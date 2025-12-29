@@ -1,0 +1,33 @@
+{
+    "DB": {
+        "HOST": "localhost",
+        "USER": "root",
+        "PWD": "rootpassword123",
+        "NAME": "consumer_affairs"
+    },
+    "ES": {
+        "HOST": "localhost",
+        "PORT": 9200,
+        "USERNAME": "elastic",
+        "PASSWORD": "AQ95XRl*uIUb9Pd-g1*l",
+        "CERT_PATH": "resources/http_ca.crt",
+        "INDEX_NAME": "consumer_affairs_index",
+        "INDEX_NAME_FEEDBACK": "consumer_feedback_index"
+    },
+    "INDIC_BERT_PATH": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
+    "BERT_MODEL_NAME": "bert-base-uncased",
+    "BERT_MODEL_PATH": "bert-base-uncased",
+    "PRIORITY_MODEL_PATH": "resources/priority_model.pth",
+    "MAPPING_STATE_ID_TO_NAME_PATH": "resources/state_id_to_name_map.json",
+    "MAPPING_CITY_ID_TO_NAME_PATH": "resources/city_id_to_name_map.json",
+    "MAPPING_STATE_NAME_TO_ID_PATH": "resources/state_name_to_id_map.json",
+    "MAPPING_CITY_NAME_TO_ID_PATH": "/resources/city_name_to_id_map.json",
+    "MAPPING_CATEGORY_ID_TO_NAME_PATH": "/resources/category_id_to_name_map.json",
+    "MAPPING_CATEGORY_NAME_TO_ID_PATH": "/resources/category_name_to_id_map.json",
+    "MAPPING_SECTOR_ID_TO_NAME_PATH": "/resources/sector_id_to_name_map.json",
+    "MAPPING_SECTOR_NAME_TO_ID_PATH": "/resources/sector_name_to_id_map.json",
+    "LLAMA_API_SERVER_URL": "https://cdis.iitk.ac.in/llama_api/llama_api/invoke",
+    "CATEGORIES_PATH": "/resources/categories.json",
+    "CATEGORIES_WITH_PROMPT_PATH": "/resources/categories_with_prompt.json",
+    "CATEGORIES_SUBCATEGORIES_WITH_PROMPT_PATH": "/resources/categories_subcategories_with_prompt.json"
+}

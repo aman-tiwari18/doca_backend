@@ -8,7 +8,7 @@ __pycache__/
 
 # custom
 data/
-resources/config.json
+# resources/config.json
 resources/http_ca.crt
 model_ai/
 
