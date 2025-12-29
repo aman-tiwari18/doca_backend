@@ -28,7 +28,7 @@ from repository.categoryAlert import categoryWiseAlerts
 
 # ---------------------------- Path Management ----------------------------
 # Move up 3 levels to reach `/xyz/resources`
-resources_dir = Path(__file__).resolve().parents[1] / "resources"
+resources_dir = Path(__file__).resolve().parents[2] / "resources"
 sys.path.append(str(resources_dir))
 
 # ---------------------------- Import Internal Modules ----------------------------
@@ -45,7 +45,8 @@ router = APIRouter(
     tags=['Analysis of Grievance Categories']
 )
 
-CATEGORIES_WITH_PROMPT_PATH = config["CATEGORIES_WITH_PROMPT_PATH"]
+
+CATEGORIES_WITH_PROMPT_PATH = resources_dir / Path(config["CATEGORIES_WITH_PROMPT_PATH"]).name
 
 with open(CATEGORIES_WITH_PROMPT_PATH, 'r') as f:
     categories_with_prompt = json.load(f)

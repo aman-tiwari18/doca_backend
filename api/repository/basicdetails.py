@@ -15,31 +15,27 @@ config = load_config()
 # ---------------------------- Constants ----------------------------
 
 
-MAPPING_STATE_ID_TO_NAME_PATH = config["MAPPING_STATE_ID_TO_NAME_PATH"]
-MAPPING_CITY_ID_TO_NAME_PATH = config["MAPPING_CITY_ID_TO_NAME_PATH"]
+
+MAPPING_STATE_ID_TO_NAME_PATH = resources_dir / Path(config["MAPPING_STATE_ID_TO_NAME_PATH"]).name
+MAPPING_CITY_ID_TO_NAME_PATH = resources_dir / Path(config["MAPPING_CITY_ID_TO_NAME_PATH"]).name
 
 with open(MAPPING_STATE_ID_TO_NAME_PATH, 'r') as f:
     MAPPING_STATE = json.load(f)
 with open(MAPPING_CITY_ID_TO_NAME_PATH, 'r') as f:
     MAPPING_CITY = json.load(f)
 
-MAPPING_STATE_NAME_TO_ID_PATH = config["MAPPING_STATE_NAME_TO_ID_PATH"]
-MAPPING_CITY_NAME_TO_ID_PATH = config["MAPPING_CITY_NAME_TO_ID_PATH"]
+MAPPING_STATE_NAME_TO_ID_PATH = resources_dir / Path(config["MAPPING_STATE_NAME_TO_ID_PATH"]).name
+MAPPING_CITY_NAME_TO_ID_PATH = resources_dir / Path(config["MAPPING_CITY_NAME_TO_ID_PATH"]).name
 
 with open(MAPPING_STATE_NAME_TO_ID_PATH, 'r') as f:
     MAPPING_STATE_NAME_TO_ID = json.load(f)
 with open(MAPPING_CITY_NAME_TO_ID_PATH, 'r') as f:
     MAPPING_CITY_NAME_TO_ID = json.load(f)
 
-#  "MAPPING_CATEGORY_ID_TO_NAME_PATH": "/main/resources/category_id_to_name_map.json",
-#     "MAPPING_CATEGORY_NAME_TO_ID_PATH": "/main/resources/category_name_to_id_map.json",
-#     "MAPPING_SECTOR_ID_TO_NAME_PATH": "/main/resources/sector_id_to_name_map.json",
-#     "MAPPING_SECTOR_NAME_TO_ID_PATH": "/main/resources/sector_name_to_id_map.json",
-
-MAPPING_CATEGORY_ID_TO_NAME_PATH = config["MAPPING_CATEGORY_ID_TO_NAME_PATH"]
-MAPPING_CATEGORY_NAME_TO_ID_PATH = config["MAPPING_CATEGORY_NAME_TO_ID_PATH"]
-MAPPING_SECTOR_ID_TO_NAME_PATH = config["MAPPING_SECTOR_ID_TO_NAME_PATH"]
-MAPPING_SECTOR_NAME_TO_ID_PATH = config["MAPPING_SECTOR_NAME_TO_ID_PATH"]
+MAPPING_CATEGORY_ID_TO_NAME_PATH = resources_dir / Path(config["MAPPING_CATEGORY_ID_TO_NAME_PATH"]).name
+MAPPING_CATEGORY_NAME_TO_ID_PATH = resources_dir / Path(config["MAPPING_CATEGORY_NAME_TO_ID_PATH"]).name
+MAPPING_SECTOR_ID_TO_NAME_PATH = resources_dir / Path(config["MAPPING_SECTOR_ID_TO_NAME_PATH"]).name
+MAPPING_SECTOR_NAME_TO_ID_PATH = resources_dir / Path(config["MAPPING_SECTOR_NAME_TO_ID_PATH"]).name
 
 with open(MAPPING_CATEGORY_ID_TO_NAME_PATH, 'r') as f:
     MAPPING_CATEGORY = json.load(f)

@@ -17,8 +17,9 @@ INDEX_NAME = config["ES"]["INDEX_NAME"]
 es_client = getES()
 embed_model = getEmbed()
 
-CATEGORIES_PATH = config["CATEGORIES_PATH"]
-CATEGORIES_SUBCATEGORIES_WITH_PROMPT_PATH = config["CATEGORIES_SUBCATEGORIES_WITH_PROMPT_PATH"]
+
+CATEGORIES_PATH = resources_dir / Path(config["CATEGORIES_PATH"]).name
+CATEGORIES_SUBCATEGORIES_WITH_PROMPT_PATH = resources_dir / Path(config["CATEGORIES_SUBCATEGORIES_WITH_PROMPT_PATH"]).name
 
 with open(CATEGORIES_PATH, 'r') as f:
     categories = json.load(f)

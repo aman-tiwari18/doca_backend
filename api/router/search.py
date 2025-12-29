@@ -35,11 +35,12 @@ INDEX_NAME = config["ES"]["INDEX_NAME"]
 es_client = getES()
 embed_model = getEmbed()
 
-MAPPING_STATE_ID_TO_NAME_PATH = config["MAPPING_STATE_ID_TO_NAME_PATH"]
-MAPPING_CITY_ID_TO_NAME_PATH = config["MAPPING_CITY_ID_TO_NAME_PATH"]
 
-MAPPING_STATE_NAME_TO_ID_PATH = config["MAPPING_STATE_NAME_TO_ID_PATH"]
-MAPPING_CITY_NAME_TO_ID_PATH = config["MAPPING_CITY_NAME_TO_ID_PATH"]
+MAPPING_STATE_ID_TO_NAME_PATH = resources_dir / Path(config["MAPPING_STATE_ID_TO_NAME_PATH"]).name
+MAPPING_CITY_ID_TO_NAME_PATH = resources_dir / Path(config["MAPPING_CITY_ID_TO_NAME_PATH"]).name
+
+MAPPING_STATE_NAME_TO_ID_PATH = resources_dir / Path(config["MAPPING_STATE_NAME_TO_ID_PATH"]).name
+MAPPING_CITY_NAME_TO_ID_PATH = resources_dir / Path(config["MAPPING_CITY_NAME_TO_ID_PATH"]).name
 
 # load both mapping and convert each to MAPPING_STATE_NAME_TO_ID and MAPPING_CITY_NAME_TO_ID
 with open(MAPPING_STATE_ID_TO_NAME_PATH, 'r') as f:
@@ -223,7 +224,7 @@ async def search_grievance(
     else:
         return {"total_count": 0, "grievanceData": []}
 
-    return {"total_count": total_count["total_count"], "grievanceData":output}
+    return {"total_count": total_count, "grievanceData":output}
 
 
 
