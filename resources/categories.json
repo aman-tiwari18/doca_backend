@@ -1,0 +1,114 @@
+{
+    "ConsumerGrievanceCategories": [
+      {
+        "category": "Product-Related Issues",
+        "subcategories": [
+          "Defective or Damaged Products",
+          "Counterfeit Items",
+          "Warranty / Guarantee Claims",
+          "Wrong Product Delivered",
+          "Product Not as Described",
+          "Missing Accessories / Parts",
+          "Product Safety Concerns"
+        ]
+      },
+      {
+        "category": "Service-Related Issues",
+        "subcategories": [
+          "Delayed Service",
+          "Poor Quality of Service",
+          "Service Not Provided",
+          "Unprofessional / Rude Staff",
+          "Contract Violation",
+          "After-Sales Support Issues"
+        ]
+      },
+      {
+        "category": "E-commerce / Digital Transactions",
+        "subcategories": [
+          "Non-Delivery of Order",
+          "Late Delivery / Shipping Delays",
+          "Refund / Return Problems",
+          "Hidden Charges",
+          "Payment Authorization / Fraud",
+          "Wrong Billing",
+          "Digital Content / Subscription Issues"
+        ]
+      },
+      {
+        "category": "Financial Services & Insurance",
+        "subcategories": [
+          "Bank Charges Dispute",
+          "Loan / Credit Issues",
+          "Insurance Claim Denial or Delay",
+          "Interest Rate / Fee Issues",
+          "Unauthorized Transactions",
+          "Investment Scheme Misrepresentation",
+          "Credit Report Errors"
+        ]
+      },
+      {
+        "category": "Utilities & Essential Services",
+        "subcategories": [
+          "Electricity / Power Supply",
+          "Water Supply",
+          "Gas / LPG / Cooking Fuel",
+          "Telecommunication / Internet Outages",
+          "Cable / DTH TV Issues",
+          "Metering / Billing Errors"
+        ]
+      },
+      {
+        "category": "Regulatory / Compliance Issues",
+        "subcategories": [
+          "Misleading Advertisement",
+          "Legal Metrology / Weights & Measures Violation",
+          "Labeling / Packaging Issues",
+          "Food Safety / FSSAI Violations",
+          "Bureau of Indian Standards (BIS) Compliance",
+          "Product Certification Problems"
+        ]
+      },
+      {
+        "category": "Public Grievances Against Government Schemes",
+        "subcategories": [
+          "Subsidy / Scheme Disbursement Delays",
+          "Eligibility / Benefit Denial",
+          "Corruption / Misuse",
+          "Poor Implementation",
+          "Service Delivery Problems"
+        ]
+      },
+      {
+        "category": "Real Estate, Housing & Construction",
+        "subcategories": [
+          "Construction Delays",
+          "Deficiencies in Construction Quality",
+          "Misrepresentation of Amenities",
+          "Possession Delay",
+          "Violation of Building Code / Safety Standards"
+        ]
+      },
+      {
+        "category": "Travel, Hospitality & Transport",
+        "subcategories": [
+          "Flight / Train / Bus Delays or Cancellations",
+          "Hotel Reservation Problems",
+          "Refunds from Travel Portals",
+          "Lost / Damaged Baggage",
+          "Service Expectations vs Reality"
+        ]
+      },
+      {
+        "category": "Healthcare & Medical Services",
+        "subcategories": [
+          "Medical Negligence",
+          "Overcharging",
+          "Billing Errors",
+          "Appointment Scheduling Problems",
+          "Pharmacy / Drug Quality Issues"
+        ]
+      }
+    ]
+  }
+  

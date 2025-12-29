@@ -1,0 +1,235 @@
+{
+    "ConsumerGrievancePrompts": [
+      {
+        "category": "Airlines - Domestic Flights",
+        "categoryKeywords": "Issue related domestic flight, flight booking, flight cancellation, flight delay, baggage service, in-flight service, Indian airlines, domestic air travel, issue related to domestic flights, problem with domestic airlines, complaints about domestic flight, grievances related to flight booking",
+        "subcategoryPrompts": {
+          "Flight Cancellation": "issue related to flight cancellation, problem with refund after cancellation, complaint about flight being cancelled, grievance about rebooking after cancellation, issue with compensation for cancelled flight, problem related to domestic flight cancellation",
+          "Flight Delay": "issue related to flight delay, problem with delayed departure, complaint about flight being delayed, grievance about missed connection due to delay, problem related to late arrival, issue with flight postponement",
+          "Overbooking": "issue related to overbooking, problem with denied boarding, complaint about involuntary overbooking, grievance about being bumped from flight, issue with overselling of flight, problem related to denied entry on flight",
+          "Baggage Loss or Damage": "issue related to lost baggage, problem with baggage damage, complaint about missing luggage, grievance about delayed baggage, issue with baggage mishandling, problem related to lost baggage claim",
+          "Seat and Booking Issues": "issue related to wrong seat assignment, problem with seat booking error, complaint about incorrect seat allocation, grievance about seat mismatch, issue with booking confirmation, problem related to seat dispute",
+          "Poor Service Quality": "issue related to in-flight service, problem with cabin crew behavior, complaint about poor hospitality, grievance about rude staff, issue with food service quality, problem related to unsatisfactory in-flight service",
+          "Safety Concerns": "issue related to safety violation, problem with safety protocol breach, complaint about unsafe flight conditions, grievance about safety hazards on flight, issue with emergency exit concerns, problem related to overcrowding",
+          "Refund and Ticket Issues": "issue related to refund denial, problem with refund delay, complaint about refund not processed, grievance about ticket cancellation, issue with ticket validity, problem related to refund amount mismatch"
+        }
+      },
+      {
+        "category": "Airlines - International Flights",
+        "categoryKeywords": "international flight, international travel, overseas flight, international booking, cross-border travel, visa issue, international airline, travel insurance, issue related to international flights, problem with overseas travel, complaints about international airlines, grievances related to cross-border travel",
+        "subcategoryPrompts": {
+          "Flight Cancellation": "issue related to international flight cancellation, problem with refund on international cancellation, complaint about cancelled international flight, grievance about compensation for international cancellation, issue with rebooking international flight, problem related to international travel disruption",
+          "Flight Delay": "issue related to international flight delay, problem with extended delay on international flight, complaint about missed connecting flight, grievance about schedule disruption, issue with late international arrival, problem related to international flight postponement",
+          "Visa and Documentation Issues": "issue related to visa denial, problem with documentation rejection, complaint about wrongful boarding denial, grievance about visa-related issues, issue with travel document rejection, problem related to passport concerns",
+          "Overbooking": "issue related to international overbooking, problem with denied boarding on international flight, complaint about oversold international flight, grievance about involuntary denied boarding, issue with being bumped from international flight, problem related to international overselling",
+          "Baggage Mishandling": "issue related to international baggage loss, problem with baggage misrouting, complaint about lost luggage on international flight, grievance about baggage damage internationally, issue with international baggage delay, problem related to lost international baggage claim",
+          "Medical Emergency or Assistance": "issue related to medical emergency on flight, problem with inadequate medical assistance, complaint about medical care denial, grievance about in-flight medical response, issue with medical support on international flight, problem related to medical emergency handling",
+          "Currency Conversion and Hidden Charges": "issue related to currency conversion charges, problem with unfair exchange rate, complaint about hidden charges in booking, grievance about dynamic currency conversion, issue with undisclosed fees, problem related to markup on international flight",
+          "Travel Insurance and Claim Denial": "issue related to insurance claim rejection, problem with travel insurance denial, complaint about trip disruption claim rejection, grievance about insurance claim delay, issue with claim settlement, problem related to insurance coverage denial"
+        }
+      },
+      {
+        "category": "Electricity - Domestic Connection",
+        "categoryKeywords": "domestic electricity, residential power supply, electricity bill, meter reading, power connection, household electricity, domestic supply, electricity issue, power problem, electric bill complaint, issue related to electricity, problem with power connection, grievances about electricity bills",
+        "subcategoryPrompts": {
+          "High or Abnormal Bills": "issue related to high electricity bill, problem with abnormally high charges, complaint about unusual bill spike, grievance about inflated electricity bill, issue with unexplained bill increase, problem related to excessive electricity charges",
+          "Meter Reading Discrepancy": "issue related to incorrect meter reading, problem with meter reading mismatch, complaint about consumption mismatch, grievance about faulty meter reading, issue with meter fraud, problem related to reading discrepancy",
+          "Billing Errors": "issue related to incorrect billing calculation, problem with duplicate charges, complaint about wrong tariff applied, grievance about billing mistake, issue with overcharging, problem related to calculation error in bill",
+          "Connection Disconnection Issues": "issue related to wrongful disconnection, problem with improper disconnection, complaint about unjustified disconnection, grievance about illegal disconnection, issue with disconnection without notice, problem related to connection termination",
+          "Power Outages or Frequent Power Cuts": "issue related to frequent power cuts, problem with regular power outages, complaint about power interruption, grievance about supply failure, issue with prolonged blackout, problem related to power outage duration",
+          "Faulty Meter": "issue related to faulty electricity meter, problem with malfunctioning meter, complaint about meter malfunction, grievance about defective meter, issue with meter accuracy, problem related to meter defect",
+          "Safety Hazards": "issue related to electrical safety hazard, problem with exposed wires, complaint about voltage fluctuations, grievance about electrical danger, issue with safety violations, problem related to electrical hazard in connection",
+          "Deposit and Refund Issues": "issue related to delayed security deposit refund, problem with rejected deposit refund, complaint about pending deposit refund, grievance about deposit refund delay, issue with security deposit claim, problem related to refund settlement"
+        }
+      },
+      {
+        "category": "Electricity - Commercial Connection",
+        "categoryKeywords": "commercial electricity, commercial power supply, business electricity bill, industrial connection, commercial tariff, peak hour charges, business power, commercial billing, issue related to commercial electricity, problem with business power supply, complaints about commercial bills, grievances about industrial connection",
+        "subcategoryPrompts": {
+          "Excessive Billing for Commercial Unit": "issue related to excessive commercial billing, problem with disproportionately high charges, complaint about inflated business electricity bill, grievance about overcharging on commercial connection, issue with excessive commercial charges, problem related to abnormal business billing",
+          "Tariff Misclassification": "issue related to wrong tariff classification, problem with incorrect commercial tariff, complaint about tariff category error, grievance about misclassified connection, issue with improper tariff application, problem related to tariff miscategorization",
+          "Peak and Off-Peak Rate Issues": "issue related to peak hour rate calculation, problem with off-peak rate error, complaint about incorrect peak hour charges, grievance about rate calculation mistake, issue with peak-off-peak mismatch, problem related to rate billing error",
+          "Power Factor Charges": "issue related to unjustified power factor penalty, problem with power factor charges, complaint about excessive power factor penalty, grievance about power factor charge, issue with power factor calculation, problem related to power factor surcharge",
+          "Outages Affecting Business": "issue related to business disruption from power outage, problem with unplanned power interruption, complaint about outage affecting business, grievance about business loss due to power cut, issue with power supply failure, problem related to commercial outage impact",
+          "Three-Phase Connection Issues": "issue related to three-phase connection problem, problem with phase imbalance, complaint about three-phase connection failure, grievance about phase-related issue, issue with three-phase system problem, problem related to phase discontinuation",
+          "Fixed Charges Dispute": "issue related to disputed fixed charges, problem with fixed charge calculation, complaint about excessive fixed charges, grievance about fixed charge increase, issue with fixed charge error, problem related to fixed charge dispute"
+        }
+      },
+      {
+        "category": "Banking - Savings and Current Accounts",
+        "categoryKeywords": "savings account, current account, bank account, ATM card, unauthorized transaction, account freezing, account closure, deposit, withdrawal, bank charges, issue related to bank account, problem with banking services, complaints about bank account, grievances about unauthorized transactions",
+        "subcategoryPrompts": {
+          "Unauthorized Transactions": "issue related to unauthorized transaction, problem with fraudulent debit, complaint about unauthorized money transfer, grievance about unauthorized account debit, issue with fraudulent transaction, problem related to unauthorized deduction",
+          "Missing Deposits": "issue related to missing bank deposit, problem with deposit not credited, complaint about missing transferred amount, grievance about deposit not received, issue with deposit processing failure, problem related to missing credit in account",
+          "Account Freezing Without Notice": "issue related to account freezing without notice, problem with account blocked unexpectedly, complaint about sudden account freeze, grievance about account freezing, issue with unauthorized account lock, problem related to account freezing without reason",
+          "Incorrect Account Closure": "issue related to unauthorized account closure, problem with account closed without permission, complaint about incorrect account termination, grievance about account closure, issue with wrongful account closure, problem related to account closure error",
+          "Charges and Fees": "issue related to unexpected bank charges, problem with undisclosed fees, complaint about excessive bank charges, grievance about surprise fees, issue with unwanted charges, problem related to unexplained bank fees",
+          "ATM Card Issues": "issue related to ATM card cloning, problem with card fraud, complaint about unauthorized card transaction, grievance about card blocking, issue with card cloning, problem related to ATM card misuse",
+          "Failed Transactions with Debit": "issue related to transaction failure with debit, problem with money debited but not transferred, complaint about failed transaction with deduction, grievance about debit without transaction completion, issue with transaction reversal failure, problem related to debit without credit",
+          "Recurring Payment Failures": "issue related to recurring payment failure, problem with repeated payment failure, complaint about recurring debit failure, grievance about recurring payment issue, issue with automatic payment failure, problem related to recurring charge failure"
+        }
+      },
+      {
+        "category": "Banking - Loans",
+        "categoryKeywords": "bank loan, personal loan, auto loan, business loan, loan approval, loan disbursement, EMI, interest rate, loan terms, loan repayment, issue related to bank loans, problem with loan processing, complaints about loan charges, grievances about loan terms",
+        "subcategoryPrompts": {
+          "Hidden Charges and Levies": "issue related to hidden loan charges, problem with undisclosed levies, complaint about hidden fees in loan, grievance about hidden charges, issue with undisclosed loan costs, problem related to hidden loan charges",
+          "Excessive Interest Charges": "issue related to excessive interest rate, problem with higher interest than agreed, complaint about inflated interest charges, grievance about excessive interest, issue with interest rate discrepancy, problem related to higher interest charges",
+          "Processing Delays": "issue related to loan approval delay, problem with delayed loan disbursement, complaint about loan processing delay, grievance about slow loan approval, issue with loan disbursement delay, problem related to delayed loan processing",
+          "Loan Rejection": "issue related to loan rejection, problem with loan application rejection, complaint about insufficient loan rejection explanation, grievance about loan denial, issue with loan rejection without reason, problem related to unexplained loan rejection",
+          "Incorrect EMI Calculation": "issue related to wrong EMI calculation, problem with incorrect monthly payment, complaint about EMI calculation error, grievance about wrong EMI amount, issue with EMI calculation mistake, problem related to incorrect EMI charge",
+          "Prepayment Penalty Issues": "issue related to excessive prepayment charges, problem with prepayment penalty, complaint about high prepayment fee, grievance about prepayment charges, issue with prepayment penalty, problem related to prepayment charge dispute",
+          "Foreclosure Complications": "issue related to loan foreclosure delay, problem with delayed loan closure, complaint about foreclosure complications, grievance about slow loan settlement, issue with foreclosure settlement delay, problem related to delayed loan foreclosure",
+          "Collateral and Security Issues": "issue related to improper collateral handling, problem with collateral mismanagement, complaint about collateral issue, grievance about security deposit handling, issue with collateral claim, problem related to improper collateral management"
+        }
+      },
+      {
+        "category": "Banking - Credit Cards",
+        "categoryKeywords": "credit card, credit card transaction, credit card billing, credit card charges, reward points, credit card interest, credit card account, card statement, issue related to credit cards, problem with credit card billing, complaints about card charges, grievances about credit card fraud",
+        "subcategoryPrompts": {
+          "Unauthorized Credit Card Charges": "issue related to unauthorized card charges, problem with fraudulent credit card transaction, complaint about card fraud, grievance about unauthorized card debit, issue with unauthorized transaction, problem related to credit card fraud",
+          "Billing Cycle Issues": "issue related to billing cycle error, problem with incorrect transaction posting, complaint about billing mistake, grievance about wrong billing, issue with payment processing error, problem related to billing error",
+          "Interest Rate Discrepancy": "issue related to higher credit card interest, problem with interest rate mismatch, complaint about excess interest charge, grievance about wrong interest rate, issue with interest rate error, problem related to higher interest charges",
+          "Rewards Points Not Credited": "issue related to missing reward points, problem with uncredited rewards, complaint about reward points not credited, grievance about missing rewards, issue with reward point error, problem related to reward point claim denial",
+          "Card Replacement Delays": "issue related to delayed card replacement, problem with slow card delivery, complaint about card replacement delay, grievance about delayed card issuance, issue with card delivery delay, problem related to slow card replacement",
+          "Incorrect Credit Limit Changes": "issue related to unauthorized credit limit reduction, problem with sudden credit limit decrease, complaint about credit limit reduction, grievance about limit change without notice, issue with credit limit error, problem related to unauthorized limit change",
+          "Disputed Installment Plans": "issue related to unauthorized installment plan, problem with unwanted EMI activation, complaint about installment plan activation, grievance about unwanted EMI, issue with plan activation, problem related to unwanted installment activation",
+          "Annual Fee Disputes": "issue related to unexpected annual fee, problem with annual charge, complaint about annual fee without benefits, grievance about unwanted annual charge, issue with fee charge, problem related to annual fee dispute"
+        }
+      },
+      {
+        "category": "Telecom - Voice GSM Services",
+        "categoryKeywords": "mobile phone, voice call, GSM service, call quality, mobile billing, roaming charges, mobile connection, network quality, issue related to mobile voice service, problem with call quality, complaints about mobile billing, grievances about telecom charges",
+        "subcategoryPrompts": {
+          "Unauthorized Usage Charges": "issue related to unauthorized usage charges, problem with billing for unused services, complaint about charged for calls not made, grievance about unauthorized charges, issue with unwanted charges, problem related to unauthorized billing",
+          "Connection Interruptions": "issue related to call drops, problem with frequent disconnections, complaint about call interruption, grievance about connection failure, issue with poor call connectivity, problem related to frequent call drops",
+          "Billing for Closed Services": "issue related to billing after cancellation, problem with charges after service closure, complaint about billing for closed service, grievance about post-cancellation charges, issue with charges after disconnection, problem related to billing after service ended",
+          "Poor Network Quality": "issue related to weak network signal, problem with poor call quality, complaint about low signal strength, grievance about weak network, issue with network quality, problem related to poor reception",
+          "Roaming Charges": "issue related to excessive roaming charges, problem with high international charges, complaint about roaming fee, grievance about roaming charges, issue with undisclosed roaming fee, problem related to roaming charge overcharge",
+          "Plan Downgrade Issues": "issue related to failed plan downgrade, problem with old charges after downgrade, complaint about plan downgrade failure, grievance about charges persisting after downgrade, issue with plan change failure, problem related to downgrade processing",
+          "Number Porting Failures": "issue related to number porting failure, problem with delayed porting, complaint about port number issue, grievance about number porting problem, issue with port transfer failure, problem related to number porting delay",
+          "Incoming Call Failures": "issue related to missed incoming calls, problem with receiving call failure, complaint about unable to receive calls, grievance about call reception issue, issue with incoming call blocking, problem related to call reception failure"
+        }
+      },
+      {
+        "category": "Telecom - Data and Broadband",
+        "categoryKeywords": "broadband, internet speed, data connection, WiFi, broadband billing, internet service, data limit, broadband connection, issue related to broadband service, problem with internet speed, complaints about broadband billing, grievances about internet connectivity",
+        "subcategoryPrompts": {
+          "Slow Internet Speed": "issue related to slow internet speed, problem with lower speed than promised, complaint about slow broadband, grievance about speed degradation, issue with insufficient speed, problem related to low internet speed",
+          "Frequent Disconnections": "issue related to frequent internet disconnections, problem with repeated connection drops, complaint about broadband outage, grievance about unstable connection, issue with connection instability, problem related to frequent disconnections",
+          "Data Throttling": "issue related to data throttling, problem with speed reduction after limit, complaint about data cap throttling, grievance about throttled speed, issue with throttling, problem related to speed reduction",
+          "Billing for Unused Services": "issue related to billing for unused data, problem with charges for unused service, complaint about billing for non-usage, grievance about unwanted charges, issue with charging for unused service, problem related to billing for unused data",
+          "Connection Not Installed": "issue related to delayed installation, problem with installation delay, complaint about slow connection installation, grievance about delayed broadband setup, issue with installation failure, problem related to non-installation",
+          "High Latency and Gaming Issues": "issue related to high ping, problem with gaming lag, complaint about high latency, grievance about gaming issues, issue with latency, problem related to high response time",
+          "Service Unavailability": "issue related to service outage, problem with no internet service, complaint about prolonged outage, grievance about service disruption, issue with service failure, problem related to complete service unavailability",
+          "Router and Equipment Issues": "issue related to faulty router, problem with defective modem, complaint about equipment malfunction, grievance about bad router, issue with equipment failure, problem related to faulty broadband equipment"
+        }
+      },
+      {
+        "category": "E-commerce - Online Shopping",
+        "categoryKeywords": "online shopping, e-commerce, product delivery, online order, online purchase, product quality, return and refund, delivery issue, issue related to online shopping, problem with online order, complaints about product delivery, grievances about e-commerce purchase",
+        "subcategoryPrompts": {
+          "Non-Delivery of Order": "issue related to non-delivery, problem with order not delivered, complaint about undelivered package, grievance about missing delivery, issue with delivery failure, problem related to order not received",
+          "Late Delivery": "issue related to late delivery, problem with delayed shipment, complaint about overdue delivery, grievance about late arrival, issue with delayed delivery, problem related to delivery delay",
+          "Wrong Item Delivered": "issue related to wrong product delivery, problem with incorrect item, complaint about wrong product, grievance about item mismatch, issue with wrong item sent, problem related to wrong product received",
+          "Damaged Products on Arrival": "issue related to damaged product, problem with product damage on delivery, complaint about damaged goods, grievance about product condition, issue with damaged item, problem related to delivery damage",
+          "Counterfeit or Substandard Quality": "issue related to counterfeit product, problem with fake product, complaint about low quality, grievance about substandard product, issue with counterfeit item, problem related to quality issue",
+          "Price and Hidden Charges": "issue related to hidden charges, problem with price difference, complaint about higher final price, grievance about unexpected charges, issue with price mismatch, problem related to hidden cost",
+          "Return and Refund Rejection": "issue related to return rejection, problem with refund denial, complaint about rejected return, grievance about refund rejection, issue with refund failure, problem related to return denial",
+          "Missing Items in Package": "issue related to missing items, problem with incomplete package, complaint about missing product, grievance about incomplete delivery, issue with item missing, problem related to incomplete order"
+        }
+      },
+      {
+        "category": "E-commerce - Digital Transactions and Payment",
+        "categoryKeywords": "online payment, digital transaction, payment failure, refund, digital wallet, e-commerce payment, payment processing, online checkout, issue related to online payment, problem with digital transaction, complaints about payment failure, grievances about online transaction",
+        "subcategoryPrompts": {
+          "Payment Deducted but Order Not Confirmed": "issue related to payment charged without confirmation, problem with deducted amount without order, complaint about payment without order placement, grievance about charged but not ordered, issue with payment without confirmation, problem related to debit without order confirmation",
+          "Duplicate Charges": "issue related to duplicate charges, problem with multiple charges, complaint about charged twice, grievance about duplicate billing, issue with repeated charge, problem related to duplicate payment",
+          "Failed Payment Showing as Success": "issue related to failed payment debited, problem with payment failure with debit, complaint about money taken for failed payment, grievance about failed transaction charge, issue with payment debit for failure, problem related to failed payment charged",
+          "Unauthorized Transactions": "issue related to unauthorized payment, problem with fraudulent transaction, complaint about unauthorized charge, grievance about fraud, issue with unauthorized debit, problem related to fraudulent payment",
+          "Refund Delayed or Not Processed": "issue related to delayed refund, problem with non-processed refund, complaint about pending refund, grievance about slow refund, issue with refund processing failure, problem related to delayed payment refund",
+          "Currency Conversion Issues": "issue related to unfair currency conversion, problem with exchange rate markup, complaint about currency conversion charge, grievance about conversion rate, issue with currency conversion, problem related to unfair exchange rate",
+          "Digital Wallet Issues": "issue related to wallet balance problem, problem with wallet fund transfer, complaint about wallet malfunction, grievance about wallet issue, issue with wallet transaction, problem related to digital wallet problem",
+          "Payment Gateway Errors": "issue related to payment gateway error, problem with technical payment failure, complaint about checkout error, grievance about transaction error, issue with payment processing error, problem related to payment gateway failure"
+        }
+      },
+      {
+        "category": "Insurance - Health Insurance",
+        "categoryKeywords": "health insurance, medical claim, hospital bill, health policy, health coverage, claim settlement, insurance rejection, pre-authorization, issue related to health insurance, problem with medical claim, complaints about claim rejection, grievances about insurance denial",
+        "subcategoryPrompts": {
+          "Claim Rejection": "issue related to claim rejection, problem with denied medical claim, complaint about claim denial, grievance about rejected claim, issue with claim refusal, problem related to claim rejection",
+          "Claim Settlement Delay": "issue related to delayed claim settlement, problem with slow claim processing, complaint about pending claim settlement, grievance about delayed payout, issue with claim payment delay, problem related to slow claim settlement",
+          "Partial Claim Payment": "issue related to partial claim payment, problem with reduced claim amount, complaint about incomplete claim settlement, grievance about partial payment, issue with claim reduction, problem related to claim payment reduction",
+          "Hospital Bill Disputes": "issue related to hospital bill dispute, problem with bill coverage denial, complaint about uncovered treatment, grievance about bill rejection, issue with bill payment denial, problem related to hospital bill not covered",
+          "Pre-Authorization Denial": "issue related to denied pre-authorization, problem with pre-auth rejection, complaint about pre-approval denial, grievance about authorization refusal, issue with pre-authorization failure, problem related to denied treatment authorization",
+          "Policy Exclusions and Limitations": "issue related to policy exclusion claim, problem with excluded treatment, complaint about coverage exclusion, grievance about claim denied due to exclusion, issue with policy limitation, problem related to coverage exclusion",
+          "Network Hospital Issues": "issue related to network hospital denial, problem with non-network coverage, complaint about hospital not covered, grievance about network hospital issue, issue with hospital coverage, problem related to network hospital claim",
+          "Renewal and Premium Issues": "issue related to premium increase, problem with high renewal cost, complaint about premium hike, grievance about renewal charge, issue with premium increase, problem related to policy renewal cost"
+        }
+      },
+      {
+        "category": "Insurance - Motor Insurance",
+        "categoryKeywords": "motor insurance, car insurance, vehicle insurance, accident claim, claim settlement, vehicle damage, insurance premium, auto policy, issue related to motor insurance, problem with accident claim, complaints about claim rejection, grievances about insurance denial",
+        "subcategoryPrompts": {
+          "Claim Rejection After Accident": "issue related to claim rejection after accident, problem with accident claim denied, complaint about claim refusal, grievance about accident claim rejection, issue with post-accident claim denial, problem related to accident claim rejection",
+          "Unfair Damage Assessment": "issue related to unfair damage assessment, problem with low assessment amount, complaint about damage undervaluation, grievance about low claim amount, issue with assessment dispute, problem related to unfair vehicle assessment",
+          "Delay in Claim Settlement": "issue related to delayed claim settlement, problem with slow claim payout, complaint about delayed settlement, grievance about pending claim payment, issue with claim payment delay, problem related to slow claim settlement",
+          "Third-Party Liability Issues": "issue related to third-party claim denial, problem with liability claim rejection, complaint about third-party claim issue, grievance about liability dispute, issue with third-party claim, problem related to third-party liability claim",
+          "Premium Increase After Claim": "issue related to premium increase after claim, problem with higher premium after claim, complaint about post-claim premium hike, grievance about premium increase, issue with premium surge, problem related to increased premium after claim",
+          "Policy Cancellation Without Notice": "issue related to policy cancellation without notice, problem with sudden cancellation, complaint about unexpected cancellation, grievance about cancellation notification, issue with abrupt cancellation, problem related to unexplained policy cancellation",
+          "Network Garage Disputes": "issue related to network garage dispute, problem with garage service quality, complaint about garage repair issue, grievance about garage dispute, issue with network garage, problem related to garage service disagreement"
+        }
+      },
+      {
+        "category": "Insurance - Travel Insurance",
+        "categoryKeywords": "travel insurance, trip cancellation, travel coverage, international trip, baggage insurance, travel claim, travel emergency, issue related to travel insurance, problem with trip coverage, complaints about claim rejection, grievances about travel insurance denial",
+        "subcategoryPrompts": {
+          "Trip Cancellation Claim Rejection": "issue related to trip cancellation claim rejection, problem with cancelled trip claim denied, complaint about cancellation claim rejection, grievance about trip cancellation claim denial, issue with trip cancellation claim, problem related to rejected trip cancellation claim",
+          "Medical Claim While Traveling": "issue related to medical claim denial while traveling, problem with international medical claim rejection, complaint about medical treatment denial, grievance about medical claim rejection, issue with medical coverage abroad, problem related to medical claim denial",
+          "Lost Luggage Claim Issues": "issue related to lost baggage claim, problem with baggage loss claim denial, complaint about lost luggage claim issue, grievance about baggage claim rejection, issue with lost baggage settlement, problem related to incomplete baggage claim",
+          "Flight Delay Compensation": "issue related to flight delay compensation rejection, problem with delayed flight claim denial, complaint about delay compensation rejection, grievance about flight delay claim, issue with delay compensation claim, problem related to rejected flight delay claim",
+          "Document Loss or Theft": "issue related to document loss claim, problem with stolen document coverage, complaint about document claim denial, grievance about lost travel document claim, issue with document loss coverage, problem related to document theft claim",
+          "Emergency Evacuation": "issue related to evacuation claim rejection, problem with emergency evacuation claim denied, complaint about evacuation compensation denial, grievance about evacuation claim, issue with evacuation coverage, problem related to evacuation claim rejection",
+          "Repatriation Claim": "issue related to repatriation claim rejection, problem with repatriation cost denial, complaint about repatriation claim denial, grievance about repatriation coverage, issue with repatriation expenses, problem related to repatriation claim denial"
+        }
+      },
+      {
+        "category": "Retail - Departmental Stores",
+        "categoryKeywords": "retail store, departmental store, product purchase, product quality, billing, product return, exchange, retail transaction, issue related to retail store, problem with store purchase, complaints about product quality, grievances about retail shopping",
+        "subcategoryPrompts": {
+          "Defective Product Purchased": "issue related to defective product, problem with faulty item, complaint about defective product, grievance about product defect, issue with product malfunction, problem related to defective goods",
+          "Price Mismatch at Billing": "issue related to price mismatch, problem with wrong billing price, complaint about billing price different from tag, grievance about price mismatch, issue with billing discrepancy, problem related to checkout price error",
+          "Wrong Size or Variant Delivered": "issue related to wrong size delivered, problem with variant mismatch, complaint about wrong product variant, grievance about wrong size, issue with product mismatch, problem related to incorrect product variant",
+          "Missing Items in Package": "issue related to missing items in package, problem with incomplete purchase, complaint about missing product, grievance about incomplete package, issue with item missing, problem related to incomplete retail order",
+          "Expired Products Sold": "issue related to expired product sold, problem with expired product purchase, complaint about expired item, grievance about expired goods, issue with expiry date product, problem related to expired product sale",
+          "Exchange and Return Denial": "issue related to return rejection, problem with exchange refusal, complaint about return denial, grievance about refused exchange, issue with return rejection, problem related to denied return or exchange"
+        }
+      },
+      {
+        "category": "Courier and Cargo Services",
+        "categoryKeywords": "courier service, cargo delivery, shipment tracking, parcel delivery, delivery service, cargo handling, shipping, logistics, issue related to courier service, problem with delivery, complaints about courier service, grievances about shipping",
+        "subcategoryPrompts": {
+          "Delayed Delivery": "issue related to delayed delivery, problem with late shipment, complaint about overdue delivery, grievance about delivery delay, issue with late courier delivery, problem related to delayed package",
+          "Lost Consignment": "issue related to lost package, problem with missing shipment, complaint about lost delivery, grievance about missing consignment, issue with package not found, problem related to lost cargo",
+          "Damaged Package": "issue related to damaged package, problem with damaged shipment, complaint about package damage, grievance about damaged cargo, issue with package damage, problem related to damaged delivery",
+          "Wrong Recipient Delivery": "issue related to wrong delivery address, problem with delivery to wrong person, complaint about misdelivery, grievance about delivery error, issue with wrong recipient, problem related to incorrect delivery location",
+          "Incomplete Delivery": "issue related to incomplete shipment, problem with missing items in delivery, complaint about incomplete package, grievance about incomplete consignment, issue with items missing, problem related to incomplete cargo delivery",
+          "Exorbitant Charges": "issue related to overcharging, problem with charges higher than quote, complaint about excessive courier charges, grievance about inflated charges, issue with higher charges, problem related to overcharging",
+          "Insurance Claim Rejection": "issue related to insurance claim rejection, problem with rejected shipment claim, complaint about insurance denial, grievance about claim rejection, issue with insurance claim, problem related to denied shipment insurance"
+        }
+      },
+      {
+        "category": "Automobile - Four Wheelers",
+        "categoryKeywords": "four wheeler, car, vehicle, car service, vehicle repair, warranty, car defect, spare parts, issue related to car, problem with vehicle, complaints about car service, grievances about vehicle defect",
+        "subcategoryPrompts": {
+          "Vehicle Defect": "issue related to vehicle defect, problem with manufacturing defect, complaint about faulty car component, grievance about product defect, issue with defective system, problem related to car malfunction",
+          "Poor Service Quality": "issue related to poor service quality, problem with substandard service, complaint about service center issue, grievance about bad service, issue with service quality, problem related to poor car service",
+          "Warranty Claim Denial": "issue related to warranty claim rejection, problem with denied warranty, complaint about warranty rejection, grievance about warranty claim denial, issue with warranty refusal, problem related to denied warranty claim",
+          "Spare Parts Quality": "issue related to poor spare parts quality, problem with counterfeit parts, complaint about substandard parts, grievance about part quality, issue with fake spare parts, problem related to spare parts fraud",
+          "Incorrect Billing for Service": "issue related to incorrect service bill, problem with overcharging for service, complaint about billing error, grievance about service charges, issue with inflated charges, problem related to service bill overcharge",
+          "Delivery Delay": "issue related to delayed car delivery, problem with late vehicle delivery, complaint about delayed handover, grievance about delivery delay"
+        }
+      }
+    ]
+  }
+  

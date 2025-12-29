@@ -1,0 +1,64 @@
+{
+    "ConsumerGrievanceCategories": [
+      {
+        "category": "Essential Food & Public Distribution",
+        "categoryPrompt": "Issues with PDS, ration cards, food quality in fair price shops, sugar, wheat, rice distribution, essential commodity prices, food adulteration, or problems with FSSAI compliance."
+      },
+      {
+        "category": "Healthcare & Medical Services",
+        "categoryPrompt": "Problems with government/private hospitals, medical bills, medicine quality, Ayushman Bharat claims, vaccination services, diagnostic centers, ambulance services, or medical negligence cases."
+      },
+      {
+        "category": "Education & Academic Services",
+        "categoryPrompt": "Issues with school/college admissions, fee structure, scholarship disbursement, mid-day meals, educational loans, distance education, private coaching, or academic certification problems."
+      },
+      {
+        "category": "Financial Services & Banking",
+        "categoryPrompt": "Complaints about bank accounts, loan processing, credit cards, insurance claims, mutual funds, pension schemes, Jan Dhan accounts, digital payments, or unauthorized transactions."
+      },
+      {
+        "category": "Public Utilities & Services",
+        "categoryPrompt": "Problems with electricity supply, water connection, gas/LPG delivery, telephone/internet services, garbage collection, street lighting, or municipal services."
+      },
+      {
+        "category": "Transportation & Mobility",
+        "categoryPrompt": "Issues with railways, bus services, metro services, auto/taxi fares, ride-sharing apps, air travel, road conditions, or transport service quality."
+      },
+      {
+        "category": "Housing & Real Estate",
+        "categoryPrompt": "Complaints about RERA compliance, housing society maintenance, rental disputes, property registration, building safety, unauthorized construction, or housing loan issues."
+      },
+      {
+        "category": "E-commerce & Digital Services",
+        "categoryPrompt": "Problems with online shopping, digital payments, mobile apps, telecom services, internet banking, cyber fraud, or consumer data privacy issues."
+      },
+      {
+        "category": "Agriculture & Rural Services",
+        "categoryPrompt": "Issues with farming subsidies, agricultural loans, seed quality, fertilizer availability, MSP payments, Kisan credit cards, or rural development schemes."
+      },
+      {
+        "category": "Employment & Labor Welfare",
+        "categoryPrompt": "Complaints about provident fund, ESI services, minimum wages, working conditions, workplace safety, or employment guarantee schemes."
+      },
+      {
+        "category": "Social Security & Welfare",
+        "categoryPrompt": "Issues with pension disbursement, disability benefits, widow pension, social assistance schemes, or welfare program implementation."
+      },
+      {
+        "category": "Environmental & Public Safety",
+        "categoryPrompt": "Concerns about pollution, waste management, public sanitation, industrial safety, noise violations, or environmental hazards."
+      },
+      {
+        "category": "Legal & Documentation Services",
+        "categoryPrompt": "Problems with document registration, legal services, notary services, government certificates, or identity documents like Aadhaar, PAN card."
+      },
+      {
+        "category": "Small Business & Trade",
+        "categoryPrompt": "Issues facing small businesses, trade licenses, GST registration, MSME loans, market regulation, or business permit problems."
+      },
+      {
+        "category": "Consumer Goods & Retail",
+        "categoryPrompt": "Complaints about product quality, MRP violations, weights and measures, warranty claims, after-sales service, or retail store practices."
+      }
+    ]
+  }
