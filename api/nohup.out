@@ -1,0 +1,4 @@
+/home/aman/Downloads/consumer_affairs_dashboard-aws/api/cron/fetch_complaints.py:67: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow()
+/home/aman/Downloads/consumer_affairs_dashboard-aws/api/cron/fetch_complaints.py:67: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  now = datetime.utcnow()
