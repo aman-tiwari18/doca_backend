@@ -185,6 +185,60 @@ def getcomplaintDetails(complain_number: str):
 #     return df.to_dict(orient='records')
 
 
+
+def getLastComplaints():
+    """
+    A function to get last 1000 complaints from the database
+    """
+
+    print("Fetching last 1000 complaints")
+
+    connection = connectDB_alchemy()
+    if connection is None:
+        return {"error": "Database connection failed."}
+
+    try:
+        # Raw SQL query
+        query = """
+        SELECT *
+        FROM tblcomplaints
+        ORDER BY complainNumber DESC
+        LIMIT 1
+        """
+
+        # Execute query
+        df = pd.read_sql(query, connection)
+
+        if df.empty:
+            connection.dispose()
+            return {"error": "No complaints found."}
+
+        # Process state names
+        if 'stateCode' in df.columns:
+            df['stateName'] = (
+                df['stateCode']
+                .astype(str)
+                .map(MAPPING_STATE)
+                .fillna('Unknown')
+            )
+
+        # Handle NaN values
+        df = df.fillna('N/A')
+
+        # Clean up connection
+        connection.dispose()
+
+        # Return all records
+        return df.to_dict(orient='records')
+
+    except Exception as e:
+        if connection:
+            connection.dispose()
+        print(f"Error details: {str(e)}")
+        return {"error": f"Failed to load last complaints: {e}"}
+
+
+
 def getUserDetails(userIds):
     """
     A function to get user details from the database based on userIds

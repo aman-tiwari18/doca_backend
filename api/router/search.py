@@ -13,6 +13,7 @@ import pandas as pd
 from pydantic import BaseModel
 router = APIRouter(tags=["Search Features"])
 from fastapi import HTTPException
+from repository.basicdetails import getLastComplaints
 
 from fastapi import Depends
 from fastapi.security import OAuth2PasswordBearer
@@ -491,7 +492,34 @@ async def get_semantic_rca(token : Annotated[str, Depends(oauth2_scheme)], reque
             status_code=500,
             detail=f"Error processing request: {str(e)}"
         )
-    
+
+@router.post("/get_last_complaints")
+async def get_last_complaints(
+    token: Annotated[str, Depends(oauth2_scheme)],
+    db: Session = Depends(database.get_db)
+):
+    """
+    A function to get last 1000 complaints from the database
+    """
+
+    # Get logged-in user
+    user = await get_current_user(token, db)
+    username = user.username.lower()
+
+    # Fetch last 1000 complaints
+    try:
+        complaints = getLastComplaints()
+        return {
+            "user": username,
+            "count": len(complaints),
+            "data": complaints
+        }
+    except Exception as e:
+        print(f"Error in get_last_complaints: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error processing request: {str(e)}"
+        )
 
 @router.post("/get_complaint_details_with_ids")
 async def get_complaint_details(token : Annotated[str, Depends(oauth2_scheme)], complain_number: List[str], db: Session = Depends(database.get_db)):
