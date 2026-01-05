@@ -20,10 +20,10 @@ PASSWORD = "Nch@iit#2025"
 PER_PAGE = 1000
 BACKFILL_START_DATE = "2025-09-01"
 LOG_FILE = "cron_fetch.log"
-DATE_CHUNK_DAYS = 10  # Fetch 10 days at a time
+DATE_CHUNK_DAYS = 5  # Fetch 5 days at a time
 
-FETCH_DETAILS = False  
-DELAY_BETWEEN_REQUESTS = 2.0 
+FETCH_DETAILS = True  
+DELAY_BETWEEN_REQUESTS = 0.5
 MAX_RETRIES_ON_RATE_LIMIT = 3
 RATE_LIMIT_BACKOFF = 30 
 
@@ -86,7 +86,9 @@ def get_date_range():
                 text("SELECT MAX(complaintRegDate) FROM tblcomplaints")
             ).scalar()
 
-            from_date = last_date.strftime("%Y-%m-%d")
+            # Subtract 5 days buffer to ensure coverage
+            start_dt = last_date - timedelta(days=5)
+            from_date = start_dt.strftime("%Y-%m-%d")
 
         to_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
         return from_date, to_date
@@ -220,10 +222,15 @@ def main():
         logging.exception(f"Grievance fetch job failed: {str(e)}")
 
 
-def fetch_grievance_details(grievance_number, retry_count=0):
+def fetch_grievance_details(grievance_number, sectorCode, categoryCode, retry_count=0):
     """Fetch detailed information for a specific grievance with rate limit handling"""
     try:
-        payload = {"grievance_number": grievance_number}
+        payload = {
+            "grievanceno": grievance_number,
+            "sectorcode": sectorCode,
+            "categoryCode": categoryCode
+
+         }
         
         response = http.post(
             f"{BASE_URL}/ws/prod/api2.0/public/api/grievanceDetails",
@@ -239,7 +246,7 @@ def fetch_grievance_details(grievance_number, retry_count=0):
                 wait_time = RATE_LIMIT_BACKOFF * (2 ** retry_count)
                 logging.warning(f"Rate limited for grievance {grievance_number}. Waiting {wait_time}s before retry {retry_count + 1}/{MAX_RETRIES_ON_RATE_LIMIT}")
                 time.sleep(wait_time)
-                return fetch_grievance_details(grievance_number, retry_count + 1)
+                return fetch_grievance_details(grievance_number, sectorCode, categoryCode, retry_count + 1)
             else:
                 logging.error(f"Max retries exceeded for grievance {grievance_number} due to rate limiting")
                 return None
@@ -350,19 +357,17 @@ def upsert_complaint(session, history_item, details=None):
             "userContactNumber": "mbileNumber",
             "complaintDetails": "grievanceDetails",
             "converganceCompanyName": "converganceCompanyName",
-            "nonConverganceCompanyName": "nonCoverganeceCompanyName",
+            "nonCoverganenceCompanyName": "nonCoverganeceCompanyName",
             "complaintMode": "grievanceMode",
             "agentRemark": "agentRemark",
             "userComment": "userComment",
             "userCommentDate": "userCommentDate",
-            "govtDepartment": "govtDepartment",
             "docketType": "docketType",
             "grievanceclassification": "grievanceClassification",
             "productValue": "grivanceAmount",
             "supportDoc1": "supportDoc1",
             "supportDoc2": "supportDoc2",
             "supportDoc3": "supportDoc3",
-            "stateName": "stateName",
             "fop" : "frequentlyOccuredProblem",
             "pgDocketNumber" : "pgDocketNumber",
             "agencyDetails" : "agencyDetails"
@@ -411,6 +416,75 @@ def upsert_complaint(session, history_item, details=None):
     session.execute(text(query), params)
 
 
+def upsert_user(session, detail_info):
+    """
+    Insert or update user details in tblregistration
+    """
+    try:
+        user_id = detail_info.get("userId")
+        if not user_id:
+            return
+
+        # Try to get names directly first
+        first_name = detail_info.get("firstName")
+        last_name = detail_info.get("lastName")
+
+        # Fallback to splitting consumerName if firstName is missing
+        if not first_name:
+            consumer_name = detail_info.get("consumerName", "").strip()
+            if " " in consumer_name:
+                first_name, last_name = consumer_name.split(" ", 1)
+            else:
+                first_name = consumer_name
+                last_name = ""
+
+        state_name = detail_info.get("stateName")
+        state_code = None
+        if state_name:
+            state_code = map_state_name_to_code(state_name)
+
+        user_data = {
+            "userId": user_id,
+            "firstName": first_name,
+            "lastName": last_name,
+            "mobNumber": detail_info.get("mbileNumber"),
+            "emailId": detail_info.get("emailId"),
+            "stateCode": state_code,
+            "pincode": detail_info.get("pincode")
+        }
+
+        columns = []
+        values_placeholders = []
+        update_clauses = []
+        params = {}
+
+        for key, value in user_data.items():
+            if value is not None:
+                columns.append(key)
+                values_placeholders.append(f":{key}")
+                params[key] = value
+                
+                if key != "userId":
+                    update_clauses.append(f"{key} = VALUES({key})")
+
+        update_clauses.append("updationDate = CURRENT_TIMESTAMP")
+
+        query = f"""
+            INSERT INTO tblregistration (
+                {', '.join(columns)}
+            ) VALUES (
+                {', '.join(values_placeholders)}
+            )
+            ON DUPLICATE KEY UPDATE
+                {', '.join(update_clauses)}
+        """
+
+        session.execute(text(query), params)
+
+    except Exception as e:
+        logging.error(f"Failed to upsert user {user_id}: {e}")
+
+
 def process_complaints(history_items):
     """Process and insert/update complaints with optional detailed information"""
     session = Session()
@@ -445,11 +519,12 @@ def process_complaints(history_items):
         for item in history_items:
             try:
                 complaint_number = item.get("complainNumber")
+                sectorCode = item.get("sectorCode")
+                categoryCode = item.get("categoryCode")
                 if not complaint_number:
                     logging.warning("Skipping item without complaint number")
                     skipped += 1
                     continue
-                
                 # Skip if already exists
                 if complaint_number in existing_complaints:
                     skipped += 1
@@ -460,9 +535,12 @@ def process_complaints(history_items):
                 
 
                 if FETCH_DETAILS:
-                    details = fetch_grievance_details(complaint_number)
+                    details = fetch_grievance_details(complaint_number, sectorCode, categoryCode)
                     if details:
                         details_fetched += 1
+                        # Update user details if available
+                        if details.get("basicGrievanceDetails"):
+                            upsert_user(session, details["basicGrievanceDetails"][0])
                     
                     time.sleep(DELAY_BETWEEN_REQUESTS)
                 
