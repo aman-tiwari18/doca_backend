@@ -1,0 +1,104 @@
+{
+    "Airlines - Domestic Flights": {
+        "categoryPrompt": "Issue related domestic flight, flight booking, flight cancellation, flight delay, baggage service, in-flight service, Indian airlines, domestic air travel, issue related to domestic flights, problem with domestic airlines, complaints about domestic flight, grievances related to flight booking"
+    },
+    "Airlines - International Flights": {
+        "categoryPrompt": "international flight, international travel, overseas flight, international booking, cross-border travel, visa issue, international airline, travel insurance, issue related to international flights, problem with overseas travel, complaints about international airlines, grievances related to cross-border travel"
+    },
+    "Airport Services": {
+        "categoryPrompt": "airport services, airport facilities, airport authorities, baggage handling at airport, airport parking, airport security, lounge services, airport shopping, issue related to airport services, problem with airport facilities, complaints about airport authorities, grievances about airport amenities"
+    },
+    "Electricity - Domestic Connection": {
+        "categoryPrompt": "domestic electricity, residential power supply, electricity bill, meter reading, power connection, household electricity, domestic supply, electricity issue, power problem, electric bill complaint, issue related to electricity, problem with power connection, grievances about electricity bills"
+    },
+    "Electricity - Commercial Connection": {
+        "categoryPrompt": "commercial electricity, commercial power supply, business electricity bill, industrial connection, commercial tariff, peak hour charges, business power, commercial billing, issue related to commercial electricity, problem with business power supply, complaints about commercial bills, grievances about industrial connection"
+    },
+    "Banking - Savings and Current Accounts": {
+        "categoryPrompt": "savings account, current account, bank account, ATM card, unauthorized transaction, account freezing, account closure, deposit, withdrawal, bank charges, issue related to bank account, problem with banking services, complaints about bank account, grievances about unauthorized transactions"
+    },
+    "Banking - Loans": {
+        "categoryPrompt": "bank loan, personal loan, auto loan, business loan, loan approval, loan disbursement, EMI, interest rate, loan terms, loan repayment, issue related to bank loans, problem with loan processing, complaints about loan charges, grievances about loan terms"
+    },
+    "Banking - Credit Cards": {
+        "categoryPrompt": "credit card, credit card transaction, credit card billing, credit card charges, reward points, credit card interest, credit card account, card statement, issue related to credit cards, problem with credit card billing, complaints about card charges, grievances about credit card fraud"
+    },
+    "Telecom - Voice GSM Services": {
+        "categoryPrompt": "mobile phone, voice call, GSM service, call quality, mobile billing, roaming charges, mobile connection, network quality, issue related to mobile voice service, problem with call quality, complaints about mobile billing, grievances about telecom charges"
+    },
+    "Telecom - Data and Broadband": {
+        "categoryPrompt": "broadband, internet speed, data connection, WiFi, broadband billing, internet service, data limit, broadband connection, DTH, cable, issue related to broadband service, problem with internet speed, complaints about broadband billing, grievances about internet connectivity"
+    },
+    "E-commerce - Online Shopping": {
+        "categoryPrompt": "online shopping, e-commerce, product delivery, online order, online purchase, product quality, return and refund, delivery issue, issue related to online shopping, problem with online order, complaints about product delivery, grievances about e-commerce purchase"
+    },
+    "Insurance - Health Insurance": {
+        "categoryPrompt": "health insurance, medical claim, hospital bill, health policy, health coverage, claim settlement, insurance rejection, pre-authorization, issue related to health insurance, problem with medical claim, complaints about claim rejection, grievances about insurance denial"
+    },
+    "Insurance - Motor Insurance": {
+        "categoryPrompt": "motor insurance, car insurance, vehicle insurance, accident claim, claim settlement, vehicle damage, insurance premium, auto policy, two wheeler insurance, bike insurance, issue related to motor insurance, problem with accident claim, complaints about claim rejection, grievances about insurance denial"
+    },
+    "Insurance - Travel Insurance": {
+        "categoryPrompt": "travel insurance, trip cancellation, travel coverage, international trip, baggage insurance, travel claim, travel emergency, issue related to travel insurance, problem with trip coverage, complaints about claim rejection, grievances about travel insurance denial"
+    },
+    "Retail - Departmental Stores": {
+        "categoryPrompt": "retail store, departmental store, product purchase, product quality, billing, product return, exchange, retail transaction, issue related to retail store, problem with store purchase, complaints about product quality, grievances about retail shopping"
+    },
+    "Courier and Cargo Services": {
+        "categoryPrompt": "courier service, cargo delivery, shipment tracking, parcel delivery, delivery service, cargo handling, shipping, logistics, issue related to courier service, problem with delivery, complaints about courier service, grievances about shipping"
+    },
+    "Automobile - Four Wheelers": {
+        "categoryPrompt": "four wheeler, car, vehicle, car service, vehicle repair, warranty, car defect, spare parts, issue related to car, problem with vehicle, complaints about car service, grievances about vehicle defect"
+    },
+    "Automobile - Two Wheelers": {
+        "categoryPrompt": "two wheeler, bike, motorcycle, scooter, bike service, vehicle repair, warranty, bike defect, spare parts, bike accessories, issue related to bike, problem with two wheeler, complaints about bike service, grievances about motorcycle maintenance"
+    },
+    "Healthcare Services": {
+        "categoryPrompt": "hospital services, healthcare, medical treatment, pharmacy, chemist, diagnostic centre, medical negligence, malpractice, drugs, cosmetics, medical products, pathology lab, issue related to healthcare, problem with medical services, complaints about hospital, grievances about pharmacy"
+    },
+    "Real Estate and Construction": {
+        "categoryPrompt": "real estate, property, builder, developer, construction, housing society, RWA, apartment, flat, construction material, property dispute, possession delay, building defects, issue related to real estate, problem with builder, complaints about property, grievances about housing society"
+    },
+    "Tourism and Hospitality": {
+        "categoryPrompt": "tourism, hotel, resort, holiday package, timeshare, travel package, shrine board yatra, government tourism, hospitality services, hotel booking, resort booking, vacation package, issue related to tourism, problem with hotel, complaints about holiday package, grievances about hospitality"
+    },
+    "Financial Services and Investments": {
+        "categoryPrompt": "remittance, money transfer, company deposits, mutual funds, SIP, ELSS, share brokerage, stock trading, investment, life insurance, term insurance, endowment, ULIP, pension plans, financial planning, issue related to investments, problem with financial services, complaints about brokerage, grievances about investment plans"
+    },
+    "Entertainment and Media": {
+        "categoryPrompt": "newspaper, magazine, media subscription, publication, print media, news delivery, magazine subscription, media services, issue related to media, problem with newspaper delivery, complaints about magazine, grievances about publication"
+    },
+    "Transportation Services": {
+        "categoryPrompt": "cab services, taxi, railway, metro rail, government transport, public transport, car rental, bike rental, urban transport, commute, issue related to transportation, problem with cab service, complaints about railway, grievances about public transport"
+    },
+    "Energy and Fuel": {
+        "categoryPrompt": "LPG, cooking gas, petrol pump, fuel station, gas cylinder, gas refill, fuel quality, fuel pricing, issue related to fuel, problem with LPG, complaints about petrol pump, grievances about gas supply"
+    },
+    "Utilities and Public Services": {
+        "categoryPrompt": "postal services, sewage, water supply, municipal services, public utilities, water connection, drainage, sanitation, post office, mail delivery, issue related to utilities, problem with water supply, complaints about postal service, grievances about municipal services"
+    },
+    "Education Services": {
+        "categoryPrompt": "school education, state board, educational institutions, IISc, IISER, IIT, skill development, ITI, IIM, management education, NITTR, autonomous educational organizations, coaching, training programs, issue related to education, problem with educational institutions, complaints about schools, grievances about education services"
+    },
+    "Professional Services": {
+        "categoryPrompt": "IT services, bar council, legal services, referring services, extended care, repair services, immigration services, visa services, placement agencies, event management, wedding services, party services, professional consultancy, issue related to professional services, problem with service providers, complaints about consultancy, grievances about professional help"
+    },
+    "Consumer Products - Electronics": {
+        "categoryPrompt": "electronics products, electronic goods, mobile accessories, car electronics, bike electronics, tyres, gadgets, consumer electronics, electronic appliances, issue related to electronics, problem with electronic products, complaints about gadgets, grievances about electronic goods quality"
+    },
+    "Consumer Products - Home and Lifestyle": {
+        "categoryPrompt": "furniture, modular works, grooming products, home appliances, bedding, mattress, water pump, motor, locks, home safes, digital locks, lighting, LED, bulbs, bicycles, apparels, footwear, bags, issue related to home products, problem with furniture, complaints about appliances, grievances about lifestyle products"
+    },
+    "Government and Regulatory Bodies": {
+        "categoryPrompt": "public distribution system, PDS, NCDRC, state information commission, SIC, BIS enforcement, ISI mark, hallmark, BEE stars, trade marks, Agmark, ISO, silk mark, approval bodies, CIC, aadhar, VAT, GST, state commission, legal metrology, consumer forums, issue related to government bodies, problem with regulatory compliance, complaints about certification, grievances about government services"
+    },
+    "Agriculture and Rural Services": {
+        "categoryPrompt": "Kishan call centre, agriculture, farming, pesticides, rural management, agriculture insurance, cattle insurance, farm services, agricultural products, crop protection, issue related to agriculture, problem with farm services, complaints about pesticides, grievances about rural services"
+    },
+    "Other Insurance Services": {
+        "categoryPrompt": "mobile insurance, gadget insurance, liability insurance, device protection, insurance coverage, claim processing, issue related to insurance, problem with gadget insurance, complaints about insurance claim, grievances about insurance services"
+    },
+    "Miscellaneous Services": {
+        "categoryPrompt": "misleading advertisement, general enquiry, meditation center, other services, miscellaneous complaints, general issues, other grievances, issue related to other services, problem with various services, complaints about misleading ads, grievances about miscellaneous matters"
+    }
+}

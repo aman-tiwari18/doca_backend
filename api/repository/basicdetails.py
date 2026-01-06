@@ -46,6 +46,22 @@ with open(MAPPING_SECTOR_ID_TO_NAME_PATH, 'r') as f:
 with open(MAPPING_SECTOR_NAME_TO_ID_PATH, 'r') as f:
     MAPPING_SECTOR_NAME_TO_ID = json.load(f)
 
+# Load Summary Mappings
+CATEGORY_SUMMARY_MAPPING_PATH = resources_dir / "category_id_to_summary_mapping.json"
+CATEGORY_PROMPTS_PATH = resources_dir / "categories_with_prompt_new.json"
+
+with open(CATEGORY_SUMMARY_MAPPING_PATH, 'r') as f:
+    raw_summary_mapping = json.load(f)
+
+# Invert mapping: ID -> Summary Name
+CATEGORY_ID_TO_SUMMARY_MAPPING = {}
+for summary_name, ids in raw_summary_mapping.items():
+    for cat_id in ids:
+        CATEGORY_ID_TO_SUMMARY_MAPPING[str(cat_id)] = summary_name
+
+with open(CATEGORY_PROMPTS_PATH, 'r') as f:
+    CATEGORY_SUMMARY_INFO = json.load(f)
+
 
 
 
@@ -485,10 +501,9 @@ def getCompanyDetails(sectorname="All", companyname="All", categoryname="All"):
 #     result = df.to_dict(orient='records')
 #     return {"distribution": result}
 
-
 def getComplaintDistribution(attribute, start_date, end_date, stateName="All", sectorName="All", categoryName="All", skip=0, limit=20):
     '''
-    A function to get complaint distribution by a specified attribute.
+    Enhanced function to get complaint distribution by attribute with summarized categories and prompts.
     Valid attributes: 'stateName', 'complaintType', 'complaintMode', 'sectorName', 'categoryName', 'complaintStatus', 'companyStatus'
     '''
     valid_attributes = ['stateName', 'complaintType', 'complaintMode', 'sectorName', 'categoryName', 'complaintStatus', 'companyStatus']
@@ -500,7 +515,6 @@ def getComplaintDistribution(attribute, start_date, end_date, stateName="All", s
         return {"error": "Database connection failed."}
     
     try:
-        # Map attribute names to actual database column names
         attribute_mapping = {
             'stateName': 'stateCode',
             'sectorName': 'sectorCode',
@@ -513,14 +527,12 @@ def getComplaintDistribution(attribute, start_date, end_date, stateName="All", s
         
         db_attribute = attribute_mapping.get(attribute, attribute)
         
-        # Build base query with parameterized attribute
         filters = []
         params = {}
 
-        # Dynamic filters
         if stateName != "All":
             if stateName in MAPPING_STATE_NAME_TO_ID:
-                stateCode = MAPPING_STATE_NAME_TO_ID[stateName]  # Fixed: use [] instead of ()
+                stateCode = MAPPING_STATE_NAME_TO_ID[stateName]
                 filters.append("stateCode = %(stateCode)s")
                 params['stateCode'] = stateCode
             else:
@@ -535,8 +547,6 @@ def getComplaintDistribution(attribute, start_date, end_date, stateName="All", s
             else:
                 connection.dispose()
                 return {"error": f"Invalid sector name: {sectorName}"}
-            filters.append("sectorCode = %(sectorName)s")
-            params['sectorName'] = sectorName
 
         if categoryName != "All":
             if categoryName in MAPPING_CATEGORY_NAME_TO_ID:
@@ -546,51 +556,86 @@ def getComplaintDistribution(attribute, start_date, end_date, stateName="All", s
             else:
                 connection.dispose()
                 return {"error": f"Invalid category name: {categoryName}"}
-            filters.append("categoryCode = %(categoryName)s")
-            params['categoryName'] = categoryName
 
-        # Date range filter
         if start_date and end_date:
             filters.append("complaintRegDate >= %(start_date)s AND complaintRegDate <= %(end_date)s")
             params['start_date'] = start_date
             params['end_date'] = end_date
 
-        # Build the query
-        if filters:
-            where_clause = " WHERE " + " AND ".join(filters)
-        else:
-            where_clause = ""
+        where_clause = " WHERE " + " AND ".join(filters) if filters else ""
 
-        # Use safe query construction - attribute name cannot be parameterized
+        # Determine if we need to fetch all records for client-side aggregation
+        fetch_all = (attribute == 'categoryName')
+        
+        limit_clause = "LIMIT %(limit)s OFFSET %(skip)s"
+        if fetch_all:
+            limit_clause = "" # No limit in SQL
+            
         query = f"""
             SELECT {db_attribute} as attribute_value, COUNT(*) as count 
             FROM tblcomplaints
             {where_clause}
             GROUP BY {db_attribute} 
             ORDER BY count DESC 
-            LIMIT %(limit)s OFFSET %(skip)s
+            {limit_clause}
         """
         
-        params['limit'] = limit
-        params['skip'] = skip
+        if not fetch_all:
+            params['limit'] = limit
+            params['skip'] = skip
 
-        # Execute query
         df = pd.read_sql(query, connection, params=params)
         
-        # Map codes back to names if needed
-        if attribute == 'stateName' and not df.empty:
-            df['attribute_value'] = df['attribute_value'].astype(str).map(MAPPING_STATE).fillna('Unknown')
-        
-        elif attribute == 'sectorName' and not df.empty:
-            df['attribute_value'] = df['attribute_value'].astype(str).map(MAPPING_SECTOR).fillna('Unknown')
-        
-        elif attribute == 'categoryName' and not df.empty:
-            df['attribute_value'] = df['attribute_value'].astype(str).map(MAPPING_CATEGORY).fillna('Unknown')
+        # Special handling for categoryName attribute
+        if attribute == 'categoryName' and not df.empty:
+            # Map to summarized categories
+            summary_results = {}
+            
+            for _, row in df.iterrows():
+                category_code = str(row['attribute_value'])
+                count = int(row['count'])  # Convert numpy.int64 to Python int
+                
+                # Get summarized category name
+                summary_category = CATEGORY_ID_TO_SUMMARY_MAPPING.get(
+                    category_code, 
+                    MAPPING_CATEGORY.get(category_code, 'Others')
+                )
+                
+                # Aggregate counts for summarized categories
+                if summary_category in summary_results:
+                    summary_results[summary_category]['count'] += count
+                else:
+                    # Get category prompt
+                    category_info = CATEGORY_SUMMARY_INFO.get(summary_category, {})
+                    category_prompt = category_info.get('categoryPrompt', '')
+                    
+                    summary_results[summary_category] = {
+                        'category': summary_category,
+                        'count': count,
+                        'categoryPrompt': category_prompt
+                    }
+            
+            # Convert to list and sort by count
+            result = sorted(summary_results.values(), key=lambda x: x['count'], reverse=True)
+            
+            # Apply pagination manually
+            if skip < len(result):
+                result = result[skip : skip + limit]
+            else:
+                result = []
+            
+        else:
+            # For other attributes, use existing mapping logic
+            if attribute == 'stateName' and not df.empty:
+                df['attribute_value'] = df['attribute_value'].astype(str).map(MAPPING_STATE).fillna('Unknown')
+            elif attribute == 'sectorName' and not df.empty:
+                df['attribute_value'] = df['attribute_value'].astype(str).map(MAPPING_SECTOR).fillna('Unknown')
+            
+            # Convert numpy types to Python native types
+            df['count'] = df['count'].astype(int)
+            result = df.to_dict(orient='records')
 
-        # Clean up connection
         connection.dispose()
-        
-        result = df.to_dict(orient='records')
         return {"distribution": result}
         
     except Exception as e:
@@ -598,8 +643,6 @@ def getComplaintDistribution(attribute, start_date, end_date, stateName="All", s
             connection.dispose()
         print(f"Error in getComplaintDistribution: {str(e)}")
         return {"error": f"Failed to get complaint distribution: {e}"}
-    
-
 
 def getFeedbackDistribution(start_date, end_date, attribute, sectorName="All", companyName="All", categoryName="All", skip=0, limit=20):
     '''

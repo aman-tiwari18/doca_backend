@@ -446,7 +446,7 @@ async def get_semantic_rca(token : Annotated[str, Depends(oauth2_scheme)], reque
                 request.complaintStatus,
                 request.threshold,
                 request.complaint_numbers
-            )["total_count"]
+            )
             results["complaintNumbers"] = output["complaintNumbers"]
             return results
 
@@ -479,7 +479,7 @@ async def get_semantic_rca(token : Annotated[str, Depends(oauth2_scheme)], reque
                     request.companyName,
                     request.complaintStatus,
                     request.complaint_numbers
-                )["total_count"]
+                )
                 results["complaintNumbers"] = output["complaintNumbers"]
             return results
 

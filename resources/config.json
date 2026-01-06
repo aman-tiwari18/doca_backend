@@ -3,7 +3,7 @@
         "HOST": "localhost",
         "USER": "root",
         "PWD": "rootpassword123",
-        "NAME": "consumer_affairs"
+        "NAME": "consumer_db_1"
     },
     "ES": {
         "HOST": "localhost",

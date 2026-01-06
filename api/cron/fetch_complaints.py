@@ -18,11 +18,11 @@ USERNAME = "nchadmin"
 PASSWORD = "Nch@iit#2025"   
 
 PER_PAGE = 1000
-BACKFILL_START_DATE = "2025-09-01"
+BACKFILL_START_DATE = "2025-09-01 00:00:00"
+BACKFILL_END_DATE = "2025-12-31 23:59:59"
 LOG_FILE = "cron_fetch.log"
-DATE_CHUNK_DAYS = 5  # Fetch 5 days at a time
 
-FETCH_DETAILS = True  
+FETCH_DETAILS = False  
 DELAY_BETWEEN_REQUESTS = 0.5
 MAX_RETRIES_ON_RATE_LIMIT = 3
 RATE_LIMIT_BACKOFF = 30 
@@ -80,18 +80,22 @@ def get_date_range():
 
         if count == 0:
             logging.info("Database empty → running full backfill")
-            from_date = BACKFILL_START_DATE
+            to_date = BACKFILL_END_DATE
         else:
-            last_date = session.execute(
-                text("SELECT MAX(complaintRegDate) FROM tblcomplaints")
+            # Find the earliest date we have processed so far (within our target range)
+            # We want to resume from where we left off (working backwards)
+            min_date = session.execute(
+                text(f"SELECT MIN(complaintRegDate) FROM tblcomplaints WHERE complaintRegDate >= '{BACKFILL_START_DATE}'")
             ).scalar()
 
-            # Subtract 5 days buffer to ensure coverage
-            start_dt = last_date - timedelta(days=5)
-            from_date = start_dt.strftime("%Y-%m-%d")
+            if min_date:
+                # Resume from the earliest date we have
+                to_date = min_date.strftime("%Y-%m-%d %H:%M:%S")
+            else:
+                # No data in our range yet, start from the end
+                to_date = BACKFILL_END_DATE
 
-        to_date = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        return from_date, to_date
+        return BACKFILL_START_DATE, to_date
 
     finally:
         session.close()
@@ -137,7 +141,7 @@ def fetch_grievance_history(from_date, to_date, page=1, retry_count=0):
 
 def main():
     logging.info("=== Grievance fetch job started ===")
-    logging.info(f"Configuration: FETCH_DETAILS={FETCH_DETAILS}, DELAY={DELAY_BETWEEN_REQUESTS}s, PER_PAGE={PER_PAGE}, DATE_CHUNK={DATE_CHUNK_DAYS} days")
+    logging.info(f"Configuration: FETCH_DETAILS={FETCH_DETAILS}, DELAY={DELAY_BETWEEN_REQUESTS}s, PER_PAGE={PER_PAGE}")
     
     if FETCH_DETAILS:
         logging.info("Running in DETAILED mode - will fetch full details for each complaint (slower)")
@@ -150,71 +154,47 @@ def main():
 
     try:
         # Determine overall date range
-        start_date_str, final_end_date_str = get_date_range()
+        from_date, to_date = get_date_range()
         
-        start_date = datetime.strptime(start_date_str, "%Y-%m-%d")
-        final_end_date = datetime.strptime(final_end_date_str, "%Y-%m-%d")
+        logging.info(f"--- Processing date range: {from_date} to {to_date} ---")
         
-        current_date = start_date
+        current_page = 1
+        total_processed = 0
+        total_pages = 0
 
-        while current_date <= final_end_date:
-            # Calculate chunk end date
-            chunk_end_date = current_date + timedelta(days=DATE_CHUNK_DAYS - 1)
-            
-            # Cap at final end date
-            if chunk_end_date > final_end_date:
-                chunk_end_date = final_end_date
-            
-            from_date = current_date.strftime("%Y-%m-%d")
-            to_date = chunk_end_date.strftime("%Y-%m-%d")
-            
-            logging.info(f"--- Processing date range: {from_date} to {to_date} ---")
-            
-            current_page = 1
-            total_processed_in_chunk = 0
-            total_pages_in_chunk = 0
-
-            while True:
-                # Fetch grievance history for current page
-                try:
-                    response_data = fetch_grievance_history(from_date, to_date, current_page)
-                    history_items = response_data.get('data', [])
-                    
-                    if not history_items:
-                        logging.info(f"No more complaints found on page {current_page} for range {from_date} to {to_date}.")
-                        break
-                    
-                    total_pages_in_chunk += 1
-                    
-                    # Process and insert complaints
-                    process_complaints(history_items)
-                    total_processed_in_chunk += len(history_items)
-                    
-                    # Check pagination
-                    pagination = response_data.get("pagination", {})
-                    next_page_url = pagination.get("next_page")
-                    
-                    if not next_page_url:
-                        logging.info(f"Reached last page ({current_page}) for range {from_date} to {to_date}.")
-                        break
-                    
-                    logging.info(f"Moving to next page... (Processed {total_processed_in_chunk} records in this chunk)")
-                    current_page += 1
-                    time.sleep(2) # Increased delay between pages
-                    
-                except Exception as e:
-                    logging.error(f"Error fetching page {current_page} for range {from_date} to {to_date}: {e}")
-                    # Wait a bit before moving to next chunk if we failed hard
-                    time.sleep(10)
+        while True:
+            # Fetch grievance history for current page
+            try:
+                response_data = fetch_grievance_history(from_date, to_date, current_page)
+                history_items = response_data.get('data', [])
+                
+                if not history_items:
+                    logging.info(f"No more complaints found on page {current_page} for range {from_date} to {to_date}.")
                     break
-
-            logging.info(f"Completed range {from_date} to {to_date}. Processed {total_processed_in_chunk} records.")
-            
-            # Move to next chunk
-            current_date = chunk_end_date + timedelta(days=1)
-            
-            # Delay between chunks to avoid rate limiting
-            time.sleep(5)
+                
+                total_pages += 1
+                
+                # Process and insert complaints
+                process_complaints(history_items)
+                total_processed += len(history_items)
+                
+                # Check pagination
+                pagination = response_data.get("pagination", {})
+                next_page_url = pagination.get("next_page")
+                
+                if not next_page_url:
+                    logging.info(f"Reached last page ({current_page}) for range {from_date} to {to_date}.")
+                    break
+                
+                logging.info(f"Moving to next page... (Processed {total_processed} records so far)")
+                current_page += 1
+                time.sleep(2) # Increased delay between pages
+                
+            except Exception as e:
+                logging.error(f"Error fetching page {current_page} for range {from_date} to {to_date}: {e}")
+                # Wait a bit before retrying or exiting
+                time.sleep(10)
+                break
         
         logging.info("=== Grievance fetch job completed ===")
         
@@ -534,15 +514,15 @@ def process_complaints(history_items):
                 company_status = None
                 
 
-                if FETCH_DETAILS:
-                    details = fetch_grievance_details(complaint_number, sectorCode, categoryCode)
-                    if details:
-                        details_fetched += 1
-                        # Update user details if available
-                        if details.get("basicGrievanceDetails"):
-                            upsert_user(session, details["basicGrievanceDetails"][0])
-                    
-                    time.sleep(DELAY_BETWEEN_REQUESTS)
+                # if FETCH_DETAILS:
+                #     details = fetch_grievance_details(complaint_number, sectorCode, categoryCode)
+                #     if details:
+                #         details_fetched += 1
+                #         # Update user details if available
+                #         if details.get("basicGrievanceDetails"):
+                #             upsert_user(session, details["basicGrievanceDetails"][0])
+                #     
+                #     time.sleep(DELAY_BETWEEN_REQUESTS)
                 
                 upsert_complaint(session, item, details)
                 processed += 1

@@ -7,7 +7,6 @@ from starlette.middleware.sessions import SessionMiddleware
 import warnings
 from repository import models
 from repository.database import engine
-from starlette.middleware.sessions import SessionMiddleware
 
 # Filter out the warnings you want to suppress
 warnings.filterwarnings("ignore", category=UserWarning)
@@ -16,21 +15,22 @@ warnings.filterwarnings("ignore", category=RuntimeWarning)
 
 # Configure CORS
 SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
-origins = ["*"]
+origins = ["http://localhost:3000", "http://127.0.0.1:3000"]
 app=FastAPI(
     # expose documentation at /docs
     root_path="/consumer_api",
 )
+
+# Add the session middleware to the app
+app.add_middleware(SessionMiddleware, secret_key=SECRET_KEY)
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["GET", "POST", "PUT", "DELETE"],
+    allow_methods=["GET", "POST", "PUT", "DELETE", "OPTIONS"],
     allow_headers=["*"],
 )
-
-# Add the session middleware to the app
-app.add_middleware(SessionMiddleware, secret_key=SECRET_KEY)
 
 models.Base.metadata.create_all(engine)
 

@@ -231,14 +231,14 @@ def categoryWiseAlerts(
         start_date=historical_start.strftime("%Y-%m-%d"),
         end_date=historical_end.strftime("%Y-%m-%d"),
         **search_params
-    )["total_count"]
+    )
 
     # Get current period counts (last 7 days)
     current_count = semanticSearchCount(
         start_date=reference_start_date.strftime("%Y-%m-%d"),
         end_date=reference_end_date.strftime("%Y-%m-%d"),
         **search_params
-    )["total_count"]
+    )
 
     # Calculate daily rates
     historical_daily_rate = (historical_count / total_days) if total_days > 0 else 0
