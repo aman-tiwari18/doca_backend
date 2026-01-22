@@ -8,28 +8,14 @@
         {
           "range": {
             "complaintRegDate": {
-              "gte": "2025-01-01",
+              "gte": "2024-01-01",
               "lte": "2026-01-01"
             }
           }
         },
         {
-          "bool": {
-            "should": [
-              {
-                "match": {
-                  "complaintDetails": {
-                    "query": "online payment issues",
-                    "operator": "OR"
-                  }
-                }
-              }
-            ]
-          }
-        },
-        {
           "multi_match": {
-            "query": "Axis Bank",
+            "query": "Bandhan Bank",
             "fields": [
               "converganceCompanyName",
               "nonCoverganeceCompanyName"
@@ -41,4 +27,4 @@
   }
 }
 
-{'took': 0, 'timed_out': False, 'terminated_early': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 4637, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+{'took': 1, 'timed_out': False, 'terminated_early': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 8126, 'relation': 'eq'}, 'max_score': None, 'hits': []}}

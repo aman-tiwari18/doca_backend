@@ -13,18 +13,22 @@ import urllib3
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
-BASE_URL = "https://consumerhelpline.gov.in"
-USERNAME = "nchadmin"   
-PASSWORD = "Nch@iit#2025"   
+resources_dir = Path(__file__).resolve().parents[2] / "resources"
+with open(resources_dir / "config.json") as f:
+    config = json.load(f)
+
+BASE_URL = config["BASE_URL_CRON"]
+USERNAME = config["USERNAME_CRON"]   
+PASSWORD = config["PASSWORD_CRON"]   
 
 PER_PAGE = 1000
-BACKFILL_START_DATE = "2025-09-01 00:00:00"
-BACKFILL_END_DATE = "2025-12-31 23:59:59"
+BACKFILL_START_DATE = "2026-01-01 00:00:00"
+BACKFILL_END_DATE = "2026-01-14 23:59:59"
 LOG_FILE = "cron_fetch.log"
 
 FETCH_DETAILS = False  
 DELAY_BETWEEN_REQUESTS = 0.5
-MAX_RETRIES_ON_RATE_LIMIT = 3
+MAX_RETRIES_ON_RATE_LIMIT = 5
 RATE_LIMIT_BACKOFF = 30 
 
 
@@ -34,9 +38,7 @@ logging.basicConfig(
     format="%(asctime)s [%(levelname)s] %(message)s"
 )
 
-resources_dir = Path(__file__).resolve().parents[2] / "resources"
-with open(resources_dir / "config.json") as f:
-    config = json.load(f)
+
 
 with open(resources_dir / "state_name_to_id_map.json") as f:
     STATE_NAME_TO_ID = json.load(f)
@@ -48,7 +50,7 @@ engine = create_engine(DB_URL, pool_pre_ping=True, pool_recycle=1800)
 Session = sessionmaker(bind=engine)
 
 http = requests.Session()
-retry = Retry(total=3, backoff_factor=2, status_forcelist=[500, 502, 503, 504])
+retry = Retry(total=5, backoff_factor=2, status_forcelist=[500, 502, 503, 504])
 http.mount("https://", HTTPAdapter(max_retries=retry))
 
 
@@ -68,37 +70,64 @@ def map_state_name_to_code(state_name):
 
 def get_date_range():
     """
-    Decide date range:
-    - If DB empty → full backfill
-    - Else → incremental fetch from last complaint date
+    Decide date range based on grievance_ingest_state table.
     """
     session = Session()
     try:
-        count = session.execute(
-            text("SELECT COUNT(*) FROM tblcomplaints")
-        ).scalar()
+        # Check state table
+        row = session.execute(
+            text("SELECT last_complaint_reg_date FROM grievance_ingest_state WHERE id = 1")
+        ).fetchone()
 
-        if count == 0:
-            logging.info("Database empty → running full backfill")
-            to_date = BACKFILL_END_DATE
-        else:
-            # Find the earliest date we have processed so far (within our target range)
-            # We want to resume from where we left off (working backwards)
-            min_date = session.execute(
-                text(f"SELECT MIN(complaintRegDate) FROM tblcomplaints WHERE complaintRegDate >= '{BACKFILL_START_DATE}'")
-            ).scalar()
-
-            if min_date:
-                # Resume from the earliest date we have
-                to_date = min_date.strftime("%Y-%m-%d %H:%M:%S")
-            else:
-                # No data in our range yet, start from the end
+        if row and row[0]:
+            last_reg_date_str = str(row[0])
+            logging.info(f"Found existing state: last_complaint_reg_date = {last_reg_date_str}")
+            
+            # If the last processed date is older than our start date, it means we haven't started this batch
+            # or we are starting fresh for this period.
+            # However, since we are fetching descending, if we have processed some 2026 data, 
+            # last_reg_date would be e.g. 2026-01-14.
+            # If last_reg_date is 2025-12-31, we start from BACKFILL_END_DATE.
+            
+            last_reg_date = datetime.strptime(last_reg_date_str, "%Y-%m-%d %H:%M:%S")
+            start_date_dt = datetime.strptime(BACKFILL_START_DATE, "%Y-%m-%d %H:%M:%S")
+            
+            if last_reg_date < start_date_dt:
+                logging.info("State is older than target start date. Starting from END_DATE.")
                 to_date = BACKFILL_END_DATE
+            else:
+                logging.info("Resuming from last_complaint_reg_date.")
+                to_date = last_reg_date_str
+        else:
+            logging.info("No state found. Starting from END_DATE.")
+            to_date = BACKFILL_END_DATE
 
         return BACKFILL_START_DATE, to_date
 
+    except Exception as e:
+        logging.error(f"Error getting date range: {e}")
+        return BACKFILL_START_DATE, BACKFILL_END_DATE
     finally:
         session.close()
+
+
+def update_ingest_state(session, complain_number, reg_date):
+    """
+    Update the grievance_ingest_state table with the latest processed complaint info.
+    Only updates the existing row with id=1, does not insert new rows.
+    """
+    try:
+        query = """
+            UPDATE grievance_ingest_state
+            SET last_complain_number = :num,
+                last_complaint_reg_date = :date,
+                updated_at = NOW()
+            WHERE id = 1
+        """
+        session.execute(text(query), {"num": complain_number, "date": reg_date})
+        session.commit()
+    except Exception as e:
+        logging.error(f"Failed to update ingest state: {e}")
 
 
 def fetch_grievance_history(from_date, to_date, page=1, retry_count=0):
@@ -130,12 +159,16 @@ def fetch_grievance_history(from_date, to_date, page=1, retry_count=0):
                 return fetch_grievance_history(from_date, to_date, page, retry_count + 1)
             else:
                 logging.error("Max retries exceeded for history fetch due to rate limiting")
-                response.raise_for_status() # Raise error to be caught by caller
+                response.raise_for_status() 
 
         response.raise_for_status()
         return response.json()
     except Exception as e:
-        # If it's not a 429 (handled above) or we ran out of retries
+        if retry_count < MAX_RETRIES_ON_RATE_LIMIT:
+             wait_time = 10 * (retry_count + 1)
+             logging.warning(f"Error fetching history: {e}. Retrying in {wait_time}s...")
+             time.sleep(wait_time)
+             return fetch_grievance_history(from_date, to_date, page, retry_count + 1)
         raise e
 
 
@@ -143,11 +176,6 @@ def main():
     logging.info("=== Grievance fetch job started ===")
     logging.info(f"Configuration: FETCH_DETAILS={FETCH_DETAILS}, DELAY={DELAY_BETWEEN_REQUESTS}s, PER_PAGE={PER_PAGE}")
     
-    if FETCH_DETAILS:
-        logging.info("Running in DETAILED mode - will fetch full details for each complaint (slower)")
-    else:
-        logging.info("Running in BASIC mode - will only insert basic complaint data (faster)")
-
     if not all([BASE_URL, USERNAME, PASSWORD]):
         logging.error("Missing API credentials or BASE_URL")
         return
@@ -188,13 +216,13 @@ def main():
                 
                 logging.info(f"Moving to next page... (Processed {total_processed} records so far)")
                 current_page += 1
-                time.sleep(2) # Increased delay between pages
+                time.sleep(2) 
                 
             except Exception as e:
                 logging.error(f"Error fetching page {current_page} for range {from_date} to {to_date}: {e}")
-                # Wait a bit before retrying or exiting
-                time.sleep(10)
-                break
+                time.sleep(30)
+                # Retry the same page loop
+                continue
         
         logging.info("=== Grievance fetch job completed ===")
         
@@ -471,7 +499,6 @@ def process_complaints(history_items):
     processed = 0
     failed = 0
     skipped = 0
-    details_fetched = 0
     
     # Extract complaint numbers to check existence
     complaint_numbers = [item.get("complainNumber") for item in history_items if item.get("complainNumber")]
@@ -493,46 +520,33 @@ def process_complaints(history_items):
             
         except Exception as e:
             logging.error(f"Failed to check existing complaints: {e}")
-            # If check fails, assume none exist to be safe (or empty set)
 
     try:
+        last_processed_item = None
         for item in history_items:
             try:
                 complaint_number = item.get("complainNumber")
-                sectorCode = item.get("sectorCode")
-                categoryCode = item.get("categoryCode")
                 if not complaint_number:
-                    logging.warning("Skipping item without complaint number")
                     skipped += 1
                     continue
-                # Skip if already exists
+                
                 if complaint_number in existing_complaints:
                     skipped += 1
+                    # Even if skipped, we track it as processed for state update purposes
+                    # because we have moved past it in the descending list
+                    last_processed_item = item
                     continue
 
-                details = None
-                company_status = None
-                
-
-                # if FETCH_DETAILS:
-                #     details = fetch_grievance_details(complaint_number, sectorCode, categoryCode)
-                #     if details:
-                #         details_fetched += 1
-                #         # Update user details if available
-                #         if details.get("basicGrievanceDetails"):
-                #             upsert_user(session, details["basicGrievanceDetails"][0])
-                #     
-                #     time.sleep(DELAY_BETWEEN_REQUESTS)
-                
-                upsert_complaint(session, item, details)
+                upsert_complaint(session, item, None)
                 processed += 1
+                last_processed_item = item
 
                 if processed % 50 == 0:
                     session.commit()
-                    if FETCH_DETAILS:
-                        logging.info(f"Processed {processed} complaints ({details_fetched} with details) so far...")
-                    else:
-                        logging.info(f"Processed {processed} complaints (basic data only) so far...")
+                    logging.info(f"Processed {processed} complaints so far...")
+                    # Update state periodically
+                    if last_processed_item:
+                         update_ingest_state(session, last_processed_item.get("complainNumber"), last_processed_item.get("complaintRegDate"))
 
             except Exception as e:
                 logging.error(f"Failed to process complaint {complaint_number}: {str(e)}")
@@ -541,10 +555,11 @@ def process_complaints(history_items):
 
         session.commit()
         
-        if FETCH_DETAILS:
-            logging.info(f"Successfully processed {processed} complaints ({details_fetched} with details), {failed} failed, {skipped} skipped")
-        else:
-            logging.info(f"Successfully processed {processed} complaints (basic data only), {failed} failed, {skipped} skipped")
+        # Update state at the end of the batch
+        if last_processed_item:
+            update_ingest_state(session, last_processed_item.get("complainNumber"), last_processed_item.get("complaintRegDate"))
+        
+        logging.info(f"Successfully processed {processed} complaints, {failed} failed, {skipped} skipped")
 
     except Exception as e:
         session.rollback()

@@ -7,23 +7,9 @@
         {
           "range": {
             "complaintRegDate": {
-              "gte": "2025-01-01",
+              "gte": "2024-01-01",
               "lte": "2026-01-01"
             }
-          }
-        },
-        {
-          "bool": {
-            "should": [
-              {
-                "match": {
-                  "complaintDetails": {
-                    "query": "E-commerce - Online Shopping",
-                    "operator": "OR"
-                  }
-                }
-              }
-            ]
           }
         },
         {
@@ -33,11 +19,6 @@
               "converganceCompanyName",
               "nonCoverganeceCompanyName"
             ]
-          }
-        },
-        {
-          "ids": {
-            "values": []
           }
         }
       ]

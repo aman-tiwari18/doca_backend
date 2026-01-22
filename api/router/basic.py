@@ -93,3 +93,4 @@ async def Complaint_distribution_by(token : Annotated[str, Depends(oauth2_scheme
 
     return {"distribution": result}
 
+

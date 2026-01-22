@@ -1,7 +1,7 @@
 import sys
 from pathlib import Path
 from fastapi import APIRouter
-from repository.semantic_search import semanticSearch, semanticSearchCount, semanticSearchSpatialAnalysis, semanticSearchBasic, getcomplaintDetails
+from repository.semantic_search import semanticSearch, semanticSearchCount, semanticSearchSpatialAnalysis, semanticSearchBasic, getcomplaintDetails, semanticSearchCompanyCount,keywordSearchCompanyCount
 from repository.keyword_search import keywordSearch, keywordSearchCount, keywordSearchBasic
 from repository.hybrid_search import hybridSearch, hybridSearchCount
 from repository.basicdetails import getUserDetails
@@ -493,6 +493,24 @@ async def get_semantic_rca(token : Annotated[str, Depends(oauth2_scheme)], reque
             detail=f"Error processing request: {str(e)}"
         )
 
+    '''
+    A function to get complaint details from the database based on complaint_number
+    '''
+
+    user = await get_current_user(token, db)
+    user = user.username.lower()
+
+    try:
+        result = getcomplaintDetails(es_client=es_client, index_name=INDEX_NAME, complaint_number=complain_number)
+        if "error" in result:
+            raise HTTPException(status_code=500, detail=result["error"])
+        return result
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Error fetching complaint details: {str(e)}")
+
+
+
+
 @router.post("/get_last_complaints")
 async def get_last_complaints(
     token: Annotated[str, Depends(oauth2_scheme)],
@@ -521,8 +539,98 @@ async def get_last_complaints(
             detail=f"Error processing request: {str(e)}"
         )
 
+
+# Define request model BEFORE the router that uses it
+class CompanyDistributionRequest(BaseModel):
+    query: str = ""
+    start_date: str = "2025-01-01"
+    end_date: str = "2025-03-30"
+    value: int = 1
+    CityName: str = "All"
+    stateName: str = "All"
+    complaintType: str = "All"
+    complaintMode: str = "All"
+    companyName: str = "All"
+    complaintStatus: str = "All"
+    threshold: float = 1.5
+    complaint_numbers: List[str] = ["NA"]
+
+
+@router.post("/get_company_distribution")
+async def getCompanyDistribution(
+    request: CompanyDistributionRequest,
+    token: Annotated[str, Depends(oauth2_scheme)],
+    db: Session = Depends(database.get_db)
+):
+    """
+    Get complaint distribution by company (merged across convergance + nonCovergence).
+    Returns aggregated counts per company.
+    """
+    user = await get_current_user(token, db)
+    user = user.username.lower()
+
+    # Convert date strings
+    start_date = datetime.strptime(request.start_date, "%Y-%m-%d").strftime("%Y-%m-%d")
+    end_date = datetime.strptime(request.end_date, "%Y-%m-%d").strftime("%Y-%m-%d")
+
+    # Map city and state names to IDs
+    CityName = MAPPING_CITY_NAME_TO_ID.get(request.CityName, "All") if request.CityName != "All" else "All"
+    stateName = MAPPING_STATE_NAME_TO_ID.get(request.stateName, "All") if request.stateName != "All" else "All"
+    result = None
+    try:
+        if request.value==1:
+
+            result = semanticSearchCompanyCount(
+                es_client=es_client,
+                query=request.query,
+                start_date=start_date,
+                end_date=end_date,
+                embed_model=embed_model,
+                index_name=INDEX_NAME,
+                CityName=CityName,
+                stateName=stateName,
+                complaintType=request.complaintType,
+                complaintMode=request.complaintMode,
+                companyName=request.companyName,
+                complaintStatus=request.complaintStatus,
+                threshold=request.threshold,
+                complaint_numbers=request.complaint_numbers
+            )
+        elif request.value==2:
+            result = keywordSearchCompanyCount(
+                es_client=es_client,
+                query=request.query,
+                start_date=start_date,
+                end_date=end_date,
+                index_name=INDEX_NAME,
+                CityName=CityName,
+                stateName=stateName,
+                complaintType=request.complaintType,
+                complaintMode=request.complaintMode,
+                companyName=request.companyName,
+                complaintStatus=request.complaintStatus,
+                complaint_numbers=request.complaint_numbers
+            )
+
+        return {
+            "total_companies": len(result),
+            "distribution": result
+        }
+    
+    except Exception as e:
+        print(f"Error in get_company_distribution: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error processing request: {str(e)}"
+        )
+
+
 @router.post("/get_complaint_details_with_ids")
-async def get_complaint_details(token : Annotated[str, Depends(oauth2_scheme)], complain_number: List[str], db: Session = Depends(database.get_db)):
+async def get_complaint_details(
+    token: Annotated[str, Depends(oauth2_scheme)], 
+    complain_number: List[str], 
+    db: Session = Depends(database.get_db)
+):
     '''
     A function to get complaint details from the database based on complaint_number
     '''
@@ -531,9 +639,17 @@ async def get_complaint_details(token : Annotated[str, Depends(oauth2_scheme)], 
     user = user.username.lower()
 
     try:
-        result = getcomplaintDetails(es_client=es_client, index_name=INDEX_NAME, complaint_number=complain_number)
+        result = getcomplaintDetails(
+            es_client=es_client, 
+            index_name=INDEX_NAME, 
+            complaint_number=complain_number
+        )
         if "error" in result:
             raise HTTPException(status_code=500, detail=result["error"])
         return result
     except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Error fetching complaint details: {str(e)}")
+        raise HTTPException(
+            status_code=500, 
+            detail=f"Error fetching complaint details: {str(e)}"
+        )
+
