@@ -3,15 +3,15 @@
         "HOST": "localhost",
         "USER": "root",
         "PWD": "rootpassword123",
-        "NAME": "consumer_db_1"
+        "NAME": "consumer_affairs_db"
     },
     "ES": {
         "HOST": "localhost",
         "PORT": 9200,
-        "USERNAME": "elastic",
-        "PASSWORD": "AQ95XRl*uIUb9Pd-g1*l",
-        "CERT_PATH": "resources/http_ca.crt",
-        "INDEX_NAME": "consumer_affairs_index",
+        "USERNAME": "",
+        "PASSWORD": "",
+        "CERT_PATH": "",
+        "INDEX_NAME": "consumer_affairs_index_v2",
         "INDEX_NAME_FEEDBACK": "consumer_feedback_index"
     },
     "INDIC_BERT_PATH": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
@@ -29,5 +29,17 @@
     "LLAMA_API_SERVER_URL": "https://cdis.iitk.ac.in/llama_api/llama_api/invoke",
     "CATEGORIES_PATH": "/resources/categories.json",
     "CATEGORIES_WITH_PROMPT_PATH": "/resources/categories_with_prompt.json",
-    "CATEGORIES_SUBCATEGORIES_WITH_PROMPT_PATH": "/resources/categories_subcategories_with_prompt.json"
+    "CATEGORIES_SUBCATEGORIES_WITH_PROMPT_PATH": "/resources/categories_subcategories_with_prompt.json",
+    "BASE_URL_CRON": "https://consumerhelpline.gov.in",
+    "USERNAME_CRON": "nchadmin",
+    "PASSWORD_CRON": "Nch@iit#2025",
+    "JWT": {
+        "SECRET_KEY": "8c55d9f5233ffc6a28a4a0afaf4a1bbc9ba698bf9b6b8a60fc50f6579e11e58b667e81a57185b083756309b06bea04095d3132e0fd4319fe2be03bc22a06f487",
+        "SECRET_KEY_PREVIOUS": "",
+        "ALGORITHM": "HS256",
+        "ACCESS_TOKEN_EXPIRE_MINUTES": 10,
+        "REFRESH_TOKEN_EXPIRE_DAYS": 1,
+        "KEY_ROTATION_DATE": "2026-01-19",
+        "NEXT_ROTATION_DATE": "2026-04-19"
+    }
 }

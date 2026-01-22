@@ -55,15 +55,20 @@ def closeDB(connection):
 
 
 def getES():
-    return Elasticsearch(
-        "https://localhost:9200",
-        basic_auth=(
-            config["ES"]["USERNAME"],
-            config["ES"]["PASSWORD"]
-        ),
-        verify_certs=False,
-        request_timeout=30
-    )
+    scheme = "https" if config["ES"].get("USE_SSL", False) else "http"
+    host = config["ES"]["HOST"]
+    port = config["ES"]["PORT"]
+    
+    es_config = {
+        "hosts": [f"{scheme}://{host}:{port}"],
+        "request_timeout": 30,
+        "verify_certs": False
+    }
+    
+    if config["ES"]["USERNAME"] and config["ES"]["PASSWORD"]:
+        es_config["basic_auth"] = (config["ES"]["USERNAME"], config["ES"]["PASSWORD"])
+        
+    return Elasticsearch(**es_config)
 
 #Database Connection
 def connectDB_alchemy(engine=False):
