@@ -11,7 +11,7 @@
         "USERNAME": "",
         "PASSWORD": "",
         "CERT_PATH": "",
-        "INDEX_NAME": "consumer_affairs_index_v2",
+        "INDEX_NAME": "consumer_affairs_index_v3",
         "INDEX_NAME_FEEDBACK": "consumer_feedback_index"
     },
     "INDIC_BERT_PATH": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
@@ -27,10 +27,12 @@
     "MAPPING_SECTOR_ID_TO_NAME_PATH": "/resources/sector_id_to_name_map.json",
     "MAPPING_SECTOR_NAME_TO_ID_PATH": "/resources/sector_name_to_id_map.json",
     "LLAMA_API_SERVER_URL": "https://cdis.iitk.ac.in/llama_api/llama_api/invoke",
+    "ANTHROPIC_API_KEY": "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",
+    "OPENAI_API_KEY": "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",
     "CATEGORIES_PATH": "/resources/categories.json",
     "CATEGORIES_WITH_PROMPT_PATH": "/resources/categories_with_prompt.json",
     "CATEGORIES_SUBCATEGORIES_WITH_PROMPT_PATH": "/resources/categories_subcategories_with_prompt.json",
-    "BASE_URL_CRON": "https://consumerhelpline.gov.in",
+    "BASE_URL_CRON": "https://consumerhelpline.gov.in/ws/prod/api2.0/public/api",
     "USERNAME_CRON": "nchadmin",
     "PASSWORD_CRON": "Nch@iit#2025",
     "JWT": {

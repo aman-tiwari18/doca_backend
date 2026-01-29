@@ -27,4 +27,4 @@
   }
 }
 
-{'took': 1, 'timed_out': False, 'terminated_early': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 8126, 'relation': 'eq'}, 'max_score': None, 'hits': []}}
+{'took': 0, 'timed_out': False, 'terminated_early': False, '_shards': {'total': 1, 'successful': 1, 'skipped': 0, 'failed': 0}, 'hits': {'total': {'value': 8126, 'relation': 'eq'}, 'max_score': None, 'hits': []}}

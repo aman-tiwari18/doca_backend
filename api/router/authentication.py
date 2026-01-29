@@ -17,6 +17,47 @@ from fastapi.templating import Jinja2Templates
 # Import JWT configuration from JWTToken module
 from repository.JWTToken import ALGORITHM, SECRET_KEY, REFRESH_TOKEN_EXPIRE_DAYS
 
+
+import time
+from fastapi import Request, HTTPException
+
+RATE_LIMIT = 5          # max calls
+WINDOW_SECONDS = 60     # per 1 minute
+
+request_log = {}       # { key: [timestamps...] }
+
+def rate_limiter(request: Request, key_prefix: str = "ip"):
+    now = time.time()
+
+    if key_prefix == "ip":
+        key = request.client.host
+    else:
+        key = key_prefix   # e.g. username or user_id
+
+    timestamps = request_log.get(key, [])
+
+    # keep only last 60s timestamps
+    timestamps = [t for t in timestamps if now - t < WINDOW_SECONDS]
+
+    if len(timestamps) >= RATE_LIMIT:
+        raise HTTPException(
+            status_code=429,
+            detail="Too many requests. Try again in a minute."
+        )
+
+    timestamps.append(now)
+    request_log[key] = timestamps
+
+router = APIRouter(
+    tags=['Authentication']
+)
+
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
+
+templates = Jinja2Templates(directory="templates")
+
 router = APIRouter(
     tags=['Authentication']
 )
@@ -38,6 +79,8 @@ def login(request: Request, form_data: OAuth2PasswordRequestForm = Depends(), db
         - access_token: Short-lived token for API access (30 minutes) in response body
         - refresh_token: Long-lived token (1 day) set as HttpOnly cookie (secure from XSS)
     """
+
+    rate_limiter(request)
     user = db.query(models.User).filter(models.User.username == form_data.username).first()
     
     if not user:

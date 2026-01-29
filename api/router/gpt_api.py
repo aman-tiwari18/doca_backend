@@ -17,6 +17,7 @@ from typing import List, Dict, Tuple
 from repository import database
 from router.authentication import get_current_user
 import anthropic
+from openai import OpenAI
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
@@ -75,30 +76,31 @@ async def all_static_categories(token : Annotated[str, Depends(oauth2_scheme)], 
 #     }
 # }
 
-def call_claude_api(prompt: str) -> str:
-    """Call Anthropic Claude API"""
+def call_gpt_api(prompt: str) -> str:
+    """Call OpenAI GPT API"""
 
-    api_key = config.get("ANTHROPIC_API_KEY", "")
+    api_key = config.get("OPENAI_API_KEY", "")
     if not api_key:
-        print("Error: ANTHROPIC_API_KEY not found in config")
+        print("Error: OPENAI_API_KEY not found in config")
         return "ERROR_LABEL"
 
-    client = anthropic.Anthropic(api_key=api_key)
+    client = OpenAI(api_key=api_key)
 
     try:
-        message = client.messages.create(
-            model="claude-sonnet-4-20250514",
-            max_tokens=4096,
+        response = client.chat.completions.create(
+            model="gpt-4.1-mini",
             messages=[
                 {"role": "user", "content": prompt}
-            ]
+            ],
+            max_tokens=4096,
+            temperature=0.2  # lower = more deterministic JSON
         )
-        return message.content[0].text
-    
-    except Exception as e:
-        print(f"Error calling Claude API: {e}")
-        return "ERROR_LABEL"
 
+        return response.choices[0].message.content
+
+    except Exception as e:
+        print(f"Error calling GPT API: {e}")
+        return "ERROR_LABEL"
 
 class GenerateAISubCategoriesRequest(BaseModel):
     """
@@ -130,8 +132,8 @@ def clean_json_response(response: str) -> str:
     return response.strip()
 
 
-@router.post("/get_ai_subcategory")
-async def get_subcategories_json_from_claude(
+@router.post("/get_ai_subcategory_gpt")
+async def get_subcategories_json_from_gpt(
     token : Annotated[str, Depends(oauth2_scheme)],
    GenerateAISubCategoriesRequest: GenerateAISubCategoriesRequest,
     db: Session = Depends(database.get_db)
@@ -184,7 +186,7 @@ The output must be a valid JSON object. The keys of this JSON object should be t
     for attempt in range(GenerateAISubCategoriesRequest.max_retries):
         print(f"Attempt {attempt + 1}/{GenerateAISubCategoriesRequest.max_retries} to get JSON from Claude...")
         try:
-            generated_content = call_claude_api(
+            generated_content = call_gpt_api(
                 prompt=llm_prompt_template
             )
 

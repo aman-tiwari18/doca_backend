@@ -269,27 +269,19 @@ def semanticSearchCount(
         print(f"Error during search count: {e}")
         return 0
 
-
 def semanticSearchCompanyCount(
     es_client,
     query: str,
     start_date: str,
     end_date: str,
-    embed_model,
     index_name: str,
-    CityName: str = "All",
-    stateName: str = "All",
-    complaintType: str = "All",
-    complaintMode: str = "All",
     companyName: str = "All",
-    complaintStatus: str = "All",
-    threshold: float = 0.5,
     complaint_numbers: list = ["NA"]
 ):
     must_clauses = []
     filter_clauses = []
 
-    # Date filter
+    # 1️⃣ Date range filter
     if start_date and end_date:
         must_clauses.append({
             "range": {
@@ -297,7 +289,7 @@ def semanticSearchCompanyCount(
             }
         })
 
-    # Text query
+    # 2️⃣ Text query on complaint details
     if query and query.strip():
         must_clauses.append({
             "match": {"complaintDetails": query}
@@ -306,74 +298,34 @@ def semanticSearchCompanyCount(
     if not must_clauses:
         must_clauses.append({"match_all": {}})
 
-    # Filters
-    if CityName != "All":
-        filter_clauses.append({"term": {"cityName.keyword": CityName}})
-
-    if stateName != "All":
-        filter_clauses.append({"term": {"stateCode": int(stateName)}})
-
-    if complaintType != "All":
-        filter_clauses.append({"term": {"complaintType.keyword": complaintType}})
-
-    if complaintMode != "All":
-        filter_clauses.append({"term": {"complaintMode.keyword": complaintMode}})
-
-    if complaintStatus != "All":
-        filter_clauses.append({"term": {"complaintStatus": complaintStatus}})
-
-    # Company filter across BOTH fields (match, not term)
+    # 3️⃣ Company filter (exact match on indexed field)
     if companyName != "All":
-        filter_clauses.append({
-            "bool": {
-                "should": [
-                    {"term": {"converganceCompanyName.keyword": companyName}},
-                    {"term": {"nonCoverganeceCompanyName.keyword": companyName}}
-                ],
-                "minimum_should_match": 1
-            }
-        })
+        filter_clauses.append({"term": {"converganceCompanyName": companyName}})
 
-
+    # 4️⃣ Complaint numbers filter
     if complaint_numbers and complaint_numbers != ["NA"]:
         filter_clauses.append({"terms": {"complainNumber.keyword": complaint_numbers}})
 
+    # ✅ Final ES query
     es_query = {
-        "size": 0,
-        "runtime_mappings": {
-            "company_name_unified": {
-                "type": "keyword",
-                "script": {
-                    "source": """
-                    if (doc.containsKey('converganceCompanyName.keyword') 
-                        && doc['converganceCompanyName.keyword'].size() != 0) {
-                        emit(doc['converganceCompanyName.keyword'].value);
-                    } else if (doc.containsKey('nonCoverganeceCompanyName.keyword') 
-                                && doc['nonCoverganeceCompanyName.keyword'].size() != 0) {
-                        emit(doc['nonCoverganeceCompanyName.keyword'].value);
-                    }
-                    """
-                }
-            }
-        },
-
+        "size": 0,  # aggregation only
         "query": {
             "bool": {
                 "must": must_clauses,
                 "filter": filter_clauses
             }
         },
-
         "aggs": {
             "company_distribution": {
                 "terms": {
-                    "field": "company_name_unified",
-                    "size": 1000,
+                    "field": "converganceCompanyName",  # indexed keyword field
+                    "size": 10,
                     "order": {"_count": "desc"}
                 }
             }
         }
     }
+
     response = es_client.search(index=index_name, body=es_query)
 
     buckets = response["aggregations"]["company_distribution"]["buckets"]
@@ -384,9 +336,8 @@ def semanticSearchCompanyCount(
         if b["key"] and str(b["key"]).strip().lower() != "none"
     ]
 
-
-
     return result
+
 
 def keywordSearchCompanyCount(
     es_client,
@@ -394,18 +345,13 @@ def keywordSearchCompanyCount(
     start_date: str,
     end_date: str,
     index_name: str,
-    CityName: str = "All",
-    stateName: str = "All",
-    complaintType: str = "All",
-    complaintMode: str = "All",
     companyName: str = "All",
-    complaintStatus: str = "All",
     complaint_numbers: list = ["NA"]
 ):
     must_clauses = []
     filter_clauses = []
 
-    # Date filter
+    # 1️⃣ Date range filter
     if start_date and end_date:
         must_clauses.append({
             "range": {
@@ -413,6 +359,7 @@ def keywordSearchCompanyCount(
             }
         })
 
+    # 2️⃣ Keyword search across multiple fields
     if query and query.strip():
         must_clauses.append({
             "multi_match": {
@@ -420,10 +367,6 @@ def keywordSearchCompanyCount(
                 "fields": [
                     "complaintDetails^3",
                     "converganceCompanyName^2",
-                    "nonCoverganeceCompanyName^2",
-                    "complaintType",
-                    "complaintMode",
-                    "companyStatus"
                 ],
                 "type": "best_fields",
                 "operator": "and"
@@ -433,69 +376,28 @@ def keywordSearchCompanyCount(
     if not must_clauses:
         must_clauses.append({"match_all": {}})
 
-    # Filters
-    if CityName != "All":
-        filter_clauses.append({"term": {"cityName.keyword": CityName}})
-
-    if stateName != "All":
-        filter_clauses.append({"term": {"stateCode": int(stateName)}})
-
-    if complaintType != "All":
-        filter_clauses.append({"term": {"complaintType.keyword": complaintType}})
-
-    if complaintMode != "All":
-        filter_clauses.append({"term": {"complaintMode.keyword": complaintMode}})
-
-    if complaintStatus != "All":
-        filter_clauses.append({"term": {"complaintStatus": complaintStatus}})
-
-    # Company filter across BOTH fields
+    # 3️⃣ Company filter (exact match)
     if companyName != "All":
-        filter_clauses.append({
-            "bool": {
-                "should": [
-                    {"term": {"converganceCompanyName.keyword": companyName}},
-                    {"term": {"nonCoverganeceCompanyName.keyword": companyName}}
-                ],
-                "minimum_should_match": 1
-            }
-        })
+        filter_clauses.append({"term": {"converganceCompanyName": companyName}})
 
+    # 4️⃣ Complaint numbers filter
     if complaint_numbers and complaint_numbers != ["NA"]:
         filter_clauses.append({"terms": {"complainNumber.keyword": complaint_numbers}})
 
+    # ✅ Final ES query
     es_query = {
         "size": 0,
-        "runtime_mappings": {
-            "company_name_unified": {
-                "type": "keyword",
-                "script": {
-                    "source": """
-                      if (doc.containsKey('converganceCompanyName.keyword') 
-                          && doc['converganceCompanyName.keyword'].size() != 0) {
-                        emit(doc['converganceCompanyName.keyword'].value);
-                      } else if (doc.containsKey('nonCoverganeceCompanyName.keyword') 
-                                 && doc['nonCoverganeceCompanyName.keyword'].size() != 0) {
-                        emit(doc['nonCoverganeceCompanyName.keyword'].value);
-                      }
-                    """
-                }
-            }
-        },
-
         "query": {
             "bool": {
                 "must": must_clauses,
                 "filter": filter_clauses
             }
         },
-
-        # ✅ Same aggregation logic
         "aggs": {
             "company_distribution": {
                 "terms": {
-                    "field": "company_name_unified",
-                    "size": 1000,
+                    "field": "converganceCompanyName",  # indexed keyword field
+                    "size": 10,
                     "order": {"_count": "desc"}
                 }
             }

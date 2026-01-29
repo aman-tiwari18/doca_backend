@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from router import search, rca, basic, categoryanalysis, feedback
+from router import search, rca, basic, categoryanalysis, feedback, distributions, gpt_api
 # , rca, bulk, priority
 from router import authentication, user
 from fastapi.middleware.cors import CORSMiddleware
@@ -41,6 +41,8 @@ app.include_router(rca.router)
 app.include_router(basic.router)
 app.include_router(categoryanalysis.router)
 app.include_router(feedback.router)
+app.include_router(distributions.router)
+app.include_router(gpt_api.router)
 # app.include_router(login.router)
 
 
