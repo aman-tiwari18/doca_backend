@@ -4,6 +4,7 @@ from fastapi import APIRouter
 from datetime import datetime
 from typing import List
 import json
+from fastapi.concurrency import run_in_threadpool
 
 from pydantic import BaseModel
 router = APIRouter(tags=["Search Features"])
@@ -15,7 +16,7 @@ from typing import Annotated
 from sqlalchemy.orm import Session
 from repository import database
 from router.authentication import get_current_user
-from repository.distributions import semanticSearchCompanyCount, keywordSearchCompanyCount , getComplaintDistributionES
+from repository.distributions import semanticSearchCompanyCount, keywordSearchCompanyCount , getComplaintDistributionES, semanticSearchAlltypeCompanyCount, keywordSearchAlltypeCompanyCount
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
@@ -130,6 +131,61 @@ async def getCompanyDistribution(
         )
 
 
+@router.post("/get_all_company_distribution")
+async def getAllCompanyDistribution(
+    request: CompanyDistributionRequest,
+    token: Annotated[str, Depends(oauth2_scheme)],
+    db: Session = Depends(database.get_db)
+):
+    """
+    Get complaint distribution by company (Both Converged and Non-Converged).
+    Returns aggregated counts per company from both fields.
+    """
+    user = await get_current_user(token, db)
+    user = user.username.lower()
+    # Convert date strings
+    start_date = datetime.strptime(request.start_date, "%Y-%m-%d").strftime("%Y-%m-%d")
+    end_date = datetime.strptime(request.end_date, "%Y-%m-%d").strftime("%Y-%m-%d")
+    
+    # Map city and state names to IDs
+    CityName = MAPPING_CITY_NAME_TO_ID.get(request.CityName, "All") if request.CityName != "All" else "All"
+    stateName = MAPPING_STATE_NAME_TO_ID.get(request.stateName, "All") if request.stateName != "All" else "All"
+    
+    result = None
+    try:
+        if request.value==1:
+            result = semanticSearchAlltypeCompanyCount(
+                es_client=es_client,
+                query=request.query,
+                start_date=start_date,
+                end_date=end_date,
+                index_name=INDEX_NAME,
+                companyName=request.companyName,
+                complaint_numbers=request.complaint_numbers,
+                skip=request.skip,
+                limit=request.limit
+            )
+        elif request.value==2:
+            result = keywordSearchAlltypeCompanyCount(
+                es_client=es_client,
+                query=request.query,
+                start_date=start_date,
+                end_date=end_date,
+                index_name=INDEX_NAME,
+                companyName=request.companyName,
+                complaint_numbers=request.complaint_numbers,
+                skip=request.skip,
+                limit=request.limit
+            )
+        return result if result else {"converged": [], "non_converged": []}
+    except Exception as e:
+        print(f"Error in get_all_company_distribution: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail=f"Error processing request: {str(e)}"
+        )
+
+
 class ComplaintDistributionRequest(BaseModel):
     start_date: str = "2024-01-01"
     end_date: str = "2025-12-31"
@@ -194,9 +250,6 @@ class SubcategoryWithCountsRequest(BaseModel):
     complaintStatus: str = "All"
     complaint_numbers: List[str] = ["NA"]
     max_retries: int = 3
-    max_subcategories: int = 15  # Limit number of subcategories to process
-    max_workers: int = 10  # Number of parallel threads
-    enable_cache: bool = True  # Enable caching for GPT responses
 
 
 
@@ -213,6 +266,11 @@ async def subcategory_with_counts(
     1. Generates subcategories from input_prompt using GPT
     2. For each subcategory, calls semantic/keyword RCA to get counts and complaint numbers
     3. Returns comprehensive results with subcategory, prompt, counts, and complaint numbers
+    
+    Backend Configuration (hardcoded):
+    - max_subcategories: 8
+    - max_workers: 8 (based on max_subcategories)
+    - enable_cache: True
     """
     from repository.distributions import getSubcategoryWithCounts
     
@@ -227,8 +285,15 @@ async def subcategory_with_counts(
     CityName = MAPPING_CITY_NAME_TO_ID.get(request.CityName, "All") if request.CityName != "All" else "All"
     stateName = MAPPING_STATE_NAME_TO_ID.get(request.stateName, "All") if request.stateName != "All" else "All"
     
+    # Hardcoded backend configuration
+    MAX_SUBCATEGORIES = 8
+    MAX_WORKERS = 8  # Based on max_subcategories
+    ENABLE_CACHE = True
+    
     try:
-        result = getSubcategoryWithCounts(
+        # Run the synchronous function in a thread pool for async execution
+        result = await run_in_threadpool(
+            getSubcategoryWithCounts,
             input_prompt=request.input_prompt,
             value=request.value,
             start_date=start_date,
@@ -242,9 +307,9 @@ async def subcategory_with_counts(
             complaintStatus=request.complaintStatus,
             complaint_numbers=request.complaint_numbers,
             max_retries=request.max_retries,
-            max_subcategories=request.max_subcategories,
-            max_workers=request.max_workers,
-            enable_cache=request.enable_cache,
+            max_subcategories=MAX_SUBCATEGORIES,
+            max_workers=MAX_WORKERS,
+            enable_cache=ENABLE_CACHE,
             es_client=es_client,
             embed_model=embed_model,
             index_name=INDEX_NAME

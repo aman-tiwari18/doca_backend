@@ -131,7 +131,7 @@ def semanticSearchCompanyCount(
                     "company_name": {
                         "top_hits": {
                             "size": 1,
-                            "_source": ["converganceCompanyName"]
+                            "_source": ["converganceCompanyName", "categoryCode", "sectorCode"]
                         }
                     }
                 }
@@ -146,15 +146,39 @@ def semanticSearchCompanyCount(
     result = []
     for b in buckets:
         name = "Unknown"
+        category_name = "Unknown"
+        sector_name = "Unknown"
+        
         hits = b.get("company_name", {}).get("hits", {}).get("hits", [])
         if hits:
-            name = hits[0]["_source"].get("converganceCompanyName", "Unknown")
+            source = hits[0]["_source"]
+            name = source.get("converganceCompanyName", "Unknown")
+            
+            # Extract codes
+            cat_code = str(source.get("categoryCode", ""))
+            sec_code = str(source.get("sectorCode", ""))
+            
+            # Clean codes (remove decimals if float string)
+            if "." in cat_code:
+                cat_code = cat_code.split(".")[0]
+            if "." in sec_code:
+                sec_code = sec_code.split(".")[0]
+                
+            # Map to names
+            category_name = MAPPING_CATEGORY.get(cat_code, "Unknown") or "Unknown"
+            sector_name = MAPPING_SECTOR.get(sec_code, "Unknown") or "Unknown"
 
         if name and str(name).strip().lower() != "none" and str(name).strip().lower() != "unknown":
-            result.append({"companyName": name, "count": b["doc_count"]})
+            result.append({
+                "companyName": name, 
+                "count": b["doc_count"],
+                "categoryName": category_name,
+                "sectorName": sector_name
+            })
 
     # Slice the final filtered result for pagination
     return result[skip : skip + limit]
+
 
 
 def keywordSearchCompanyCount(
@@ -227,7 +251,7 @@ def keywordSearchCompanyCount(
                     "company_name": {
                         "top_hits": {
                             "size": 1,
-                            "_source": ["converganceCompanyName"]
+                            "_source": ["converganceCompanyName", "categoryCode", "sectorCode"]
                         }
                     }
                 }
@@ -242,15 +266,341 @@ def keywordSearchCompanyCount(
     result = []
     for b in buckets:
         name = "Unknown"
+        category_name = "Unknown"
+        sector_name = "Unknown"
+
         hits = b.get("company_name", {}).get("hits", {}).get("hits", [])
         if hits:
-            name = hits[0]["_source"].get("converganceCompanyName", "Unknown")
+            source = hits[0]["_source"]
+            name = source.get("converganceCompanyName", "Unknown")
+            
+            # Extract codes
+            cat_code = str(source.get("categoryCode", ""))
+            sec_code = str(source.get("sectorCode", ""))
+            
+            # Clean codes (remove decimals if float string)
+            if "." in cat_code:
+                cat_code = cat_code.split(".")[0]
+            if "." in sec_code:
+                sec_code = sec_code.split(".")[0]
+                
+            # Map to names
+            category_name = MAPPING_CATEGORY.get(cat_code, "Unknown") or "Unknown"
+            sector_name = MAPPING_SECTOR.get(sec_code, "Unknown") or "Unknown"
 
         if name and str(name).strip().lower() != "none" and str(name).strip().lower() != "unknown":
-            result.append({"companyName": name, "count": b["doc_count"]})
+            result.append({
+                "companyName": name, 
+                "count": b["doc_count"],
+                "categoryName": category_name,
+                "sectorName": sector_name
+            })
 
     # Slice the final filtered result for pagination
     return result[skip : skip + limit]
+
+
+def semanticSearchAlltypeCompanyCount(
+    es_client,
+    query: str,
+    start_date: str,
+    end_date: str,
+    index_name: str,
+    companyName: str = "All",
+    complaint_numbers: list = ["NA"],
+    skip: int = 0,
+    limit: int = 10
+):
+    must_clauses = []
+    filter_clauses = []
+
+    # 1️⃣ Date range filter
+    if start_date and end_date:
+        must_clauses.append({
+            "range": {
+                "complaintRegDate": {"gte": start_date, "lte": end_date}
+            }
+        })
+
+    # 2️⃣ Text query on complaint details
+    if query and query.strip():
+        must_clauses.append({
+            "match": {"complaintDetails": query}
+        })
+
+    if not must_clauses:
+        must_clauses.append({"match_all": {}})
+
+    # 3️⃣ Company filter (Search in both fields)
+    if companyName != "All":
+        filter_clauses.append({
+            "bool": {
+                "should": [
+                    {"match_phrase": {"converganceCompanyName": companyName}},
+                    {"match_phrase": {"nonCoverganeceCompanyName": companyName}}
+                ],
+                "minimum_should_match": 1
+            }
+        })
+
+    # 4️⃣ Complaint numbers filter
+    if complaint_numbers and complaint_numbers != ["NA"]:
+        filter_clauses.append({
+            "terms": {
+                "complainNumber": [x.strip() for x in complaint_numbers]
+            }
+        })
+
+    # ✅ Final ES query
+    fetch_size = skip + limit + 20 
+    
+    es_query = {
+        "size": 0,  # aggregation only
+        "query": {
+            "bool": {
+                "must": must_clauses,
+                "filter": filter_clauses
+            }
+        },
+        "aggs": {
+            "company_distribution": {
+                "terms": {
+                    "script": {
+                        "source": """
+                            if (doc['converganceCompanyId'].size() != 0) {
+                                return 'C_' + doc['converganceCompanyId'].value;
+                            }
+                            if (doc['nonCoverganeceCompanyCode'].size() != 0) {
+                                return 'N_' + Long.toString(doc['nonCoverganeceCompanyCode'].value);
+                            }
+                            return 'Unknown';
+                        """,
+                        "lang": "painless"
+                    },
+                    "size": fetch_size,
+                    "order": {"_count": "desc"}
+                },
+                "aggs": {
+                    "company_details": {
+                        "top_hits": {
+                            "size": 1,
+                            "_source": ["converganceCompanyName", "nonCoverganeceCompanyName", "categoryCode", "sectorCode"]
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    response = es_client.search(index=index_name, body=es_query)
+
+    buckets = response["aggregations"]["company_distribution"]["buckets"]
+
+    converged_result = []
+    non_converged_result = []
+    
+    for b in buckets:
+        name_key = b["key"]
+        
+        # Determine if converged or non-converged based on ID prefix
+        is_converged = name_key.startswith("C_")
+        
+        name = "Unknown"
+        category_name = "Unknown"
+        sector_name = "Unknown"
+        
+        hits = b.get("company_details", {}).get("hits", {}).get("hits", [])
+        if hits:
+            source = hits[0]["_source"]
+            name = source.get("converganceCompanyName")
+            if not name:
+                name = source.get("nonCoverganeceCompanyName", "Unknown")
+            
+            # Extract codes
+            cat_code = str(source.get("categoryCode", ""))
+            sec_code = str(source.get("sectorCode", ""))
+            
+            # Clean codes
+            if "." in cat_code:
+                cat_code = cat_code.split(".")[0]
+            if "." in sec_code:
+                sec_code = sec_code.split(".")[0]
+                
+            # Map to names
+            category_name = MAPPING_CATEGORY.get(cat_code, "Unknown") or "Unknown"
+            sector_name = MAPPING_SECTOR.get(sec_code, "Unknown") or "Unknown"
+
+        if name and str(name).strip().lower() != "none" and str(name).strip().lower() != "unknown":
+            item = {
+                "companyName": name, 
+                "count": b["doc_count"],
+                "categoryName": category_name,
+                "sectorName": sector_name
+            }
+            if is_converged:
+                converged_result.append(item)
+            else:
+                non_converged_result.append(item)
+
+    # Return structured result
+    return {
+        "converged": converged_result,
+        "non_converged": non_converged_result
+    }
+
+
+def keywordSearchAlltypeCompanyCount(
+    es_client,
+    query: str,
+    start_date: str,
+    end_date: str,
+    index_name: str,
+    companyName: str = "All",
+    complaint_numbers: list = ["NA"],
+    skip: int = 0,
+    limit: int = 10
+):
+    must_clauses = []
+    filter_clauses = []
+
+    # 1️⃣ Date range filter
+    if start_date and end_date:
+        must_clauses.append({
+            "range": {
+                "complaintRegDate": {"gte": start_date, "lte": end_date}
+            }
+        })
+
+    # 2️⃣ Keyword search
+    if query and query.strip():
+        must_clauses.append({
+            "multi_match": {
+                "query": query,
+                "fields": [
+                    "complaintDetails^3",
+                    "converganceCompanyName^2",
+                    "nonCoverganeceCompanyName^2"
+                ],
+                "type": "best_fields",
+                "operator": "and"
+            }
+        })
+
+    if not must_clauses:
+        must_clauses.append({"match_all": {}})
+
+    # 3️⃣ Company filter
+    if companyName != "All":
+        filter_clauses.append({
+            "bool": {
+                "should": [
+                    {"term": {"converganceCompanyName": companyName}},
+                    {"term": {"nonCoverganeceCompanyName": companyName}}
+                ],
+                "minimum_should_match": 1
+            }
+        })
+
+    # 4️⃣ Complaint numbers filter
+    if complaint_numbers and complaint_numbers != ["NA"]:
+        filter_clauses.append({"terms": {"complainNumber.keyword": complaint_numbers}})
+
+    # ✅ Final ES query
+    fetch_size = skip + limit + 20 
+    
+    es_query = {
+        "size": 0,  # aggregation only
+        "query": {
+            "bool": {
+                "must": must_clauses,
+                "filter": filter_clauses
+            }
+        },
+        "aggs": {
+            "company_distribution": {
+                "terms": {
+                    "script": {
+                        "source": """
+                            if (doc['converganceCompanyId'].size() != 0) {
+                                return 'C_' + doc['converganceCompanyId'].value;
+                            }
+                            if (doc['nonCoverganeceCompanyCode'].size() != 0) {
+                                return 'N_' + Long.toString(doc['nonCoverganeceCompanyCode'].value);
+                            }
+                            return 'Unknown';
+                        """,
+                        "lang": "painless"
+                    },
+                    "size": fetch_size,
+                    "order": {"_count": "desc"}
+                },
+                "aggs": {
+                    "company_details": {
+                        "top_hits": {
+                            "size": 1,
+                            "_source": ["converganceCompanyName", "nonCoverganeceCompanyName", "categoryCode", "sectorCode"]
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    response = es_client.search(index=index_name, body=es_query)
+
+    buckets = response["aggregations"]["company_distribution"]["buckets"]
+
+    converged_result = []
+    non_converged_result = []
+    
+    for b in buckets:
+        name_key = b["key"]
+        
+        # Determine if converged or non-converged based on ID prefix
+        is_converged = name_key.startswith("C_")
+        
+        name = "Unknown"
+        category_name = "Unknown"
+        sector_name = "Unknown"
+        
+        hits = b.get("company_details", {}).get("hits", {}).get("hits", [])
+        if hits:
+            source = hits[0]["_source"]
+            name = source.get("converganceCompanyName")
+            if not name:
+                name = source.get("nonCoverganeceCompanyName", "Unknown")
+
+            # Extract codes
+            cat_code = str(source.get("categoryCode", ""))
+            sec_code = str(source.get("sectorCode", ""))
+            
+            # Clean codes
+            if "." in cat_code:
+                cat_code = cat_code.split(".")[0]
+            if "." in sec_code:
+                sec_code = sec_code.split(".")[0]
+                
+            # Map to names
+            category_name = MAPPING_CATEGORY.get(cat_code, "Unknown") or "Unknown"
+            sector_name = MAPPING_SECTOR.get(sec_code, "Unknown") or "Unknown"
+
+        if name and str(name).strip().lower() != "none" and str(name).strip().lower() != "unknown":
+            item = {
+                "companyName": name, 
+                "count": b["doc_count"],
+                "categoryName": category_name,
+                "sectorName": sector_name
+            }
+            if is_converged:
+                converged_result.append(item)
+            else:
+                non_converged_result.append(item)
+
+    # Return structured result
+    return {
+        "converged": converged_result,
+        "non_converged": non_converged_result
+    }
 
 
 
