@@ -363,28 +363,74 @@ def semanticSearchAlltypeCompanyCount(
             }
         },
         "aggs": {
-            "company_distribution": {
-                "terms": {
-                    "script": {
-                        "source": """
-                            if (doc['converganceCompanyId'].size() != 0) {
-                                return 'C_' + doc['converganceCompanyId'].value;
-                            }
-                            if (doc['nonCoverganeceCompanyCode'].size() != 0) {
-                                return 'N_' + Long.toString(doc['nonCoverganeceCompanyCode'].value);
-                            }
-                            return 'Unknown';
-                        """,
-                        "lang": "painless"
-                    },
-                    "size": fetch_size,
-                    "order": {"_count": "desc"}
-                },
+            "converged_distribution": {
+                "filter": {"exists": {"field": "converganceCompanyId"}},
                 "aggs": {
-                    "company_details": {
-                        "top_hits": {
-                            "size": 1,
-                            "_source": ["converganceCompanyName", "nonCoverganeceCompanyName", "categoryCode", "sectorCode"]
+                    "companies": {
+                        "terms": {
+                            "field": "converganceCompanyId", 
+                            "size": fetch_size,
+                            "order": {"_count": "desc"}
+                        },
+                        "aggs": {
+                             "company_details": {
+                                "top_hits": {
+                                    "size": 1,
+                                    "_source": ["converganceCompanyName", "categoryCode", "sectorCode"]
+                                }
+                            },
+                            "disposed_count": {
+                                "filter": {
+                                    "terms": {
+                                        "companyStatus": ["Resolved", "Disposed", "Closed", "resolved", "disposed off", "closed", "Disposed off"]
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "non_converged_distribution": {
+                 "filter": {
+                     "bool": {
+                        "must": [
+                            {"exists": {"field": "nonCoverganeceCompanyCode"}}
+                        ],
+                        "must_not": [{"exists": {"field": "converganceCompanyId"}}]
+                     }
+                 },
+                 "aggs": {
+                    "companies": {
+                        "terms": {
+                            "script": {
+                                "source": """
+                                    String name = doc.containsKey('nonCoverganeceCompanyName') && doc['nonCoverganeceCompanyName'].size() != 0 
+                                        ? doc['nonCoverganeceCompanyName'].value 
+                                        : '';
+                                    if (name == null || name.trim().isEmpty()) {
+                                        return 'Unknown';
+                                    }
+                                    return name;
+                                """,
+                                "lang": "painless"
+                            },
+                            "size": fetch_size,
+                            "order": {"_count": "desc"}
+                        },
+                        "aggs": {
+                             "company_details": {
+                                "top_hits": {
+                                    "size": 1,
+                                    "_source": ["nonCoverganeceCompanyName", "categoryCode", "sectorCode", "nonCoverganeceCompanyCode"]
+                                }
+                            },
+                            "disposed_count": {
+                                "filter": {
+                                    "terms": {
+                                        "companyStatus": ["Resolved", "Disposed", "Closed", "resolved", "disposed off", "closed", "Disposed off"]
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -394,17 +440,14 @@ def semanticSearchAlltypeCompanyCount(
 
     response = es_client.search(index=index_name, body=es_query)
 
-    buckets = response["aggregations"]["company_distribution"]["buckets"]
+    converged_buckets = response["aggregations"]["converged_distribution"]["companies"]["buckets"]
+    non_converged_buckets = response["aggregations"]["non_converged_distribution"]["companies"]["buckets"]
 
     converged_result = []
     non_converged_result = []
-    
-    for b in buckets:
-        name_key = b["key"]
-        
-        # Determine if converged or non-converged based on ID prefix
-        is_converged = name_key.startswith("C_")
-        
+
+    # Process Converged Companies
+    for b in converged_buckets:
         name = "Unknown"
         category_name = "Unknown"
         sector_name = "Unknown"
@@ -412,9 +455,7 @@ def semanticSearchAlltypeCompanyCount(
         hits = b.get("company_details", {}).get("hits", {}).get("hits", [])
         if hits:
             source = hits[0]["_source"]
-            name = source.get("converganceCompanyName")
-            if not name:
-                name = source.get("nonCoverganeceCompanyName", "Unknown")
+            name = source.get("converganceCompanyName", "Unknown")
             
             # Extract codes
             cat_code = str(source.get("categoryCode", ""))
@@ -430,22 +471,72 @@ def semanticSearchAlltypeCompanyCount(
             category_name = MAPPING_CATEGORY.get(cat_code, "Unknown") or "Unknown"
             sector_name = MAPPING_SECTOR.get(sec_code, "Unknown") or "Unknown"
 
+        # Calculate disposal rate
+        total_count = b["doc_count"]
+        disposed_count = b.get("disposed_count", {}).get("doc_count", 0)
+        disposal_rate = round((disposed_count / total_count * 100), 2) if total_count > 0 else 0.0
+
         if name and str(name).strip().lower() != "none" and str(name).strip().lower() != "unknown":
-            item = {
+            converged_result.append({
                 "companyName": name, 
-                "count": b["doc_count"],
+                "count": total_count,
+                "disposedCount": disposed_count,
+                "disposalRate": disposal_rate,
                 "categoryName": category_name,
                 "sectorName": sector_name
-            }
-            if is_converged:
-                converged_result.append(item)
-            else:
-                non_converged_result.append(item)
+            })
 
-    # Return structured result
+    # Process Non-Converged Companies
+    for b in non_converged_buckets:
+        company_name_key = b["key"]  # This is the company name from aggregation
+        name = company_name_key if company_name_key != "Unknown" else "Unknown"
+        category_name = "Unknown"
+        sector_name = "Unknown"
+        company_code = "N/A"
+        
+        hits = b.get("company_details", {}).get("hits", {}).get("hits", [])
+        if hits:
+            source = hits[0]["_source"]
+            
+            # Get company code if available
+            code_raw = source.get("nonCoverganeceCompanyCode")
+            if code_raw is not None and code_raw != 0:
+                company_code = str(code_raw)
+            
+            # Extract codes
+            cat_code = str(source.get("categoryCode", ""))
+            sec_code = str(source.get("sectorCode", ""))
+            
+            # Clean codes
+            if "." in cat_code:
+                cat_code = cat_code.split(".")[0]
+            if "." in sec_code:
+                sec_code = sec_code.split(".")[0]
+                
+            # Map to names
+            category_name = MAPPING_CATEGORY.get(cat_code, "Unknown") or "Unknown"
+            sector_name = MAPPING_SECTOR.get(sec_code, "Unknown") or "Unknown"
+
+        # Calculate disposal rate
+        total_count = b["doc_count"]
+        disposed_count = b.get("disposed_count", {}).get("doc_count", 0)
+        disposal_rate = round((disposed_count / total_count * 100), 2) if total_count > 0 else 0.0
+
+        # Include all companies
+        non_converged_result.append({
+            "companyName": name, 
+            "companyCode": company_code,
+            "count": total_count,
+            "disposedCount": disposed_count,
+            "disposalRate": disposal_rate,
+            "categoryName": category_name,
+            "sectorName": sector_name
+        })
+
+    # Return structured result with pagination
     return {
-        "converged": converged_result,
-        "non_converged": non_converged_result
+        "converged": converged_result[skip : skip + limit],
+        "non_converged": non_converged_result[skip : skip + limit]
     }
 
 
@@ -525,7 +616,13 @@ def keywordSearchAlltypeCompanyCount(
                                 return 'C_' + doc['converganceCompanyId'].value;
                             }
                             if (doc['nonCoverganeceCompanyCode'].size() != 0) {
-                                return 'N_' + Long.toString(doc['nonCoverganeceCompanyCode'].value);
+                                String name = doc.containsKey('nonCoverganeceCompanyName') && doc['nonCoverganeceCompanyName'].size() != 0 
+                                    ? doc['nonCoverganeceCompanyName'].value 
+                                    : '';
+                                if (name == null || name.trim().isEmpty()) {
+                                    return 'N_Unknown';
+                                }
+                                return 'N_' + name;
                             }
                             return 'Unknown';
                         """,
@@ -538,7 +635,14 @@ def keywordSearchAlltypeCompanyCount(
                     "company_details": {
                         "top_hits": {
                             "size": 1,
-                            "_source": ["converganceCompanyName", "nonCoverganeceCompanyName", "categoryCode", "sectorCode"]
+                            "_source": ["converganceCompanyName", "nonCoverganeceCompanyName", "categoryCode", "sectorCode", "nonCoverganeceCompanyCode"]
+                        }
+                    },
+                    "disposed_count": {
+                        "filter": {
+                            "terms": {
+                                "companyStatus": ["Resolved", "Disposed", "Closed", "resolved", "disposed off", "closed", "Disposed off"]
+                            }
                         }
                     }
                 }
@@ -558,17 +662,31 @@ def keywordSearchAlltypeCompanyCount(
         
         # Determine if converged or non-converged based on ID prefix
         is_converged = name_key.startswith("C_")
+        is_non_converged = name_key.startswith("N_")
         
         name = "Unknown"
         category_name = "Unknown"
         sector_name = "Unknown"
+        company_code = "N/A"
         
         hits = b.get("company_details", {}).get("hits", {}).get("hits", [])
         if hits:
             source = hits[0]["_source"]
-            name = source.get("converganceCompanyName")
-            if not name:
-                name = source.get("nonCoverganeceCompanyName", "Unknown")
+            
+            if is_converged:
+                company_name_raw = source.get("converganceCompanyName")
+                if company_name_raw and str(company_name_raw).strip():
+                    name = company_name_raw
+                company_code = name_key.replace("C_", "")  # Extract convergence ID
+            elif is_non_converged:
+                # Extract name from key (remove N_ prefix)
+                extracted_name = name_key.replace("N_", "", 1)
+                name = extracted_name if extracted_name != "Unknown" else "Unknown"
+                
+                # Get company code if available
+                code_raw = source.get("nonCoverganeceCompanyCode")
+                if code_raw is not None and code_raw != 0:
+                    company_code = str(code_raw)
 
             # Extract codes
             cat_code = str(source.get("categoryCode", ""))
@@ -584,22 +702,30 @@ def keywordSearchAlltypeCompanyCount(
             category_name = MAPPING_CATEGORY.get(cat_code, "Unknown") or "Unknown"
             sector_name = MAPPING_SECTOR.get(sec_code, "Unknown") or "Unknown"
 
-        if name and str(name).strip().lower() != "none" and str(name).strip().lower() != "unknown":
-            item = {
-                "companyName": name, 
-                "count": b["doc_count"],
-                "categoryName": category_name,
-                "sectorName": sector_name
-            }
-            if is_converged:
-                converged_result.append(item)
-            else:
-                non_converged_result.append(item)
+        # Calculate disposal rate
+        total_count = b["doc_count"]
+        disposed_count = b.get("disposed_count", {}).get("doc_count", 0)
+        disposal_rate = round((disposed_count / total_count * 100), 2) if total_count > 0 else 0.0
 
-    # Return structured result
+        # Include all companies
+        item = {
+            "companyName": name, 
+            "companyCode": company_code,
+            "count": total_count,
+            "disposedCount": disposed_count,
+            "disposalRate": disposal_rate,
+            "categoryName": category_name,
+            "sectorName": sector_name
+        }
+        if is_converged:
+            converged_result.append(item)
+        else:
+            non_converged_result.append(item)
+
+    # Return structured result with pagination
     return {
-        "converged": converged_result,
-        "non_converged": non_converged_result
+        "converged": converged_result[skip : skip + limit],
+        "non_converged": non_converged_result[skip : skip + limit]
     }
 
 
@@ -877,7 +1003,7 @@ The output must be a valid JSON object. The keys of this JSON object should be t
 
 **Output JSON Format Example:**
 ```json
-{{
+{{ 
   "property fires": {{
     "prompt": "Find grievances related to property fires, including incidents at houses, shops, factories, buildings, apartments, slums, markets, hospitals, schools, offices, hotels, malls, colonies, temples, mosques, or church fires."
   }},

@@ -11,7 +11,7 @@
         "USERNAME": "",
         "PASSWORD": "",
         "CERT_PATH": "",
-        "INDEX_NAME": "consumer_affairs_index_v3",
+        "INDEX_NAME": "consumer_affair_index_v4",
         "INDEX_NAME_FEEDBACK": "consumer_feedback_index"
     },
     "INDIC_BERT_PATH": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
