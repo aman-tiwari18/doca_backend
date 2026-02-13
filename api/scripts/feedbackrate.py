@@ -1,183 +1,118 @@
-import time
-import mysql.connector
+import argparse
+import pandas as pd
 from transformers import pipeline
 from tqdm import tqdm
+import os
 
 
-# ================== CONFIG ================== #
-
-DB_CONFIG = {
-    "host": "localhost",
-    "user": "root",
-    "password": "rootpassword123",
-    "database": "consumer_db_1",
-    "port": 3306
-}
-
-BATCH_SIZE = 256        # Increase if GPU (512/1024)
-SLEEP_TIME = 0.1        # Reduce DB load
+BATCH_SIZE = 32
+DEVICE = -1  # -1 = CPU, 0 = GPU (Change to 0 if GPU available)
 
 
-# ================== MODEL ================== #
+parser = argparse.ArgumentParser(description="Rate feedback sentiment")
+parser.add_argument("--input", type=str, default="output.xlsx", help="Input Excel file")
+parser.add_argument("--output", type=str, default="output_rated.xlsx", help="Output Excel file")
+args = parser.parse_args()
 
+INPUT_FILE = args.input
+OUTPUT_FILE = args.output
+
+
+print("Loading model...")
 classifier = pipeline(
     "sentiment-analysis",
     model="cardiffnlp/twitter-xlm-roberta-base-sentiment",
-    device=0    # -1 = CPU, 0 = GPU
+    device=DEVICE
 )
 
 
-# ================== LABEL MAPPING ================== #
-
 def map_to_5(label, score):
-
     label = label.lower()
-
     if label == "negative":
         if score > 0.7:
-            return "Very Poor", score
-        return "Poor", score
-
+            return 1  # Very Poor
+        return 2      # Poor
     if label == "positive":
         if score > 0.7:
-            return "Excellent", score
-        return "Good", score
+            return 5  # Excellent
+        return 4      # Good
+    return 3          # Average
 
-    return "Average", score
-
-
-# ================== DB CONNECTION ================== #
-
-def get_connection():
-    return mysql.connector.connect(**DB_CONFIG)
-
-
-# ================== FETCH ================== #
-
-def fetch_batch(cursor):
-
-    query = """
-        SELECT id,
-               CONCAT_WS(
-                   ' ',
-                   NULLIF(Remark, ''),
-                   NULLIF(unUnsatisfactory, ''),
-                   NULLIF(ExperiencewithNCH, '')
-               ) AS text_data
-        FROM tblfeedback
-        WHERE sentiment_done = FALSE
-          AND (
-                Remark IS NOT NULL
-             OR unUnsatisfactory IS NOT NULL
-             OR ExperiencewithNCH IS NOT NULL
-          )
-        LIMIT %s
-    """
-
-    cursor.execute(query, (BATCH_SIZE,))
-    return cursor.fetchall()
-
-
-
-# ================== UPDATE ================== #
-
-def update_batch(cursor, data):
-
-    query = """
-        UPDATE tblfeedback
-        SET
-            sentiment_rating = %s,
-            sentiment_done = TRUE
-        WHERE id = %s
-    """
-
-    cursor.executemany(query, data)
-
-
-# ================== MAIN ================== #
 
 def main():
+    if not os.path.exists(INPUT_FILE):
+        print(f"Error: Input file '{INPUT_FILE}' not found.")
+        return
 
-    print("Starting Sentiment Batch Processing...")
+    print(f"Reading {INPUT_FILE}...")
+    try:
+        df = pd.read_excel(INPUT_FILE)
+    except Exception as e:
+        print(f"Error reading Excel file: {e}")
+        return
 
-    conn = get_connection()
-    cursor = conn.cursor()
+    # Combine text columns
+    print("Pre-processing text data...")
+    df['text_data'] = df.apply(
+        lambda row: ' '.join(filter(None, [
+            str(row['Remark']) if pd.notna(row['Remark']) else '', 
+            str(row['unUnsatisfactory']) if pd.notna(row['unUnsatisfactory']) else '', 
+            str(row['ExperiencewithNCH']) if pd.notna(row['ExperiencewithNCH']) else ''
+        ])).strip(),
+        axis=1
+    )
 
-    total = 0
+    texts = df['text_data'].tolist()
+    ratings = []
+    
+    print(f"Processing {len(texts)} entries...")
+    
+    # Process in batches
+    for i in tqdm(range(0, len(texts), BATCH_SIZE)):
+        batch_texts = texts[i : i + BATCH_SIZE]
+        
+        # Handle empty strings which might cause issues with the model
+        batch_results = []
+        valid_indices = []
+        valid_inputs = []
 
-    while True:
-
-        rows = fetch_batch(cursor)
-
-        if not rows:
-            break
-
-
-        ids = []
-        texts = []
-
-        for row in rows:
-            if row[1] and len(row[1].strip()) > 5:
-                ids.append(row[0])
-                texts.append(row[1])
+        for idx, text in enumerate(batch_texts):
+            if text and len(text) > 5:
+                valid_inputs.append(text)
+                valid_indices.append(idx)
             else:
-                # Mark empty rows as done
-                cursor.execute("""
-                    UPDATE tblfeedback
-                    SET sentiment_done = TRUE
-                    WHERE id = %s
-                """, (row[0],))
+                # Default rating for empty/short text
+                pass 
 
-        if not texts:
-            conn.commit()
-            continue
+        if valid_inputs:
+            model_outputs = classifier(
+                valid_inputs,
+                batch_size=BATCH_SIZE,
+                truncation=True,
+                max_length=512
+            )
+            
+            # Reconstruct batch results
+            current_batch_ratings = [None] * len(batch_texts)
+            
+            for j, out in enumerate(model_outputs):
+                original_idx = valid_indices[j]
+                label = out['label']
+                score = out['score']
+                rating = map_to_5(label, score)
+                current_batch_ratings[original_idx] = rating
 
+            ratings.extend(current_batch_ratings)
+        else:
+            ratings.extend([None] * len(batch_texts))
 
-        # --------- MODEL INFERENCE (BATCH) --------- #
+    df['rating'] = ratings
 
-        results = classifier(
-            texts,
-            batch_size=32,
-            truncation=True,
-            max_length=256
-        )
-
-
-        updates = []
-
-        for i, res in enumerate(results):
-
-            label = res["label"]
-            score = float(res["score"])
-
-            final_label, final_score = map_to_5(label, score)
-
-            updates.append((
-                final_label,
-                ids[i]
-            ))
-
-
-        # --------- UPDATE DB --------- #
-
-        update_batch(cursor, updates)
-
-        conn.commit()
-
-
-        total += len(updates)
-
-        print(f"Processed: {total}")
-
-        time.sleep(SLEEP_TIME)
-
-
-    cursor.close()
-    conn.close()
-
-    print("Completed. Total processed:", total)
-
-
+    print(f"Saving to {OUTPUT_FILE}...")
+    df.drop(columns=['text_data'], inplace=True)
+    
+    df.to_excel(OUTPUT_FILE, index=False)
+    print("Done!")
 
 if __name__ == "__main__":
     main()

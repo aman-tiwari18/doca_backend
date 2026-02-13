@@ -1,0 +1,4154 @@
+[
+    {
+        "categoryCode": "1",
+        "sectorCode": "1",
+        "categoryName": "Voice - Landline",
+        "categoryDescription": "Landline Connection",
+        "hindiCategoryName": "आवाज - लैंडलाइन",
+        "status": "1"
+    },
+    {
+        "categoryCode": "2",
+        "sectorCode": "1",
+        "categoryName": "Voice - GSM",
+        "categoryDescription": "Mobile GSM",
+        "hindiCategoryName": "आवाज - जीएसएम\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "3",
+        "sectorCode": "1",
+        "categoryName": "Telecom - Others",
+        "categoryDescription": "Telecom - Others",
+        "hindiCategoryName": "दूरसंचार - दूसरों\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "4",
+        "sectorCode": "2",
+        "categoryName": "Electricity-Domestic",
+        "categoryDescription": "Electricity-Domestic",
+        "hindiCategoryName": "बिजली-घरेलू",
+        "status": "1"
+    },
+    {
+        "categoryCode": "5",
+        "sectorCode": "2",
+        "categoryName": "Commercial",
+        "categoryDescription": "Commercial",
+        "hindiCategoryName": "व्यावसायिक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "6",
+        "sectorCode": "2",
+        "categoryName": "Electricity - Others",
+        "categoryDescription": "Electricity - Others",
+        "hindiCategoryName": "विद्युत - दूसरों\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "7",
+        "sectorCode": "3",
+        "categoryName": "Saving & Current Account",
+        "categoryDescription": "Saving & Current Account",
+        "hindiCategoryName": "बचत और चालू खाता\n",
+        "status": "0"
+    },
+    {
+        "categoryCode": "8",
+        "sectorCode": "3",
+        "categoryName": "Loans",
+        "categoryDescription": "Loans",
+        "hindiCategoryName": "ऋण\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "9",
+        "sectorCode": "3",
+        "categoryName": "ATM's",
+        "categoryDescription": "ATM's",
+        "hindiCategoryName": "एटीएम\n",
+        "status": "0"
+    },
+    {
+        "categoryCode": "10",
+        "sectorCode": "3",
+        "categoryName": "Credit Card",
+        "categoryDescription": "Credit Card",
+        "hindiCategoryName": "क्रेडिट कार्ड\n",
+        "status": "0"
+    },
+    {
+        "categoryCode": "11",
+        "sectorCode": "3",
+        "categoryName": "Remittance",
+        "categoryDescription": "Remittance",
+        "hindiCategoryName": "प्रेषण\n",
+        "status": "0"
+    },
+    {
+        "categoryCode": "12",
+        "sectorCode": "3",
+        "categoryName": "Banking - Others",
+        "categoryDescription": "Banking - Others",
+        "hindiCategoryName": "बैंकिंग - दूसरों\n",
+        "status": "0"
+    },
+    {
+        "categoryCode": "13",
+        "sectorCode": "4",
+        "categoryName": "Health Insurance",
+        "categoryDescription": "Health Insurance",
+        "hindiCategoryName": "स्वास्थ्य बीमा\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "14",
+        "sectorCode": "4",
+        "categoryName": "Travel Insurance",
+        "categoryDescription": "Travel Insurance",
+        "hindiCategoryName": "यात्रा बीमा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "15",
+        "sectorCode": "4",
+        "categoryName": "Motor Insurance",
+        "categoryDescription": "Motor Insurance",
+        "hindiCategoryName": "मोटर बीमा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "16",
+        "sectorCode": "4",
+        "categoryName": "General Insurance - Others",
+        "categoryDescription": "General Insurance - Others",
+        "hindiCategoryName": "जनरल इंश्योरेंस - दूसरों",
+        "status": "1"
+    },
+    {
+        "categoryCode": "17",
+        "sectorCode": "5",
+        "categoryName": "Home Appliances",
+        "categoryDescription": "Home Appliances",
+        "hindiCategoryName": "घरेलु उपकरण\n",
+        "status": "0"
+    },
+    {
+        "categoryCode": "18",
+        "sectorCode": "5",
+        "categoryName": "Inverter & Batteries",
+        "categoryDescription": "Inverter & Batteries",
+        "hindiCategoryName": "इन्वर्टर और बैटरी\n",
+        "status": "0"
+    },
+    {
+        "categoryCode": "19",
+        "sectorCode": "5",
+        "categoryName": "Water Pump & Motor",
+        "categoryDescription": "Water Pump & Motor",
+        "hindiCategoryName": "जल पम्प और मोटर",
+        "status": "0"
+    },
+    {
+        "categoryCode": "20",
+        "sectorCode": "5",
+        "categoryName": "Water Purifier & RO",
+        "categoryDescription": "Water Purifier & RO",
+        "hindiCategoryName": "जल शोधक और आरओ",
+        "status": "0"
+    },
+    {
+        "categoryCode": "21",
+        "sectorCode": "5",
+        "categoryName": "Grooming Products",
+        "categoryDescription": "Grooming Products",
+        "hindiCategoryName": "सौंदर्य उत्पाद\n",
+        "status": "0"
+    },
+    {
+        "categoryCode": "22",
+        "sectorCode": "5",
+        "categoryName": "Furniture & Fixtures",
+        "categoryDescription": "Furniture & Fixtures",
+        "hindiCategoryName": "सामान तथा जोड़ा गया उपकरण\n",
+        "status": "0"
+    },
+    {
+        "categoryCode": "23",
+        "sectorCode": "5",
+        "categoryName": "Consumer Durabless - Others",
+        "categoryDescription": "General Insurance - Others",
+        "hindiCategoryName": "उपभोक्ता टिकाऊ - दूसरों",
+        "status": "0"
+    },
+    {
+        "categoryCode": "24",
+        "sectorCode": "6",
+        "categoryName": "Timeshare Membership",
+        "categoryDescription": "Timeshare Membership",
+        "hindiCategoryName": "टाइमशैयर सदस्यता",
+        "status": "0"
+    },
+    {
+        "categoryCode": "25",
+        "sectorCode": "6",
+        "categoryName": "Holiday Package",
+        "categoryDescription": "Holiday Package",
+        "hindiCategoryName": "छुट्टी पैकेज",
+        "status": "0"
+    },
+    {
+        "categoryCode": "26",
+        "sectorCode": "6",
+        "categoryName": "State Govt. Tourism Package",
+        "categoryDescription": "State Govt. Tourism Package",
+        "hindiCategoryName": "राज्य सरकार। पर्यटन पैकेज",
+        "status": "0"
+    },
+    {
+        "categoryCode": "27",
+        "sectorCode": "6",
+        "categoryName": "Shrine Boards Yatra",
+        "categoryDescription": "Shrine Boards Yatra",
+        "hindiCategoryName": "तीर्थ यात्रा बोर्डों\n",
+        "status": "0"
+    },
+    {
+        "categoryCode": "28",
+        "sectorCode": "6",
+        "categoryName": "Offine Hotels & Resorts",
+        "categoryDescription": "Offine Hotels & Resorts",
+        "hindiCategoryName": "ऑफ़लाइन होटल एंड रिसॉर्ट्स",
+        "status": "0"
+    },
+    {
+        "categoryCode": "29",
+        "sectorCode": "6",
+        "categoryName": "Travel & Tourism - Others",
+        "categoryDescription": "Travel & Tourism - Others",
+        "hindiCategoryName": "यात्रा एवं पर्यटन - दूसरों",
+        "status": "0"
+    },
+    {
+        "categoryCode": "30",
+        "sectorCode": "7",
+        "categoryName": "Courier",
+        "categoryDescription": "Courier",
+        "hindiCategoryName": "संदेशवाहक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "31",
+        "sectorCode": "7",
+        "categoryName": "Cargo",
+        "categoryDescription": "Cargo",
+        "hindiCategoryName": "माल",
+        "status": "1"
+    },
+    {
+        "categoryCode": "32",
+        "sectorCode": "8",
+        "categoryName": "Hospital Services",
+        "categoryDescription": "Hospital Services",
+        "hindiCategoryName": "अस्पताल सेवा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "33",
+        "sectorCode": "8",
+        "categoryName": "Negligences & Malpractice",
+        "categoryDescription": "Negligences & Malpractice",
+        "hindiCategoryName": "लापरवाही और कदाचार",
+        "status": "1"
+    },
+    {
+        "categoryCode": "34",
+        "sectorCode": "8",
+        "categoryName": "Pharmacy & Chemist Stores",
+        "categoryDescription": "Pharmacy & Chemist Stores",
+        "hindiCategoryName": "फार्मेसी एवं केमिस्ट स्टोर",
+        "status": "1"
+    },
+    {
+        "categoryCode": "35",
+        "sectorCode": "8",
+        "categoryName": "Diagnostic Centres",
+        "categoryDescription": "Diagnostic Centres",
+        "hindiCategoryName": "नैदानिक ​​केन्द्रों",
+        "status": "1"
+    },
+    {
+        "categoryCode": "36",
+        "sectorCode": "8",
+        "categoryName": "Medical Negligence - Others",
+        "categoryDescription": "Medical Negligence - Others",
+        "hindiCategoryName": "चिकित्सकीय लापरवाही - दूसरों",
+        "status": "1"
+    },
+    {
+        "categoryCode": "37",
+        "sectorCode": "9",
+        "categoryName": "Mobile Handsets",
+        "categoryDescription": "Mobile Handsets",
+        "hindiCategoryName": "मोबाइल हैंडसेट",
+        "status": "0"
+    },
+    {
+        "categoryCode": "38",
+        "sectorCode": "9",
+        "categoryName": "Gaming Devices",
+        "categoryDescription": "Gaming Devices",
+        "hindiCategoryName": "गेमिंग उपकरणों",
+        "status": "0"
+    },
+    {
+        "categoryCode": "39",
+        "sectorCode": "9",
+        "categoryName": "Computers & laptops",
+        "categoryDescription": "Computers & laptops",
+        "hindiCategoryName": "कंप्यूटर और लैपटॉप",
+        "status": "0"
+    },
+    {
+        "categoryCode": "40",
+        "sectorCode": "9",
+        "categoryName": "Tablets & Other Gadgets",
+        "categoryDescription": "Tablets & Other Gadgets",
+        "hindiCategoryName": "गोलियां और अन्य गैजेट्स",
+        "status": "0"
+    },
+    {
+        "categoryCode": "41",
+        "sectorCode": "9",
+        "categoryName": "Electronics Products - Others",
+        "categoryDescription": "Electronics Products - Others",
+        "hindiCategoryName": "इलेक्ट्रॉनिक्स उत्पाद - दूसरों",
+        "status": "0"
+    },
+    {
+        "categoryCode": "42",
+        "sectorCode": "9",
+        "categoryName": "LCD/LED/Smart TV",
+        "categoryDescription": "LCD/LED/Smart TV",
+        "hindiCategoryName": "एलसीडी / एलईडी / स्मार्ट टीवी",
+        "status": "0"
+    },
+    {
+        "categoryCode": "43",
+        "sectorCode": "9",
+        "categoryName": "Audio Devices",
+        "categoryDescription": "Audio Devices",
+        "hindiCategoryName": "ऑडियो उपकरणों",
+        "status": "0"
+    },
+    {
+        "categoryCode": "44",
+        "sectorCode": "10",
+        "categoryName": "Company Deposits",
+        "categoryDescription": "Company Deposits",
+        "hindiCategoryName": "कंपनी जमा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "45",
+        "sectorCode": "10",
+        "categoryName": "Consumer Product Loans",
+        "categoryDescription": "Consumer Product Loans",
+        "hindiCategoryName": "उपभोक्ता उत्पाद ऋण",
+        "status": "1"
+    },
+    {
+        "categoryCode": "46",
+        "sectorCode": "10",
+        "categoryName": "Auto Loans",
+        "categoryDescription": "Auto Loans",
+        "hindiCategoryName": "ऑटो ऋण",
+        "status": "1"
+    },
+    {
+        "categoryCode": "47",
+        "sectorCode": "10",
+        "categoryName": "Home Loans",
+        "categoryDescription": "Home Loans",
+        "hindiCategoryName": "घर के लिए ऋण",
+        "status": "0"
+    },
+    {
+        "categoryCode": "48",
+        "sectorCode": "10",
+        "categoryName": "Personal Loans",
+        "categoryDescription": "Personal Loans",
+        "hindiCategoryName": "व्यक्तिगत ऋण\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "49",
+        "sectorCode": "10",
+        "categoryName": "NBFC's - Others",
+        "categoryDescription": "NBFC's - Others",
+        "hindiCategoryName": "एनबीएफसी - अन्य\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "50",
+        "sectorCode": "11",
+        "categoryName": "SIP",
+        "categoryDescription": "SIP",
+        "hindiCategoryName": "एसआईपी\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "51",
+        "sectorCode": "11",
+        "categoryName": "ELSS",
+        "categoryDescription": "ELSS",
+        "hindiCategoryName": "ईएलएसएस\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "52",
+        "sectorCode": "11",
+        "categoryName": "Mutual Fund - Others",
+        "categoryDescription": "Mutual Fund - Others",
+        "hindiCategoryName": "म्युचुअल फंड - दूसरों\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "53",
+        "sectorCode": "12",
+        "categoryName": "Data - Wired",
+        "categoryDescription": "Data - Wired",
+        "hindiCategoryName": "डेटा - वायर्ड\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "54",
+        "sectorCode": "12",
+        "categoryName": "Data - Wireless",
+        "categoryDescription": "Data - Wireless",
+        "hindiCategoryName": "डेटा - वायरलेस\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "55",
+        "sectorCode": "12",
+        "categoryName": "Broadband & Internet - Others",
+        "categoryDescription": "Broadband & Internet - Others",
+        "hindiCategoryName": "ब्रॉडबैंड और इंटरनेट - दूसरों",
+        "status": "1"
+    },
+    {
+        "categoryCode": "56",
+        "sectorCode": "13",
+        "categoryName": "DTH",
+        "categoryDescription": "DTH",
+        "hindiCategoryName": "डीटीएच\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "57",
+        "sectorCode": "13",
+        "categoryName": "Cable",
+        "categoryDescription": "Cable",
+        "hindiCategoryName": "केबल\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "58",
+        "sectorCode": "13",
+        "categoryName": "DTH & Cable - Others",
+        "categoryDescription": "DTH & Cable - Others",
+        "hindiCategoryName": "डीटीएच और केबल - दूसरों\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "59",
+        "sectorCode": "14",
+        "categoryName": "Online Shopping",
+        "categoryDescription": "Online Shopping",
+        "hindiCategoryName": "ऑनलाइन खरीदारी",
+        "status": "1"
+    },
+    {
+        "categoryCode": "60",
+        "sectorCode": "14",
+        "categoryName": "Tele Shopping",
+        "categoryDescription": "Tele Shopping",
+        "hindiCategoryName": "टेली शॉपिंग\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "61",
+        "sectorCode": "14",
+        "categoryName": "E- Commerce - Others",
+        "categoryDescription": "E- Commerce - Others",
+        "hindiCategoryName": "ई वाणिज्य - दूसरों",
+        "status": "1"
+    },
+    {
+        "categoryCode": "62",
+        "sectorCode": "14",
+        "categoryName": "Utility Services",
+        "categoryDescription": "Utility Services",
+        "hindiCategoryName": "उपयोगिता सेवा",
+        "status": "0"
+    },
+    {
+        "categoryCode": "63",
+        "sectorCode": "14",
+        "categoryName": "Online Hotel Booking",
+        "categoryDescription": "Online Hotel Booking",
+        "hindiCategoryName": "ऑनलाइन होटल बुकिंग",
+        "status": "0"
+    },
+    {
+        "categoryCode": "64",
+        "sectorCode": "14",
+        "categoryName": "Online Travel Booking",
+        "categoryDescription": "Online Travel Booking",
+        "hindiCategoryName": "ऑनलाइन ट्रैवल बुकिंग",
+        "status": "0"
+    },
+    {
+        "categoryCode": "65",
+        "sectorCode": "15",
+        "categoryName": "Two Wheelers",
+        "categoryDescription": "Two Wheels/Bike",
+        "hindiCategoryName": "दोपहिया वाहन",
+        "status": "1"
+    },
+    {
+        "categoryCode": "66",
+        "sectorCode": "15",
+        "categoryName": "Four Wheelers",
+        "categoryDescription": "Four Wheels/Cars",
+        "hindiCategoryName": "पहिया वाहन",
+        "status": "1"
+    },
+    {
+        "categoryCode": "68",
+        "sectorCode": "16",
+        "categoryName": "Domestic Airlines",
+        "categoryDescription": "Airlines-Domestic",
+        "hindiCategoryName": "घरेलू एयरलाइंस",
+        "status": "1"
+    },
+    {
+        "categoryCode": "69",
+        "sectorCode": "16",
+        "categoryName": "International Airlines",
+        "categoryDescription": "International",
+        "hindiCategoryName": "अंतरराष्ट्रीय एयरलाइंस",
+        "status": "1"
+    },
+    {
+        "categoryCode": "70",
+        "sectorCode": "16",
+        "categoryName": "Airport authority of India",
+        "categoryDescription": "Airport Authorities",
+        "hindiCategoryName": "हवाई अड्डे के अधिकारियों",
+        "status": "1"
+    },
+    {
+        "categoryCode": "71",
+        "sectorCode": "16",
+        "categoryName": "Airlines - Others",
+        "categoryDescription": "Airlines - Others",
+        "hindiCategoryName": "एयरलाइंस - दूसरों",
+        "status": "0"
+    },
+    {
+        "categoryCode": "72",
+        "sectorCode": "17",
+        "categoryName": "Newspaper",
+        "categoryDescription": "Newspaper",
+        "hindiCategoryName": "अखबार",
+        "status": "1"
+    },
+    {
+        "categoryCode": "73",
+        "sectorCode": "17",
+        "categoryName": "Magazine",
+        "categoryDescription": "Magazine",
+        "hindiCategoryName": "पत्रिका\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "74",
+        "sectorCode": "17",
+        "categoryName": "Publications - Others",
+        "categoryDescription": "Publications - Others",
+        "hindiCategoryName": "प्रकाशन - दूसरों",
+        "status": "1"
+    },
+    {
+        "categoryCode": "75",
+        "sectorCode": "18",
+        "categoryName": "Others",
+        "categoryDescription": "Others",
+        "hindiCategoryName": "अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "76",
+        "sectorCode": "19",
+        "categoryName": "State Board",
+        "categoryDescription": "State Board",
+        "hindiCategoryName": "राज्य बोर्ड",
+        "status": "1"
+    },
+    {
+        "categoryCode": "77",
+        "sectorCode": "19",
+        "categoryName": "Central Board",
+        "categoryDescription": "Central Board",
+        "hindiCategoryName": "सेंट्रल बोर्ड",
+        "status": "1"
+    },
+    {
+        "categoryCode": "78",
+        "sectorCode": "19",
+        "categoryName": "School Education - Others",
+        "categoryDescription": "School Education - Others",
+        "hindiCategoryName": "स्कूल शिक्षा - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "79",
+        "sectorCode": "20",
+        "categoryName": "Placement Agencies",
+        "categoryDescription": "Placement Agencies",
+        "hindiCategoryName": "प्लेसमेंट एजेंसियों",
+        "status": "0"
+    },
+    {
+        "categoryCode": "80",
+        "sectorCode": "20",
+        "categoryName": "Cab Services",
+        "categoryDescription": "Cab Services",
+        "hindiCategoryName": "टैक्सी सेवा",
+        "status": "0"
+    },
+    {
+        "categoryCode": "81",
+        "sectorCode": "20",
+        "categoryName": "Beauty/GYM/Spa",
+        "categoryDescription": "Beauty/GYM/Spa",
+        "hindiCategoryName": "सौंदर्य / जिम / स्पा",
+        "status": "0"
+    },
+    {
+        "categoryCode": "82",
+        "sectorCode": "20",
+        "categoryName": "Event Services",
+        "categoryDescription": "Event Services",
+        "hindiCategoryName": "ईवेंट्स सेवाएँ",
+        "status": "0"
+    },
+    {
+        "categoryCode": "83",
+        "sectorCode": "20",
+        "categoryName": "IT Services",
+        "categoryDescription": "IT Services",
+        "hindiCategoryName": "आईटी सेवाएं",
+        "status": "0"
+    },
+    {
+        "categoryCode": "84",
+        "sectorCode": "20",
+        "categoryName": "Agency Services - Others",
+        "categoryDescription": "Agency Services - Others",
+        "hindiCategoryName": "एजेंसी सेवाएँ -अन्य",
+        "status": "0"
+    },
+    {
+        "categoryCode": "85",
+        "sectorCode": "21",
+        "categoryName": "Postal",
+        "categoryDescription": "Postal ",
+        "hindiCategoryName": "डाक का",
+        "status": "1"
+    },
+    {
+        "categoryCode": "87",
+        "sectorCode": "22",
+        "categoryName": "Private Developers/ Builder",
+        "categoryDescription": "Private Developers/ Builder",
+        "hindiCategoryName": "निजी डेवलपर्स / बिल्डर",
+        "status": "1"
+    },
+    {
+        "categoryCode": "88",
+        "sectorCode": "22",
+        "categoryName": "Govt. Development Authorities",
+        "categoryDescription": "Govt. Development Authorities",
+        "hindiCategoryName": "सरकार। विकास प्राधिकरण",
+        "status": "1"
+    },
+    {
+        "categoryCode": "89",
+        "sectorCode": "22",
+        "categoryName": "RWA & Societies",
+        "categoryDescription": "RWA & Societies",
+        "hindiCategoryName": "RWA और सोसायटी",
+        "status": "1"
+    },
+    {
+        "categoryCode": "90",
+        "sectorCode": "22",
+        "categoryName": "Real Estate - Others",
+        "categoryDescription": "Real Estate - Others",
+        "hindiCategoryName": "रियल एस्टेट -अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "91",
+        "sectorCode": "23",
+        "categoryName": "LPG",
+        "categoryDescription": "LPG",
+        "hindiCategoryName": "रसोई गैस",
+        "status": "1"
+    },
+    {
+        "categoryCode": "92",
+        "sectorCode": "23",
+        "categoryName": "Petrol Pumps",
+        "categoryDescription": "Petrol Pumps",
+        "hindiCategoryName": "पेट्रोल पंप",
+        "status": "1"
+    },
+    {
+        "categoryCode": "93",
+        "sectorCode": "23",
+        "categoryName": "PNG",
+        "categoryDescription": "PNG",
+        "hindiCategoryName": "पीएनजी",
+        "status": "1"
+    },
+    {
+        "categoryCode": "94",
+        "sectorCode": "23",
+        "categoryName": "CNG",
+        "categoryDescription": "CNG",
+        "hindiCategoryName": "सीएनजी",
+        "status": "1"
+    },
+    {
+        "categoryCode": "95",
+        "sectorCode": "23",
+        "categoryName": "Petroleum - Others",
+        "categoryDescription": "Petroleum - Others",
+        "hindiCategoryName": "पेट्रोलियम - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "96",
+        "sectorCode": "24",
+        "categoryName": "Railways",
+        "categoryDescription": "Railways",
+        "hindiCategoryName": "रेलवे",
+        "status": "1"
+    },
+    {
+        "categoryCode": "97",
+        "sectorCode": "24",
+        "categoryName": "Railways - Others",
+        "categoryDescription": "Railways - Others",
+        "hindiCategoryName": "रेल - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "98",
+        "sectorCode": "25",
+        "categoryName": "Packers and Movers",
+        "categoryDescription": "Packers and Movers",
+        "hindiCategoryName": "पैकर्स और मोवेर्स",
+        "status": "1"
+    },
+    {
+        "categoryCode": "99",
+        "sectorCode": "25",
+        "categoryName": "Packers and Movers - Others",
+        "categoryDescription": "Packers and Movers - Others",
+        "hindiCategoryName": "पैकर्स और मोवेर्स - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "100",
+        "sectorCode": "26",
+        "categoryName": "Legal Metrology",
+        "categoryDescription": "Legal Metrology",
+        "hindiCategoryName": "लीगल मेट्रोलोजी",
+        "status": "0"
+    },
+    {
+        "categoryCode": "101",
+        "sectorCode": "26",
+        "categoryName": "Legal Metrology - Others",
+        "categoryDescription": "Legal Metrology - Others",
+        "hindiCategoryName": "लीगल मेट्रोलोजी - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "102",
+        "sectorCode": "27",
+        "categoryName": "Packaged household product",
+        "categoryDescription": "Packaged household product ",
+        "hindiCategoryName": "पैकेज घरेलु उत्पाद",
+        "status": "0"
+    },
+    {
+        "categoryCode": "103",
+        "sectorCode": "27",
+        "categoryName": "Packaged Personal care/Grooming products",
+        "categoryDescription": "Packaged Personal care/Grooming products",
+        "hindiCategoryName": "पैकेज व्यक्तिगत केयर / सौंदर्य उत्पाद",
+        "status": "0"
+    },
+    {
+        "categoryCode": "104",
+        "sectorCode": "27",
+        "categoryName": "FMCG - Others",
+        "categoryDescription": "FMCG - Others",
+        "hindiCategoryName": "FMCG - अन्य शिकायतें",
+        "status": "1"
+    },
+    {
+        "categoryCode": "105",
+        "sectorCode": "28",
+        "categoryName": "Term",
+        "categoryDescription": "Term",
+        "hindiCategoryName": "अवधि",
+        "status": "1"
+    },
+    {
+        "categoryCode": "106",
+        "sectorCode": "28",
+        "categoryName": "Endowment",
+        "categoryDescription": "Endowment",
+        "hindiCategoryName": "अक्षय निधि",
+        "status": "1"
+    },
+    {
+        "categoryCode": "107",
+        "sectorCode": "28",
+        "categoryName": "ULIP",
+        "categoryDescription": "ULIP",
+        "hindiCategoryName": "यूलिप",
+        "status": "1"
+    },
+    {
+        "categoryCode": "108",
+        "sectorCode": "28",
+        "categoryName": "Pension Plans",
+        "categoryDescription": "Pension Plans",
+        "hindiCategoryName": "पेंशन योजनाएं",
+        "status": "1"
+    },
+    {
+        "categoryCode": "109",
+        "sectorCode": "28",
+        "categoryName": "Life Insurance - Others",
+        "categoryDescription": "Life Insurance - Others",
+        "hindiCategoryName": "जीवन बीमा - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "110",
+        "sectorCode": "29",
+        "categoryName": "Under Graduate",
+        "categoryDescription": "Under Graduate",
+        "hindiCategoryName": "ग्रेजुएट के तहत",
+        "status": "1"
+    },
+    {
+        "categoryCode": "111",
+        "sectorCode": "29",
+        "categoryName": "IITs",
+        "categoryDescription": "IITs",
+        "hindiCategoryName": "आईआईटी",
+        "status": "1"
+    },
+    {
+        "categoryCode": "112",
+        "sectorCode": "29",
+        "categoryName": "IISc and IISERs",
+        "categoryDescription": "IISc and IISERs",
+        "hindiCategoryName": "आईआईएससी और आईआईएसईआरएस",
+        "status": "1"
+    },
+    {
+        "categoryCode": "113",
+        "sectorCode": "29",
+        "categoryName": "Technical Education",
+        "categoryDescription": "Technical Education",
+        "hindiCategoryName": "तकनीकी शिक्षा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "114",
+        "sectorCode": "29",
+        "categoryName": "Higher Education - Others",
+        "categoryDescription": "Higher Education - Others",
+        "hindiCategoryName": "उच्च शिक्षा - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "115",
+        "sectorCode": "30",
+        "categoryName": "Job Oriented Courses",
+        "categoryDescription": "Job Oriented Courses",
+        "hindiCategoryName": "रोजगारोन्मुखी पाठ्यक्रम",
+        "status": "1"
+    },
+    {
+        "categoryCode": "116",
+        "sectorCode": "30",
+        "categoryName": "Job Oriented Courses - Others",
+        "categoryDescription": "Job Oriented Courses - Others",
+        "hindiCategoryName": "रोजगारोन्मुखी पाठ्यक्रम - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "117",
+        "sectorCode": "31",
+        "categoryName": "Misleading Advertisement",
+        "categoryDescription": "Misleading Advertisement",
+        "hindiCategoryName": "भ्रामक विज्ञापन",
+        "status": "0"
+    },
+    {
+        "categoryCode": "118",
+        "sectorCode": "31",
+        "categoryName": "Unfair Trade Practices",
+        "categoryDescription": "Unfair Trade Practices",
+        "hindiCategoryName": "अनुचित व्यापार व्यवहार",
+        "status": "0"
+    },
+    {
+        "categoryCode": "119",
+        "sectorCode": "31",
+        "categoryName": "Advertisements - Others",
+        "categoryDescription": "Advertisements - Others",
+        "hindiCategoryName": "विज्ञापन - अन्य",
+        "status": "0"
+    },
+    {
+        "categoryCode": "120",
+        "sectorCode": "32",
+        "categoryName": "Seed Problem",
+        "categoryDescription": "Seed Problem",
+        "hindiCategoryName": "बीज समस्या",
+        "status": "1"
+    },
+    {
+        "categoryCode": "121",
+        "sectorCode": "32",
+        "categoryName": "Fertilizers",
+        "categoryDescription": "Fertilizers",
+        "hindiCategoryName": "उर्वरक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "122",
+        "sectorCode": "32",
+        "categoryName": "Kishan Call Centre",
+        "categoryDescription": "Kishan Call Centre",
+        "hindiCategoryName": "किशन कॉल सेंटर",
+        "status": "1"
+    },
+    {
+        "categoryCode": "123",
+        "sectorCode": "32",
+        "categoryName": "Agriculture - Others",
+        "categoryDescription": "Agriculture - Others",
+        "hindiCategoryName": "कृषि - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "124",
+        "sectorCode": "33",
+        "categoryName": "Drugs",
+        "categoryDescription": "Drugs",
+        "hindiCategoryName": "औषध",
+        "status": "1"
+    },
+    {
+        "categoryCode": "125",
+        "sectorCode": "33",
+        "categoryName": "perosnal Care Cosmetics product",
+        "categoryDescription": "Cosmetics",
+        "hindiCategoryName": "प्रसाधन सामग्री",
+        "status": "1"
+    },
+    {
+        "categoryCode": "126",
+        "sectorCode": "33",
+        "categoryName": "Magical Remedy Productrs",
+        "categoryDescription": "Magical Remedy Productrs",
+        "hindiCategoryName": "जादुई उपाय Productrs",
+        "status": "1"
+    },
+    {
+        "categoryCode": "127",
+        "sectorCode": "33",
+        "categoryName": "Drugs & Cosmetics - Others",
+        "categoryDescription": "Drugs & Cosmetics - Others",
+        "hindiCategoryName": "औषधि और प्रसाधन सामग्री - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "128",
+        "sectorCode": "34",
+        "categoryName": "Public Distribution System",
+        "categoryDescription": "Public Distribution System",
+        "hindiCategoryName": "सार्वजनिक वितरण प्रणाली",
+        "status": "1"
+    },
+    {
+        "categoryCode": "129",
+        "sectorCode": "34",
+        "categoryName": "Public Distribution System - Others",
+        "categoryDescription": "Public Distribution System - Others",
+        "hindiCategoryName": "सार्वजनिक वितरण प्रणाली - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "130",
+        "sectorCode": "35",
+        "categoryName": "NCDRC",
+        "categoryDescription": "NCDRC",
+        "hindiCategoryName": "एनसीडीआरसी",
+        "status": "0"
+    },
+    {
+        "categoryCode": "131",
+        "sectorCode": "35",
+        "categoryName": "State Commission",
+        "categoryDescription": "State Commission",
+        "hindiCategoryName": "राज्य आयोग",
+        "status": "0"
+    },
+    {
+        "categoryCode": "132",
+        "sectorCode": "35",
+        "categoryName": "District Forum",
+        "categoryDescription": "District Forum",
+        "hindiCategoryName": "जिला फोरम",
+        "status": "0"
+    },
+    {
+        "categoryCode": "133",
+        "sectorCode": "35",
+        "categoryName": "Legal - Others",
+        "categoryDescription": "Legal - Others",
+        "hindiCategoryName": "कानूनी - अन्य",
+        "status": "0"
+    },
+    {
+        "categoryCode": "134",
+        "sectorCode": "36",
+        "categoryName": "CIC",
+        "categoryDescription": "CIC",
+        "hindiCategoryName": "सीआईसी",
+        "status": "1"
+    },
+    {
+        "categoryCode": "135",
+        "sectorCode": "36",
+        "categoryName": "SIC",
+        "categoryDescription": "SIC",
+        "hindiCategoryName": "अस ई सी",
+        "status": "1"
+    },
+    {
+        "categoryCode": "136",
+        "sectorCode": "36",
+        "categoryName": "Right to Information - Others",
+        "categoryDescription": "Right to Information - Others",
+        "hindiCategoryName": "सूचना का अधिकार - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "137",
+        "sectorCode": "37",
+        "categoryName": "Sewage",
+        "categoryDescription": "Sewage",
+        "hindiCategoryName": "मल",
+        "status": "1"
+    },
+    {
+        "categoryCode": "138",
+        "sectorCode": "37",
+        "categoryName": "Water Supply",
+        "categoryDescription": "Water Supply",
+        "hindiCategoryName": "जलापूर्ति",
+        "status": "1"
+    },
+    {
+        "categoryCode": "139",
+        "sectorCode": "37",
+        "categoryName": "Water - Others",
+        "categoryDescription": "Water - Others",
+        "hindiCategoryName": "जल - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "140",
+        "sectorCode": "38",
+        "categoryName": "Aadhar",
+        "categoryDescription": "Aadhar ",
+        "hindiCategoryName": "आधार\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "141",
+        "sectorCode": "38",
+        "categoryName": "PAN Card",
+        "categoryDescription": "PAN Card",
+        "hindiCategoryName": "पैन कार्ड",
+        "status": "1"
+    },
+    {
+        "categoryCode": "142",
+        "sectorCode": "38",
+        "categoryName": "Passport",
+        "categoryDescription": "Passport",
+        "hindiCategoryName": "पासपोर्ट",
+        "status": "1"
+    },
+    {
+        "categoryCode": "143",
+        "sectorCode": "38",
+        "categoryName": "Voter ID",
+        "categoryDescription": "Voter ID",
+        "hindiCategoryName": "वोटर आईडी",
+        "status": "1"
+    },
+    {
+        "categoryCode": "144",
+        "sectorCode": "38",
+        "categoryName": "Govt. Identity Services - Others",
+        "categoryDescription": "Govt. Identity Services - Others",
+        "hindiCategoryName": "सरकार। पहचान सेवाओं - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "145",
+        "sectorCode": "39",
+        "categoryName": "Service Tax",
+        "categoryDescription": "Service Tax",
+        "hindiCategoryName": "सेवा कर",
+        "status": "1"
+    },
+    {
+        "categoryCode": "146",
+        "sectorCode": "39",
+        "categoryName": "VAT",
+        "categoryDescription": "VAT",
+        "hindiCategoryName": "वैट",
+        "status": "1"
+    },
+    {
+        "categoryCode": "147",
+        "sectorCode": "39",
+        "categoryName": "Educational Cess",
+        "categoryDescription": "Educational Cess",
+        "hindiCategoryName": "शिक्षा उपकर",
+        "status": "1"
+    },
+    {
+        "categoryCode": "148",
+        "sectorCode": "39",
+        "categoryName": "Swachh  Bharat",
+        "categoryDescription": "Swachh  Bharat",
+        "hindiCategoryName": "स्वच्छ भारत",
+        "status": "1"
+    },
+    {
+        "categoryCode": "149",
+        "sectorCode": "39",
+        "categoryName": "FAT Tax",
+        "categoryDescription": "FAT Tax",
+        "hindiCategoryName": "वसा कर",
+        "status": "1"
+    },
+    {
+        "categoryCode": "150",
+        "sectorCode": "39",
+        "categoryName": "Income Tax",
+        "categoryDescription": "Income Tax",
+        "hindiCategoryName": "आयकर\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "151",
+        "sectorCode": "39",
+        "categoryName": "Govt. Taxes - Others",
+        "categoryDescription": "Govt. Taxes - Others",
+        "hindiCategoryName": "सरकार। कर- अन्य\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "152",
+        "sectorCode": "40",
+        "categoryName": "Departmental Stores",
+        "categoryDescription": "Departmental Stores",
+        "hindiCategoryName": "विभागीय स्टोर",
+        "status": "1"
+    },
+    {
+        "categoryCode": "153",
+        "sectorCode": "40",
+        "categoryName": "Shopping Malls",
+        "categoryDescription": "Shopping Malls",
+        "hindiCategoryName": "शॉपिंग मॉल",
+        "status": "1"
+    },
+    {
+        "categoryCode": "154",
+        "sectorCode": "40",
+        "categoryName": "Stand Alone Shops",
+        "categoryDescription": "Strand Alone Shops",
+        "hindiCategoryName": "अकेला दुकानें किनारा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "155",
+        "sectorCode": "40",
+        "categoryName": "Retail Outlets -Others",
+        "categoryDescription": "Retail Outlets -Others",
+        "hindiCategoryName": "रिटेल आउटलेट -अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "156",
+        "sectorCode": "41",
+        "categoryName": "Food Premises - Sitting & Dining",
+        "categoryDescription": "Food Premises - Sitting & Dining",
+        "hindiCategoryName": "खाद्य परिसर में बैठ कर भोजन ग्रहण करना",
+        "status": "0"
+    },
+    {
+        "categoryCode": "157",
+        "sectorCode": "41",
+        "categoryName": "Food Premises- Home Delivery/food aggregators/Takeaway",
+        "categoryDescription": "Food Premises- Home Delivery/food aggregators/Takeaway",
+        "hindiCategoryName": "खाद्य परिसर- खाद्य परिसर- घर पर डिलीवरी / स्वयं घर ले जाना / फ़ूड अग्ग्रीगेटर के द्वारा आर्डर",
+        "status": "0"
+    },
+    {
+        "categoryCode": "158",
+        "sectorCode": "41",
+        "categoryName": "Take way",
+        "categoryDescription": "Take way",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "159",
+        "sectorCode": "41",
+        "categoryName": "Unlabelled Agri Products/ Milk/Meat/Poultry",
+        "categoryDescription": "Unlabelled Agri Products/ Milk/Meat/Poultry",
+        "hindiCategoryName": "कृषि उपज अथवा खुला सामान / दूध / मांस /अंडे",
+        "status": "0"
+    },
+    {
+        "categoryCode": "160",
+        "sectorCode": "7",
+        "categoryName": "Courier & Cargo - Others",
+        "categoryDescription": "Courier & Cargo - Others",
+        "hindiCategoryName": "कूरियर और कार्गो - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "161",
+        "sectorCode": "42",
+        "categoryName": "Share Brokerage",
+        "categoryDescription": "Share Brokerage",
+        "hindiCategoryName": "शेयर ब्रोकरेज",
+        "status": "1"
+    },
+    {
+        "categoryCode": "162",
+        "sectorCode": "42",
+        "categoryName": "Share Brokerage - Others",
+        "categoryDescription": "Share Brokerage - Others",
+        "hindiCategoryName": "शेयर ब्रोकरेज - अन्य",
+        "status": "0"
+    },
+    {
+        "categoryCode": "163",
+        "sectorCode": "43",
+        "categoryName": "BIS - ENFORCEMENT",
+        "categoryDescription": "BIS - ENFORCEMENT",
+        "hindiCategoryName": "बीआईएस - प्रवर्तन",
+        "status": "0"
+    },
+    {
+        "categoryCode": "164",
+        "sectorCode": "43",
+        "categoryName": "ISI",
+        "categoryDescription": "ISI",
+        "hindiCategoryName": "आईएसआई",
+        "status": "0"
+    },
+    {
+        "categoryCode": "165",
+        "sectorCode": "43",
+        "categoryName": "Hall Mark",
+        "categoryDescription": "Hall Mark",
+        "hindiCategoryName": "हॉल मार्क\n",
+        "status": "0"
+    },
+    {
+        "categoryCode": "166",
+        "sectorCode": "43",
+        "categoryName": "BEE Stars",
+        "categoryDescription": "BEE Stars",
+        "hindiCategoryName": "बीईई स्टार",
+        "status": "0"
+    },
+    {
+        "categoryCode": "167",
+        "sectorCode": "43",
+        "categoryName": "Trade Marks",
+        "categoryDescription": "Trade Marks",
+        "hindiCategoryName": "ट्रेड मार्क्स",
+        "status": "0"
+    },
+    {
+        "categoryCode": "168",
+        "sectorCode": "43",
+        "categoryName": "Agmark",
+        "categoryDescription": "Agmark",
+        "hindiCategoryName": "एगमार्क",
+        "status": "0"
+    },
+    {
+        "categoryCode": "169",
+        "sectorCode": "43",
+        "categoryName": "ISO",
+        "categoryDescription": "ISO",
+        "hindiCategoryName": "आईएसओ\n",
+        "status": "0"
+    },
+    {
+        "categoryCode": "170",
+        "sectorCode": "43",
+        "categoryName": "Silk Mark",
+        "categoryDescription": "Silk Mark",
+        "hindiCategoryName": "सिल्क मार्क",
+        "status": "0"
+    },
+    {
+        "categoryCode": "171",
+        "sectorCode": "43",
+        "categoryName": "Standards - Others",
+        "categoryDescription": "Standards - Others",
+        "hindiCategoryName": "मानक - अन्य",
+        "status": "0"
+    },
+    {
+        "categoryCode": "172",
+        "sectorCode": "44",
+        "categoryName": "General Enquiry",
+        "categoryDescription": "General Enquiry",
+        "hindiCategoryName": "सामान्य जांच",
+        "status": "1"
+    },
+    {
+        "categoryCode": "173",
+        "sectorCode": "44",
+        "categoryName": "General Enquiry - Others",
+        "categoryDescription": "General Enquiry - Others",
+        "hindiCategoryName": "जनरल पूछताछ  - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "174",
+        "sectorCode": "45",
+        "categoryName": "Govt. Transport",
+        "categoryDescription": "Govt. Transport",
+        "hindiCategoryName": "सरकार ट्रांसपोर्ट",
+        "status": "1"
+    },
+    {
+        "categoryCode": "175",
+        "sectorCode": "45",
+        "categoryName": "Govt. Transport - Others",
+        "categoryDescription": "Govt. Transport - Others",
+        "hindiCategoryName": "जनरल पूछताछ - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "176",
+        "sectorCode": "38",
+        "categoryName": "Employees Provident Fund",
+        "categoryDescription": "Employees Provident Fund",
+        "hindiCategoryName": "कर्मचारी भविष्य निधि",
+        "status": "1"
+    },
+    {
+        "categoryCode": "177",
+        "sectorCode": "44",
+        "categoryName": "Cyber Crime",
+        "categoryDescription": "Cyber Crime",
+        "hindiCategoryName": "साइबर अपराध",
+        "status": "1"
+    },
+    {
+        "categoryCode": "178",
+        "sectorCode": "44",
+        "categoryName": "Delhi Police Grievance",
+        "categoryDescription": "Delhi Police Grievance",
+        "hindiCategoryName": "दिल्ली पुलिस  शिकायत",
+        "status": "1"
+    },
+    {
+        "categoryCode": "179",
+        "sectorCode": "44",
+        "categoryName": "Women helpline",
+        "categoryDescription": "Women helpline",
+        "hindiCategoryName": "महिला हेल्पलाइन",
+        "status": "1"
+    },
+    {
+        "categoryCode": "180",
+        "sectorCode": "44",
+        "categoryName": "Fraudulent Complaints",
+        "categoryDescription": "Fraudulent Complaints",
+        "hindiCategoryName": "धोखाधड़ी शिकायतें",
+        "status": "1"
+    },
+    {
+        "categoryCode": "181",
+        "sectorCode": "5",
+        "categoryName": "Sanitary/ Toiletries",
+        "categoryDescription": "Sanitary/ Toiletries",
+        "hindiCategoryName": "स्वच्छता / प्रसाधन",
+        "status": "0"
+    },
+    {
+        "categoryCode": "182",
+        "sectorCode": "5",
+        "categoryName": "Mattress",
+        "categoryDescription": "Mattress",
+        "hindiCategoryName": "गद्दा",
+        "status": "0"
+    },
+    {
+        "categoryCode": "183",
+        "sectorCode": "5",
+        "categoryName": "Tyers",
+        "categoryDescription": "Tyers",
+        "hindiCategoryName": "टायर",
+        "status": "0"
+    },
+    {
+        "categoryCode": "184",
+        "sectorCode": "35",
+        "categoryName": "Meditation center",
+        "categoryDescription": "Meditation center",
+        "hindiCategoryName": "ध्यान केंद्र",
+        "status": "0"
+    },
+    {
+        "categoryCode": "185",
+        "sectorCode": "35",
+        "categoryName": "Bar Council",
+        "categoryDescription": "Bar Council",
+        "hindiCategoryName": "बार काउंसिल",
+        "status": "0"
+    },
+    {
+        "categoryCode": "186",
+        "sectorCode": "8",
+        "categoryName": "Medical Instruments",
+        "categoryDescription": "Medical Instruments",
+        "hindiCategoryName": "चिकित्सा उपकरण",
+        "status": "1"
+    },
+    {
+        "categoryCode": "187",
+        "sectorCode": "10",
+        "categoryName": "Chit Fund",
+        "categoryDescription": "Chit Fund",
+        "hindiCategoryName": "चिट फंड",
+        "status": "1"
+    },
+    {
+        "categoryCode": "188",
+        "sectorCode": "4",
+        "categoryName": "Product insurance",
+        "categoryDescription": "Product insurance",
+        "hindiCategoryName": "प्रोडक्ट बीमा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "189",
+        "sectorCode": "20",
+        "categoryName": "Referring Service",
+        "categoryDescription": "Referring Service",
+        "hindiCategoryName": "जिक्र करते हुए सेवा",
+        "status": "0"
+    },
+    {
+        "categoryCode": "190",
+        "sectorCode": "20",
+        "categoryName": "Extended Care Services",
+        "categoryDescription": "Extended Care Services",
+        "hindiCategoryName": "विस्तारित देखभाल सेवा",
+        "status": "0"
+    },
+    {
+        "categoryCode": "191",
+        "sectorCode": "20",
+        "categoryName": "Repair Services",
+        "categoryDescription": "Repair Services",
+        "hindiCategoryName": "मरम्मत सेवाएँ",
+        "status": "0"
+    },
+    {
+        "categoryCode": "192",
+        "sectorCode": "14",
+        "categoryName": "M- Commerce",
+        "categoryDescription": "M- Commerce",
+        "hindiCategoryName": "एम कामर्स",
+        "status": "0"
+    },
+    {
+        "categoryCode": "193",
+        "sectorCode": "14",
+        "categoryName": "Online Cab service",
+        "categoryDescription": "Online Cab service",
+        "hindiCategoryName": "ऑनलाइन टैक्सी सेवा",
+        "status": "0"
+    },
+    {
+        "categoryCode": "194",
+        "sectorCode": "20",
+        "categoryName": "Agency Services-Mobile Insurance",
+        "categoryDescription": "Agency Services-Mobile Insurance",
+        "hindiCategoryName": "एजेंसी सेवाएं-मोबाइल बीमा",
+        "status": "0"
+    },
+    {
+        "categoryCode": "196",
+        "sectorCode": "46",
+        "categoryName": "IT Coaching",
+        "categoryDescription": "IT Coaching",
+        "hindiCategoryName": "आईटी कोचिंग",
+        "status": "0"
+    },
+    {
+        "categoryCode": "197",
+        "sectorCode": "20",
+        "categoryName": "Car/bike rental service",
+        "categoryDescription": "Car/bike rental service",
+        "hindiCategoryName": "कार / बाइक किराए पर लेने की सेवा",
+        "status": "0"
+    },
+    {
+        "categoryCode": "198",
+        "sectorCode": "41",
+        "categoryName": "Food Premises -Food Cart/ Roadside Vendor/ food Van/ Dhaba",
+        "categoryDescription": "Food Premises -Food Cart/ Roadside Vendor/ food Van/ Dhaba",
+        "hindiCategoryName": "खाद्य परिसर- रेहड़ी /ठेला / फ़ूड वैन / ढाबा",
+        "status": "0"
+    },
+    {
+        "categoryCode": "199",
+        "sectorCode": "41",
+        "categoryName": "Packaged food Products",
+        "categoryDescription": "Packaged food Products",
+        "hindiCategoryName": "पैकेज खाद्य पदार्थ",
+        "status": "0"
+    },
+    {
+        "categoryCode": "200",
+        "sectorCode": "41",
+        "categoryName": "Food-Others",
+        "categoryDescription": "Food-Others",
+        "hindiCategoryName": "अन्य शिकायतें",
+        "status": "0"
+    },
+    {
+        "categoryCode": "201",
+        "sectorCode": "14",
+        "categoryName": "Home Delivery",
+        "categoryDescription": "Home Delivery",
+        "hindiCategoryName": "घर पहुँचाना",
+        "status": "0"
+    },
+    {
+        "categoryCode": "202",
+        "sectorCode": "32",
+        "categoryName": "Pesticides\n",
+        "categoryDescription": "Pesticides\n",
+        "hindiCategoryName": "कीटनाशकों",
+        "status": "1"
+    },
+    {
+        "categoryCode": "203",
+        "sectorCode": "14",
+        "categoryName": "Pharmacy",
+        "categoryDescription": "Pharmacy",
+        "hindiCategoryName": "फार्मेसी",
+        "status": "0"
+    },
+    {
+        "categoryCode": "204",
+        "sectorCode": "39",
+        "categoryName": "GST",
+        "categoryDescription": "GST",
+        "hindiCategoryName": "जीएसटी",
+        "status": "0"
+    },
+    {
+        "categoryCode": "205",
+        "sectorCode": "14",
+        "categoryName": "Perishables - Shelflife (24hrs)",
+        "categoryDescription": "Perishables - Shelflife (24hrs)",
+        "hindiCategoryName": "पराजय - शेल्फ़फैफ़ (24 घंटे)",
+        "status": "0"
+    },
+    {
+        "categoryCode": "206",
+        "sectorCode": "21",
+        "categoryName": "Postal Financial Services",
+        "categoryDescription": "Postal Financial Services",
+        "hindiCategoryName": "पोस्टल वित्तीय सेवाएं",
+        "status": "1"
+    },
+    {
+        "categoryCode": "207",
+        "sectorCode": "21",
+        "categoryName": "Postal Mail Services",
+        "categoryDescription": "Postal Mail Services",
+        "hindiCategoryName": "डाक मेल सेवा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "208",
+        "sectorCode": "26",
+        "categoryName": "Charging GST Over MRP",
+        "categoryDescription": "Charging GST Over MRP",
+        "hindiCategoryName": "Charging GST Over MRP",
+        "status": "0"
+    },
+    {
+        "categoryCode": "209",
+        "sectorCode": "4",
+        "categoryName": "Personal Insurance",
+        "categoryDescription": "Personal Insurance",
+        "hindiCategoryName": "व्यक्तिगत बीमा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "210",
+        "sectorCode": "4",
+        "categoryName": "Liability Insurance",
+        "categoryDescription": "Liability Insurance",
+        "hindiCategoryName": "दायित्व बीमा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "211",
+        "sectorCode": "29",
+        "categoryName": "Rural Management",
+        "categoryDescription": "Rural Management",
+        "hindiCategoryName": "ग्रामीण प्रबंधन",
+        "status": "1"
+    },
+    {
+        "categoryCode": "212",
+        "sectorCode": "14",
+        "categoryName": "Loans",
+        "categoryDescription": "Loans",
+        "hindiCategoryName": "ऋण",
+        "status": "0"
+    },
+    {
+        "categoryCode": "213",
+        "sectorCode": "14",
+        "categoryName": "Insurance",
+        "categoryDescription": "Insurance",
+        "hindiCategoryName": "बीमा",
+        "status": "0"
+    },
+    {
+        "categoryCode": "214",
+        "sectorCode": "20",
+        "categoryName": "Immigration & Visa services",
+        "categoryDescription": "Immigration & Visa services",
+        "hindiCategoryName": "आप्रवासन और वीजा सेवाएं",
+        "status": "0"
+    },
+    {
+        "categoryCode": "215",
+        "sectorCode": "22",
+        "categoryName": "Urban Transport-Metro Rail",
+        "categoryDescription": "Urban Transport-Metro Rail",
+        "hindiCategoryName": "शहरी परिवहन-मेट्रो रेल",
+        "status": "1"
+    },
+    {
+        "categoryCode": "216",
+        "sectorCode": "46",
+        "categoryName": "Private Education - Others",
+        "categoryDescription": "Private Education - Others",
+        "hindiCategoryName": "निजी शिक्षा - अन्य",
+        "status": "0"
+    },
+    {
+        "categoryCode": "218",
+        "sectorCode": "47",
+        "categoryName": "Approval Body",
+        "categoryDescription": "Approval Body",
+        "hindiCategoryName": "अनुमोदन निकाय",
+        "status": "1"
+    },
+    {
+        "categoryCode": "219",
+        "sectorCode": "46",
+        "categoryName": "Play School",
+        "categoryDescription": "Play School",
+        "hindiCategoryName": "प्ले स्कूल",
+        "status": "1"
+    },
+    {
+        "categoryCode": "220",
+        "sectorCode": "5",
+        "categoryName": "Musical Instruments",
+        "categoryDescription": "Musical Instruments",
+        "hindiCategoryName": "संगीत वाद्ययंत्र",
+        "status": "0"
+    },
+    {
+        "categoryCode": "221",
+        "sectorCode": "29",
+        "categoryName": "ITI /All Skill development programme",
+        "categoryDescription": "ITI /All Skill development programme",
+        "hindiCategoryName": "आईटीआई / सभी कौशल विकास कार्यक्रम",
+        "status": "1"
+    },
+    {
+        "categoryCode": "222",
+        "sectorCode": "23",
+        "categoryName": "Research Association/ Institute",
+        "categoryDescription": "Research Association/ Institute",
+        "hindiCategoryName": "रिसर्च एसोसिएशन / इंस्टीट्यूट",
+        "status": "1"
+    },
+    {
+        "categoryCode": "223",
+        "sectorCode": "29",
+        "categoryName": "NITTTRs",
+        "categoryDescription": "NITTTRs",
+        "hindiCategoryName": "एनआईटीटीटीआरएस",
+        "status": "1"
+    },
+    {
+        "categoryCode": "224",
+        "sectorCode": "29",
+        "categoryName": "Autonomous Organization",
+        "categoryDescription": "Autonomous Organization",
+        "hindiCategoryName": "स्वायत्त संगठन",
+        "status": "1"
+    },
+    {
+        "categoryCode": "225",
+        "sectorCode": "14",
+        "categoryName": "Online Rental",
+        "categoryDescription": "Online Rental",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "226",
+        "sectorCode": "5",
+        "categoryName": "Home Security",
+        "categoryDescription": "Home Security ",
+        "hindiCategoryName": "गृह सुरक्षा\n",
+        "status": "0"
+    },
+    {
+        "categoryCode": "228",
+        "sectorCode": "8",
+        "categoryName": "Stem Cells Organization\n",
+        "categoryDescription": "Stem Cells Organization",
+        "hindiCategoryName": "स्टेम सेल संगठन",
+        "status": "1"
+    },
+    {
+        "categoryCode": "229",
+        "sectorCode": "29",
+        "categoryName": "Apex Level Bodies",
+        "categoryDescription": "Apex Level Bodies",
+        "hindiCategoryName": "शीर्ष स्तर निकाय",
+        "status": "1"
+    },
+    {
+        "categoryCode": "230",
+        "sectorCode": "29",
+        "categoryName": "Central Universities",
+        "categoryDescription": "Central Universities",
+        "hindiCategoryName": "केंद्रीय विश्वविद्यालय",
+        "status": "1"
+    },
+    {
+        "categoryCode": "231",
+        "sectorCode": "29",
+        "categoryName": "IIMs",
+        "categoryDescription": "IIMs",
+        "hindiCategoryName": "आईआईएम",
+        "status": "1"
+    },
+    {
+        "categoryCode": "232",
+        "sectorCode": "22",
+        "categoryName": "Rental Services",
+        "categoryDescription": "",
+        "hindiCategoryName": "किराये की सेवाएं",
+        "status": "0"
+    },
+    {
+        "categoryCode": "233",
+        "sectorCode": "9",
+        "categoryName": "M Commerce",
+        "categoryDescription": "M Commerce",
+        "hindiCategoryName": "एम कॉमर्स",
+        "status": "0"
+    },
+    {
+        "categoryCode": "234",
+        "sectorCode": "4",
+        "categoryName": "Agriculture Insurance",
+        "categoryDescription": "Agriculture Insurance",
+        "hindiCategoryName": "कृषि बीमा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "236",
+        "sectorCode": "17",
+        "categoryName": "Autonomous Publication House",
+        "categoryDescription": "Autonomous Publication House",
+        "hindiCategoryName": "स्वायत्त प्रकाशन हाउस",
+        "status": "1"
+    },
+    {
+        "categoryCode": "237",
+        "sectorCode": "24",
+        "categoryName": "IRCTC- Tourism",
+        "categoryDescription": "",
+        "hindiCategoryName": "आईआरसीटीसी - पर्यटन",
+        "status": "1"
+    },
+    {
+        "categoryCode": "238",
+        "sectorCode": "24",
+        "categoryName": "IRCTC- Catering",
+        "categoryDescription": "",
+        "hindiCategoryName": "आईआरसीटीसी-केटरिंग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "239",
+        "sectorCode": "24",
+        "categoryName": "IRCTC- I Ticketing",
+        "categoryDescription": "",
+        "hindiCategoryName": "आईआरसीटीसी- आई टिकटिंग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "240",
+        "sectorCode": "29",
+        "categoryName": "Boards of Apprenticeship Training",
+        "categoryDescription": "Boards of Apprenticeship Training",
+        "hindiCategoryName": "प्रशिक्षु प्रशिक्षण बोर्ड",
+        "status": "1"
+    },
+    {
+        "categoryCode": "241",
+        "sectorCode": "29",
+        "categoryName": "Institutions Related to Hindi and other Indian Languages",
+        "categoryDescription": "Institutions Related to Hindi and other Indian Languages",
+        "hindiCategoryName": "हिंदी और अन्य भारतीय भाषाओं से संबंधित संस्थान",
+        "status": "1"
+    },
+    {
+        "categoryCode": "242",
+        "sectorCode": "41",
+        "categoryName": "Complaints related to Service Charge",
+        "categoryDescription": "Complaints related to Service Charge",
+        "hindiCategoryName": "सर्विस चार्ज से संबंधित शिकायतें",
+        "status": "0"
+    },
+    {
+        "categoryCode": "243",
+        "sectorCode": "41",
+        "categoryName": "Canteen & Mess - School/ Colleges/offices/Etc",
+        "categoryDescription": "Canteen & Mess - School/ Colleges/offices/Etc",
+        "hindiCategoryName": "कैंटीन एवम मैस - स्कूल / कॉलेज /ऑफिस इत्यादि",
+        "status": "0"
+    },
+    {
+        "categoryCode": "244",
+        "sectorCode": "27",
+        "categoryName": "Apparels/Footwears",
+        "categoryDescription": "Apparels/Footwears",
+        "hindiCategoryName": "कपड़े / फूटवेयर्स",
+        "status": "0"
+    },
+    {
+        "categoryCode": "245",
+        "sectorCode": "27",
+        "categoryName": "Toiletries/Sanitary Items/ Other Personal Care",
+        "categoryDescription": "Toiletries/Sanitary Items",
+        "hindiCategoryName": "प्रसाधन सामग्री / सेनेटरी आइटम",
+        "status": "0"
+    },
+    {
+        "categoryCode": "246",
+        "sectorCode": "5",
+        "categoryName": "Housing hardware item / Plumbing / Sanitary wares/ Construction and Building Material",
+        "categoryDescription": "Housing Hardware Items/Plumbing/Sanitarywares",
+        "hindiCategoryName": "हाउसिंग हार्डवेयर आइटम / प्लंबिंग  / सेनेटरी वेयर",
+        "status": "1"
+    },
+    {
+        "categoryCode": "247",
+        "sectorCode": "14",
+        "categoryName": "Direct Selling",
+        "categoryDescription": "Direct Selling",
+        "hindiCategoryName": "प्रत्यक्ष बिक्री",
+        "status": "0"
+    },
+    {
+        "categoryCode": "248",
+        "sectorCode": "3",
+        "categoryName": "Nodal Bank",
+        "categoryDescription": "Nodal Bank",
+        "hindiCategoryName": "नोडल बैंक",
+        "status": "0"
+    },
+    {
+        "categoryCode": "249",
+        "sectorCode": "20",
+        "categoryName": "Comparison Sites (Loans/Insurance/Property/Gadgets)",
+        "categoryDescription": "Utility Services",
+        "hindiCategoryName": "तुल्नात्मक वेबसाइटें",
+        "status": "1"
+    },
+    {
+        "categoryCode": "250",
+        "sectorCode": "14",
+        "categoryName": "Online Cab Services/ Car Rentals",
+        "categoryDescription": "Online Cab Services/ Car Rentals",
+        "hindiCategoryName": "ऑनलाइन टैक्सी सेवा",
+        "status": "0"
+    },
+    {
+        "categoryCode": "251",
+        "sectorCode": "33",
+        "categoryName": "Online Pharmacy",
+        "categoryDescription": "Online Pharmacy",
+        "hindiCategoryName": "ऑनलाइन फार्मेसी",
+        "status": "1"
+    },
+    {
+        "categoryCode": "252",
+        "sectorCode": "20",
+        "categoryName": "Online Home/PG/Hostel Rental",
+        "categoryDescription": "Online Rentals (Home/ Durables/Etc)",
+        "hindiCategoryName": "किराये की सेवायें",
+        "status": "1"
+    },
+    {
+        "categoryCode": "253",
+        "sectorCode": "50",
+        "categoryName": "Mobile Wallets / Payment Gateway",
+        "categoryDescription": "Mobile Wallets / Payment Gateway",
+        "hindiCategoryName": "मोबाइल वॉलेट / भुगतान गेटवे",
+        "status": "1"
+    },
+    {
+        "categoryCode": "254",
+        "sectorCode": "14",
+        "categoryName": "Online food orders/ Delivery",
+        "categoryDescription": "Online food orders/ Delivery",
+        "hindiCategoryName": "ऑनलाइन भोजन डिलीवरी",
+        "status": "0"
+    },
+    {
+        "categoryCode": "255",
+        "sectorCode": "14",
+        "categoryName": "Online Booking (Hotel / Travel/ Ticket)",
+        "categoryDescription": "Online Booking (Hotel / Travel/ Ticket)",
+        "hindiCategoryName": "ऑनलाइन  बुकिंग",
+        "status": "0"
+    },
+    {
+        "categoryCode": "256",
+        "sectorCode": "9",
+        "categoryName": "Audio Devices /Home Theatre/Bluetooth Devices",
+        "categoryDescription": "Audio Devices /Home Theatre/Bluetooth Devices",
+        "hindiCategoryName": "ऑडियो डिवाइस / होम थियेटर / ब्लूटूथ डिवाइस",
+        "status": "1"
+    },
+    {
+        "categoryCode": "257",
+        "sectorCode": "9",
+        "categoryName": "Laptops/Desktop/PC's",
+        "categoryDescription": "Laptops/Desktop/PC's",
+        "hindiCategoryName": "लैपटॉप / डेस्कटॉप / पीसी\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "258",
+        "sectorCode": "9",
+        "categoryName": "Camera / Camera Accessories /Handicam",
+        "categoryDescription": "Camera / Camera Accessories /Handicam",
+        "hindiCategoryName": "कैमरा/ कैमरा एक्सेसरीज  /हैंडीकैम ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "259",
+        "sectorCode": "9",
+        "categoryName": "Gaming Console /Gaming Accessories/MP3 Players",
+        "categoryDescription": "Gaming Console /Gaming Accessories/MP3 Players",
+        "hindiCategoryName": "गेमिंग कंसोल / गेमिंग एक्सेसरीज/ ऍमपी थ्री प्लेयर ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "260",
+        "sectorCode": "9",
+        "categoryName": "TV/Smart TV/ LCD/LED",
+        "categoryDescription": "TV/Smart TV/ LCD/LED",
+        "hindiCategoryName": "टीवी/ स्मार्ट टीवी /एलसीडी/एलइदी  \n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "261",
+        "sectorCode": "9",
+        "categoryName": "Networking Devices/ Networking Accessories",
+        "categoryDescription": "Networking Devices/ Networking Accessories",
+        "hindiCategoryName": "नेटवर्किंग डेविसेस /नेटवर्किंग एक्सेसरीज",
+        "status": "1"
+    },
+    {
+        "categoryCode": "262",
+        "sectorCode": "9",
+        "categoryName": "Mobile Handsets /Tablets / landline Phone Instrument",
+        "categoryDescription": "Mobile Handsets /Tablets / landline Phone Instrument",
+        "hindiCategoryName": "मोबइल हैंडसेट/ टेबलेट /लैंडलाइन फ़ोन  इंस्ट्रूमेंट ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "263",
+        "sectorCode": "9",
+        "categoryName": "Printer /Fax / Scanner/Photo Copier/Cartridge",
+        "categoryDescription": "Printer /Fax / Scanner/Photo Copier/Cartridge",
+        "hindiCategoryName": "प्रिन्टर / फैक्स / स्कैनर / फोटो कॉपियर/ कार्ट्रिज \n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "264",
+        "sectorCode": "9",
+        "categoryName": "Power Banks/Mobile Accessories",
+        "categoryDescription": "Power Banks/Mobile Accessories",
+        "hindiCategoryName": "पावर बैंक/ मोबाइल एक्सेसरीज",
+        "status": "1"
+    },
+    {
+        "categoryCode": "265",
+        "sectorCode": "9",
+        "categoryName": "Smart Watch/ VR/ Watches",
+        "categoryDescription": "Smart Watch/ VR/ Watches",
+        "hindiCategoryName": "स्मार्ट वॉच /वीआर/ वॉचेस  ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "266",
+        "sectorCode": "9",
+        "categoryName": "Home Security Systems/ CCTV / Surveillance Products",
+        "categoryDescription": "Home Security Systems/ CCTV / Surveillance Products",
+        "hindiCategoryName": "होम सिक्योरिटी सिस्टम /सीसी टीवी / सर्वेइल्लांस प्रोडक्ट ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "267",
+        "sectorCode": "9",
+        "categoryName": "Computer Peripherals / Computer Accessories / Electronics Accessories",
+        "categoryDescription": "Computer Peripherals / Computer Accessories",
+        "hindiCategoryName": "कंप्यूटर पैरिफैरल्स / कंप्यूटर एक्सेसरीज /विद्युत सामान",
+        "status": "1"
+    },
+    {
+        "categoryCode": "268",
+        "sectorCode": "9",
+        "categoryName": "Softwares / Antivirus / Paper Licenses",
+        "categoryDescription": "Softwares / Antivirus / Paper Licenses",
+        "hindiCategoryName": "सॉफ्टवेयर / एंटीवायरस /पेपर लइसेंसेस ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "269",
+        "sectorCode": "9",
+        "categoryName": "Electronics Products-Bulb/ Lightning Items/ LED's",
+        "categoryDescription": "Electronics Products-Bulb/ Lightning Items/ LED's",
+        "hindiCategoryName": "इलेक्ट्रॉनिक्स उत्पाद-बल्ब / लाइटनिंग आइटम / एलईडी",
+        "status": "0"
+    },
+    {
+        "categoryCode": "270",
+        "sectorCode": "9",
+        "categoryName": "Solar Devices",
+        "categoryDescription": "Solar Devices",
+        "hindiCategoryName": "सोलर  डिवाइस",
+        "status": "1"
+    },
+    {
+        "categoryCode": "271",
+        "sectorCode": "9",
+        "categoryName": "Electronics Products-Others",
+        "categoryDescription": "Electronics Products-Others",
+        "hindiCategoryName": "इलेक्ट्रॉनिक्स  प्रोडक्ट्स -आदर्स\n",
+        "status": "1"
+    },
+    {
+        "categoryCode": "272",
+        "sectorCode": "3",
+        "categoryName": "Digital Payment Modes",
+        "categoryDescription": "Digital Payment Modes",
+        "hindiCategoryName": "डिजिटल भुगतान मोड",
+        "status": "0"
+    },
+    {
+        "categoryCode": "273",
+        "sectorCode": "5",
+        "categoryName": "Consumer Durables -Others",
+        "categoryDescription": "Consumer Durables -Others",
+        "hindiCategoryName": "कंस्यूमर दूरेबल - आदर्स ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "274",
+        "sectorCode": "5",
+        "categoryName": "Furniture / Modular Works",
+        "categoryDescription": "Furniture / Modular Works",
+        "hindiCategoryName": "फर्नीचर / मॉडुलर वर्क्स ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "275",
+        "sectorCode": "5",
+        "categoryName": "Grooming Products",
+        "categoryDescription": "Grooming Products",
+        "hindiCategoryName": "ग्रूमिंग प्रोडक्ट्स  ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "276",
+        "sectorCode": "5",
+        "categoryName": "Home Appliances",
+        "categoryDescription": "Home Appliances",
+        "hindiCategoryName": "होम अप्प्लाइंसेस ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "277",
+        "sectorCode": "5",
+        "categoryName": "Fitness / Sports Items/ Bags / Luggage",
+        "categoryDescription": "Fitness / Sports Items/? Bags / Luggage",
+        "hindiCategoryName": "फिटनेस / स्पोर्ट्स आइटम्स / बैग्स / लगेज ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "278",
+        "sectorCode": "5",
+        "categoryName": "Inverter & Batteries",
+        "categoryDescription": "Inverter & Batteries",
+        "hindiCategoryName": "इन्वर्टर और  बैटरीज ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "279",
+        "sectorCode": "5",
+        "categoryName": "Bedding/ Mattress",
+        "categoryDescription": "Bedding/ Mattress",
+        "hindiCategoryName": "बेडिंग / मैट्रेस्स ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "280",
+        "sectorCode": "5",
+        "categoryName": "Musical Instruments / Professional Audio",
+        "categoryDescription": "Musical Instruments / Professional Audio",
+        "hindiCategoryName": "म्यूजिकल इंस्ट्रूमेंट्स / प्रोफेशनल ऑडियो ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "281",
+        "sectorCode": "5",
+        "categoryName": "Kitchen Hardware/ Glassware Items/Kitchen Items/Other Hardware",
+        "categoryDescription": "Kitchen Hardware/ Glassware Items/Kitchen Items/Other Hardware",
+        "hindiCategoryName": "किचन हार्डवेयर / ग्लासवेयर आइटम्स / किचन आइटम्स/  आदर्स हार्डवेयर ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "282",
+        "sectorCode": "5",
+        "categoryName": "Bike Electronics & Accessories /Car Electronics & Accessories / Tyers",
+        "categoryDescription": "Bike Electronics & Accessories /Car Electronics & Accessories / Tyers",
+        "hindiCategoryName": "बाइक इलेक्ट्रॉनिक्स और सहायक उपकरण / कारइलेक्ट्रॉनिक्स और सहायक उपकरण / टायरर्स",
+        "status": "1"
+    },
+    {
+        "categoryCode": "283",
+        "sectorCode": "5",
+        "categoryName": "Water Pump & Motor",
+        "categoryDescription": "Water Pump & Motor",
+        "hindiCategoryName": "वाटर पंप और  मोटर ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "284",
+        "sectorCode": "5",
+        "categoryName": "Water Purifiers /RO / Air Purifiers / Vacuum Cleaner",
+        "categoryDescription": "Water Purifiers /RO / Air Purifiers",
+        "hindiCategoryName": "वाटर पुरीफायर/ रओ / एयर पुरीफायर / वैक्यूम क्लीनर",
+        "status": "1"
+    },
+    {
+        "categoryCode": "285",
+        "sectorCode": "5",
+        "categoryName": "Pet Food Supplies & Pet Products",
+        "categoryDescription": "Pet Food Supplies & Pet Products",
+        "hindiCategoryName": "पालतू पशु भोजन आपूर्ति और पालतू पशु उत्पाद",
+        "status": "1"
+    },
+    {
+        "categoryCode": "286",
+        "sectorCode": "5",
+        "categoryName": "Locks / Home Safes / Digital Locks",
+        "categoryDescription": "Locks / Home Safes / Digital Locks",
+        "hindiCategoryName": "लॉक्स / होम सेफ / डिजिटल लॉक्स ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "287",
+        "sectorCode": "5",
+        "categoryName": "Conumer Durables-Bulb/ Lightning Items/ LED's",
+        "categoryDescription": "Conumer Durables-Bulb/ Lightning Items/ LED's",
+        "hindiCategoryName": "उपभोक्ता टिकाऊ-बल्ब / बिजली के सामान / एलईडी",
+        "status": "1"
+    },
+    {
+        "categoryCode": "288",
+        "sectorCode": "5",
+        "categoryName": "Bicycles/Electric Scooters and Bikes",
+        "categoryDescription": "Bicycles/Electric Scooters and Bikes",
+        "hindiCategoryName": " साइकिल  / इलेक्ट्रिक स्कूटर और बाइक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "289",
+        "sectorCode": "39",
+        "categoryName": "Complaints related to Service Charge",
+        "categoryDescription": "Complaints related to Service Charge",
+        "hindiCategoryName": "सर्विस चार्ज से संबंधित शिकायतें",
+        "status": "0"
+    },
+    {
+        "categoryCode": "290",
+        "sectorCode": "27",
+        "categoryName": "Construction / Building Material",
+        "categoryDescription": "Construction / Building Material",
+        "hindiCategoryName": "निर्माण / भवन निर्माण सामग्री",
+        "status": "0"
+    },
+    {
+        "categoryCode": "293",
+        "sectorCode": "3",
+        "categoryName": "Credit Card (other than Digital Payments)",
+        "categoryDescription": "Credit Card (other than Digital Payments)",
+        "hindiCategoryName": "क्रेडिट कार्ड  (डिजिटल पेमेंट्स के अलावा)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "294",
+        "sectorCode": "48",
+        "categoryName": "Consumer-Packaged commodity",
+        "categoryDescription": "\n\n\n\n\n\n\n\n",
+        "hindiCategoryName": "उपभोक्ता-पैक की गई वस्तु",
+        "status": "0"
+    },
+    {
+        "categoryCode": "295",
+        "sectorCode": "48",
+        "categoryName": "Consumer- Non-Packaged commodity",
+        "categoryDescription": "Consumer- Non-Packaged commodity",
+        "hindiCategoryName": "उपभोक्ता- गैर-पैक की गई वस्तु",
+        "status": "0"
+    },
+    {
+        "categoryCode": "296",
+        "sectorCode": "48",
+        "categoryName": "Traders",
+        "categoryDescription": "",
+        "hindiCategoryName": " व्यापारी",
+        "status": "0"
+    },
+    {
+        "categoryCode": "297",
+        "sectorCode": "48",
+        "categoryName": "Enquiries",
+        "categoryDescription": "",
+        "hindiCategoryName": "पूछताछ",
+        "status": "0"
+    },
+    {
+        "categoryCode": "298",
+        "sectorCode": "48",
+        "categoryName": "Sevices, Repairs etc charges",
+        "categoryDescription": "Sevices, Repairs ets charges",
+        "hindiCategoryName": "सेवा, मरम्मत और आदि शुल्क",
+        "status": "0"
+    },
+    {
+        "categoryCode": "299",
+        "sectorCode": "20",
+        "categoryName": "Personal Care Services",
+        "categoryDescription": "Personal Care Services",
+        "hindiCategoryName": "पर्सनल केयर सर्विसेज",
+        "status": "0"
+    },
+    {
+        "categoryCode": "300",
+        "sectorCode": "20",
+        "categoryName": "Car/Bike Rental resale services Apps or Local vendor",
+        "categoryDescription": "Car/Bike Rental resale services Apps or Local vendor",
+        "hindiCategoryName": " कार / बाइक रेंटल सर्विसेज / पुनर्विक्रय सेवाएँ",
+        "status": "1"
+    },
+    {
+        "categoryCode": "301",
+        "sectorCode": "4",
+        "categoryName": "Gadget Insurance",
+        "categoryDescription": "Gadget Insurance ",
+        "hindiCategoryName": "गैजेट बीमा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "302",
+        "sectorCode": "20",
+        "categoryName": "Immigration and Visa Services",
+        "categoryDescription": "Immigration and Visa Services ",
+        "hindiCategoryName": "आप्रवासन और वीजा सेवाएं",
+        "status": "1"
+    },
+    {
+        "categoryCode": "303",
+        "sectorCode": "20",
+        "categoryName": "Business Referral Services",
+        "categoryDescription": "Business Referral Services",
+        "hindiCategoryName": "व्यापार रेफरल सेवाएं",
+        "status": "1"
+    },
+    {
+        "categoryCode": "304",
+        "sectorCode": "20",
+        "categoryName": "Placement Agencies",
+        "categoryDescription": "Placement Agencies",
+        "hindiCategoryName": "प्लेसमेंट एजेंसियां",
+        "status": "1"
+    },
+    {
+        "categoryCode": "305",
+        "sectorCode": "20",
+        "categoryName": "Repair Services",
+        "categoryDescription": "Repair Services ",
+        "hindiCategoryName": "मरम्मत सेवाएं",
+        "status": "1"
+    },
+    {
+        "categoryCode": "306",
+        "sectorCode": "20",
+        "categoryName": "Miscellaneous Services",
+        "categoryDescription": "Miscellaneous Services  ",
+        "hindiCategoryName": "विविध सेवाएं",
+        "status": "1"
+    },
+    {
+        "categoryCode": "307",
+        "sectorCode": "20",
+        "categoryName": "Entertainment Services - Cincema/ Concert/ Others",
+        "categoryDescription": "Entertainment Services - Cincema/ Concert/ Others",
+        "hindiCategoryName": "मनोरंजन सेवाएं - सिनेमा  / कॉन्सर्ट / अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "308",
+        "sectorCode": "20",
+        "categoryName": "Events -  Wedding/ Party Services",
+        "categoryDescription": "Events -  Wedding/ Party Services ",
+        "hindiCategoryName": "इवेंट- वेडिंग / पार्टी सर्विसेज",
+        "status": "1"
+    },
+    {
+        "categoryCode": "309",
+        "sectorCode": "20",
+        "categoryName": "Boutique / Laundry Services",
+        "categoryDescription": "Boutique / Laundry Services",
+        "hindiCategoryName": "बुटीक / लाँड्री सेवाएं",
+        "status": "1"
+    },
+    {
+        "categoryCode": "310",
+        "sectorCode": "20",
+        "categoryName": "Personal Care Services/Hobbies",
+        "categoryDescription": "Hobbies/ Leisure Services",
+        "hindiCategoryName": "शौक / पाठ  सेवाएं",
+        "status": "1"
+    },
+    {
+        "categoryCode": "311",
+        "sectorCode": "20",
+        "categoryName": "House Cleaning Home Improvement Services",
+        "categoryDescription": "House Cleaning Home Improvement Services",
+        "hindiCategoryName": "घर की सफाई/  गृह सुधार सेवाएं",
+        "status": "1"
+    },
+    {
+        "categoryCode": "312",
+        "sectorCode": "20",
+        "categoryName": "Manpower Hiring Services",
+        "categoryDescription": "Manpower Hiring Services",
+        "hindiCategoryName": "कर्मियों की भर्ती सेवाएं",
+        "status": "1"
+    },
+    {
+        "categoryCode": "313",
+        "sectorCode": "20",
+        "categoryName": "Matrimonial Services",
+        "categoryDescription": "Matrimonial Services",
+        "hindiCategoryName": "वैवाहिक सेवाएं",
+        "status": "1"
+    },
+    {
+        "categoryCode": "317",
+        "sectorCode": "10",
+        "categoryName": "Home Finance",
+        "categoryDescription": "",
+        "hindiCategoryName": "गृह वित्त",
+        "status": "1"
+    },
+    {
+        "categoryCode": "318",
+        "sectorCode": "49",
+        "categoryName": "Network Marketing",
+        "categoryDescription": "Network Marketing",
+        "hindiCategoryName": "नेटवर्क मार्केटिंग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "319",
+        "sectorCode": "49",
+        "categoryName": "Online Selling",
+        "categoryDescription": "Online Selling",
+        "hindiCategoryName": "ऑनलाइन सेलिंग",
+        "status": "0"
+    },
+    {
+        "categoryCode": "320",
+        "sectorCode": "3",
+        "categoryName": "Saving/Current/ Deposit Accounts",
+        "categoryDescription": "Saving/Current/ Deposit Accounts",
+        "hindiCategoryName": " बचत / चालू / जमा खाते",
+        "status": "1"
+    },
+    {
+        "categoryCode": "321",
+        "sectorCode": "3",
+        "categoryName": "ATM & Debit Card",
+        "categoryDescription": "ATM & Debit Card",
+        "hindiCategoryName": "एटीएम और डेबिट कार्ड",
+        "status": "1"
+    },
+    {
+        "categoryCode": "322",
+        "sectorCode": "3",
+        "categoryName": "Nodal Bank/ Govt. Schemes",
+        "categoryDescription": "Nodal Bank/ Govt. Schemes",
+        "hindiCategoryName": "नोडल बैंक / सरकार योजनाएं",
+        "status": "1"
+    },
+    {
+        "categoryCode": "323",
+        "sectorCode": "3",
+        "categoryName": "e-Wallet",
+        "categoryDescription": "e-Wallet",
+        "hindiCategoryName": "ई-वॉलेट",
+        "status": "1"
+    },
+    {
+        "categoryCode": "324",
+        "sectorCode": "50",
+        "categoryName": "e-Wallet",
+        "categoryDescription": "e-Wallet",
+        "hindiCategoryName": "ई-वॉलेट",
+        "status": "0"
+    },
+    {
+        "categoryCode": "325",
+        "sectorCode": "50",
+        "categoryName": "RTGS/NEFT/IMPS",
+        "categoryDescription": "RTGS/NEFT/IMPS",
+        "hindiCategoryName": "आर.टी.जी.एस./एन.ई.एफ.टी./आई.एम.पी.एस.",
+        "status": "1"
+    },
+    {
+        "categoryCode": "326",
+        "sectorCode": "50",
+        "categoryName": "UPI Banking",
+        "categoryDescription": "UPI Banking",
+        "hindiCategoryName": "यूपीआई बैंकिंग",
+        "status": "0"
+    },
+    {
+        "categoryCode": "327",
+        "sectorCode": "50",
+        "categoryName": "Internet Banking",
+        "categoryDescription": "Internet Banking",
+        "hindiCategoryName": " इंटरनेट बैंकिंग",
+        "status": "0"
+    },
+    {
+        "categoryCode": "328",
+        "sectorCode": "50",
+        "categoryName": "Debit/Prepaid/Gift Cards",
+        "categoryDescription": "Debit/Prepaid/Gift / Credit Cards",
+        "hindiCategoryName": "डेबिट / प्रीपेड / गिफ्ट कार्ड",
+        "status": "1"
+    },
+    {
+        "categoryCode": "329",
+        "sectorCode": "50",
+        "categoryName": "USSD/SMS",
+        "categoryDescription": "USSD/SMS",
+        "hindiCategoryName": "यूएसएसडी / एसएमएस",
+        "status": "0"
+    },
+    {
+        "categoryCode": "330",
+        "sectorCode": "50",
+        "categoryName": "BHIM UPI",
+        "categoryDescription": "BHIM UPI",
+        "hindiCategoryName": "भिम यूपीआई",
+        "status": "0"
+    },
+    {
+        "categoryCode": "331",
+        "sectorCode": "50",
+        "categoryName": "BHIM Aadhaar/AEPS",
+        "categoryDescription": "BHIM Aadhaar/AEPS",
+        "hindiCategoryName": "भिम आधार /ऐईपीएस",
+        "status": "0"
+    },
+    {
+        "categoryCode": "332",
+        "sectorCode": "50",
+        "categoryName": "Policy Inputs",
+        "categoryDescription": "Policy Inputs",
+        "hindiCategoryName": " पॉलिसी इनपुट",
+        "status": "0"
+    },
+    {
+        "categoryCode": "333",
+        "sectorCode": "20",
+        "categoryName": "IRCTC- Tourism",
+        "categoryDescription": "IRCTC- Tourism",
+        "hindiCategoryName": "आईआरसीटीसी - पर्यटन",
+        "status": "0"
+    },
+    {
+        "categoryCode": "334",
+        "sectorCode": "20",
+        "categoryName": "IRCTC- Catering",
+        "categoryDescription": "IRCTC- Catering",
+        "hindiCategoryName": "आईआरसीटीसी-केटरिंग",
+        "status": "0"
+    },
+    {
+        "categoryCode": "335",
+        "sectorCode": "20",
+        "categoryName": "IRCTC- I Ticketing",
+        "categoryDescription": "IRCTC- I Ticketing",
+        "hindiCategoryName": "आईआरसीटीसी- आई टिकटिंग",
+        "status": "0"
+    },
+    {
+        "categoryCode": "336",
+        "sectorCode": "35",
+        "categoryName": "Enquiry",
+        "categoryDescription": "Enquiry",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "337",
+        "sectorCode": "33",
+        "categoryName": "Chemist Issues",
+        "categoryDescription": "",
+        "hindiCategoryName": "औषधि मुद्दे",
+        "status": "1"
+    },
+    {
+        "categoryCode": "338",
+        "sectorCode": "14",
+        "categoryName": "Online loan",
+        "categoryDescription": "Online loan",
+        "hindiCategoryName": "ऑनलाइन ऋण",
+        "status": "0"
+    },
+    {
+        "categoryCode": "339",
+        "sectorCode": "27",
+        "categoryName": "Seeds and Associated products",
+        "categoryDescription": "Seeds and Associated products",
+        "hindiCategoryName": "बीज और संबद्ध उत्पाद",
+        "status": "0"
+    },
+    {
+        "categoryCode": "340",
+        "sectorCode": "32",
+        "categoryName": "seeds and associated products",
+        "categoryDescription": "seeds and associated products",
+        "hindiCategoryName": "बीज संबंधित उत्पाद",
+        "status": "1"
+    },
+    {
+        "categoryCode": "342",
+        "sectorCode": "40",
+        "categoryName": "Food outlets",
+        "categoryDescription": "",
+        "hindiCategoryName": "फूड आउटलेट",
+        "status": "0"
+    },
+    {
+        "categoryCode": "343",
+        "sectorCode": "45",
+        "categoryName": "Metro Rail",
+        "categoryDescription": "",
+        "hindiCategoryName": "मेट्रो रेल",
+        "status": "1"
+    },
+    {
+        "categoryCode": "344",
+        "sectorCode": "29",
+        "categoryName": "National Institute for the Empowerment of Persons with Intellectual Disabilities",
+        "categoryDescription": "National Institute for the Empowerment of Persons with Intellectual Disabilities",
+        "hindiCategoryName": "बौद्धिक विकलांग व्यक्तियों के सशक्तिकरण के लिए राष्ट्रीय संस्थान",
+        "status": "1"
+    },
+    {
+        "categoryCode": "345",
+        "sectorCode": "29",
+        "categoryName": "CA Institute",
+        "categoryDescription": "CA Institute",
+        "hindiCategoryName": "सीए संस्थान",
+        "status": "1"
+    },
+    {
+        "categoryCode": "346",
+        "sectorCode": "29",
+        "categoryName": "College of Veterinary Sciences & Animal Husbandry",
+        "categoryDescription": "College of Veterinary Sciences & Animal Husbandry",
+        "hindiCategoryName": "पशु चिकित्सा विज्ञान और पशुपालन कॉलेज",
+        "status": "1"
+    },
+    {
+        "categoryCode": "347",
+        "sectorCode": "29",
+        "categoryName": "Council of Scientific & Industrial Research (CSIR)",
+        "categoryDescription": "Council of Scientific & Industrial Research (CSIR)",
+        "hindiCategoryName": "वैज्ञानिक और औद्योगिक अनुसंधान परिषद (सीएसआईआर)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "348",
+        "sectorCode": "29",
+        "categoryName": "Solar Energy Courses",
+        "categoryDescription": "Solar Energy Courses",
+        "hindiCategoryName": "सौर ऊर्जा पाठ्यक्रम",
+        "status": "1"
+    },
+    {
+        "categoryCode": "349",
+        "sectorCode": "29",
+        "categoryName": "School for Aircraft Maintenance Engineer /ST Institute of Aeronautics",
+        "categoryDescription": "School for Aircraft Maintenance Engineer /ST Institute of Aeronautics ",
+        "hindiCategoryName": "एयरक्राफ्ट मेंटेनेंस इंजीनियर / एसटी इंस्टीट्यूट ऑफ एयरोनॉटिक्स  स्कूल",
+        "status": "1"
+    },
+    {
+        "categoryCode": "350",
+        "sectorCode": "29",
+        "categoryName": "Indian Institute of Mass Communication",
+        "categoryDescription": "Indian Institute of Mass Communication",
+        "hindiCategoryName": "भारतीय जनसंचार संस्थान",
+        "status": "1"
+    },
+    {
+        "categoryCode": "351",
+        "sectorCode": "29",
+        "categoryName": "Indian Maritime University",
+        "categoryDescription": "Indian Maritime University",
+        "hindiCategoryName": "भारतीय समुद्री विश्वविद्यालय",
+        "status": "1"
+    },
+    {
+        "categoryCode": "352",
+        "sectorCode": "29",
+        "categoryName": "Law  Courses",
+        "categoryDescription": "Law  Courses",
+        "hindiCategoryName": "कानून पाठ्यक्रम",
+        "status": "1"
+    },
+    {
+        "categoryCode": "353",
+        "sectorCode": "29",
+        "categoryName": "National Institute of Electronics & Information Technology (NIELIT)",
+        "categoryDescription": "National Institute of Electronics & Information Technology (NIELIT) ",
+        "hindiCategoryName": "राष्ट्रीय इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी संस्थान",
+        "status": "1"
+    },
+    {
+        "categoryCode": "354",
+        "sectorCode": "29",
+        "categoryName": "Audiometric and speech language pathology",
+        "categoryDescription": "Audiometric and speech-language pathology",
+        "hindiCategoryName": "ऑडियोमेट्रिक और भाषण भाषा विकृति विज्ञान",
+        "status": "1"
+    },
+    {
+        "categoryCode": "355",
+        "sectorCode": "29",
+        "categoryName": "National Institute Of Fashion Technology",
+        "categoryDescription": "National Institute Of Fashion Technology",
+        "hindiCategoryName": "नेशनल इंस्टीट्यूट ऑफ फैशन टेक्नोलॉजी",
+        "status": "1"
+    },
+    {
+        "categoryCode": "356",
+        "sectorCode": "29",
+        "categoryName": "State Universities",
+        "categoryDescription": "State Universities",
+        "hindiCategoryName": "राज्य विश्वविद्यालय",
+        "status": "1"
+    },
+    {
+        "categoryCode": "357",
+        "sectorCode": "29",
+        "categoryName": "Medical Education & Research  /Nursing course/Dental College/Pharmaceutical Courses",
+        "categoryDescription": "Medical Education & Research  /Nursing course/Dental College/Pharmaceutical Courses",
+        "hindiCategoryName": "चिकित्सा शिक्षा और अनुसंधान / नर्सिंग पाठ्यक्रम / डेंटल कॉलेज / फार्मास्युटिकल पाठ्यक्रम",
+        "status": "1"
+    },
+    {
+        "categoryCode": "358",
+        "sectorCode": "46",
+        "categoryName": "Learning App and Portal",
+        "categoryDescription": "NA",
+        "hindiCategoryName": "लर्निंग ऐप और पोर्टल",
+        "status": "1"
+    },
+    {
+        "categoryCode": "359",
+        "sectorCode": "29",
+        "categoryName": "Hotel Management Institute",
+        "categoryDescription": "Hotel Management Institute",
+        "hindiCategoryName": "Hotel Management Institute",
+        "status": "1"
+    },
+    {
+        "categoryCode": "360",
+        "sectorCode": "14",
+        "categoryName": "Charging more than MRP for masks",
+        "categoryDescription": "NA",
+        "hindiCategoryName": "मास्क के लिए एमआरपी से अधिक चार्ज करना",
+        "status": "0"
+    },
+    {
+        "categoryCode": "361",
+        "sectorCode": "14",
+        "categoryName": "Charging more than MRP for Sanitizer",
+        "categoryDescription": "NA",
+        "hindiCategoryName": "सेनिटाइजर  के लिए एमआरपी  से अधिक चार्ज करना",
+        "status": "0"
+    },
+    {
+        "categoryCode": "362",
+        "sectorCode": "14",
+        "categoryName": "Non-availability of Masks",
+        "categoryDescription": "NA",
+        "hindiCategoryName": "मास्क की अनुपलब्धता",
+        "status": "0"
+    },
+    {
+        "categoryCode": "363",
+        "sectorCode": "14",
+        "categoryName": "Non-availability of Sanitizer",
+        "categoryDescription": "NA",
+        "hindiCategoryName": "सेनिटाइजर की अनुपलब्धता",
+        "status": "0"
+    },
+    {
+        "categoryCode": "364",
+        "sectorCode": "26",
+        "categoryName": "Charging more than MRP for masks",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "मास्क के लिए एमआरपी से अधिक चार्ज करना",
+        "status": "0"
+    },
+    {
+        "categoryCode": "365",
+        "sectorCode": "26",
+        "categoryName": "Charging more than MRP for Sanitizer",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "सेनिटाइजर  के लिए एमआरपी  से अधिक चार्ज करना",
+        "status": "0"
+    },
+    {
+        "categoryCode": "366",
+        "sectorCode": "26",
+        "categoryName": "Non-availability of Masks",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "मास्क की अनुपलब्धता",
+        "status": "0"
+    },
+    {
+        "categoryCode": "367",
+        "sectorCode": "26",
+        "categoryName": "Non-availability of Sanitizer",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "सेनिटाइजर की अनुपलब्धता",
+        "status": "0"
+    },
+    {
+        "categoryCode": "368",
+        "sectorCode": "51",
+        "categoryName": "Charging more than MRP",
+        "categoryDescription": "NA",
+        "hindiCategoryName": "एमआरपी से अधिक चार्ज करना",
+        "status": "1"
+    },
+    {
+        "categoryCode": "369",
+        "sectorCode": "51",
+        "categoryName": "Non-availability",
+        "categoryDescription": "NA",
+        "hindiCategoryName": "मास्क की अनुपलब्धता",
+        "status": "1"
+    },
+    {
+        "categoryCode": "370",
+        "sectorCode": "52",
+        "categoryName": "Charging more than MRP",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "एमआरपी से अधिक चार्ज करना",
+        "status": "1"
+    },
+    {
+        "categoryCode": "371",
+        "sectorCode": "52",
+        "categoryName": "Non-availability",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "सेनिटाइजर की अनुपलब्धता",
+        "status": "1"
+    },
+    {
+        "categoryCode": "372",
+        "sectorCode": "51",
+        "categoryName": "Quality",
+        "categoryDescription": "NA",
+        "hindiCategoryName": "गुणवत्ता",
+        "status": "0"
+    },
+    {
+        "categoryCode": "373",
+        "sectorCode": "52",
+        "categoryName": "Quality",
+        "categoryDescription": "NA",
+        "hindiCategoryName": "गुणवत्ता",
+        "status": "1"
+    },
+    {
+        "categoryCode": "374",
+        "sectorCode": "42",
+        "categoryName": "SEBI- Securities related grievance",
+        "categoryDescription": "SEBI- Securities-related grievance",
+        "hindiCategoryName": "सेबी- प्रतिभूति संबंधी शिकायत",
+        "status": "1"
+    },
+    {
+        "categoryCode": "375",
+        "sectorCode": "44",
+        "categoryName": "Right to Information",
+        "categoryDescription": "Right to Information",
+        "hindiCategoryName": "सूचना का अधिकार",
+        "status": "1"
+    },
+    {
+        "categoryCode": "376",
+        "sectorCode": "44",
+        "categoryName": "GST",
+        "categoryDescription": "GST",
+        "hindiCategoryName": "जीएसटी",
+        "status": "1"
+    },
+    {
+        "categoryCode": "377",
+        "sectorCode": "44",
+        "categoryName": "Govt. Identity Services",
+        "categoryDescription": "Govt. Identity Services",
+        "hindiCategoryName": "सरकार पहचान सेवाओं",
+        "status": "1"
+    },
+    {
+        "categoryCode": "378",
+        "sectorCode": "44",
+        "categoryName": "Govt. Taxes",
+        "categoryDescription": "Govt. Taxes",
+        "hindiCategoryName": "सरकार करों",
+        "status": "1"
+    },
+    {
+        "categoryCode": "379",
+        "sectorCode": "4",
+        "categoryName": "Cattle Insurance",
+        "categoryDescription": "Cattle Insurance",
+        "hindiCategoryName": "पशु बीमा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "380",
+        "sectorCode": "35",
+        "categoryName": "Consumer Commissions",
+        "categoryDescription": "Consumer Commissions",
+        "hindiCategoryName": "उपभोक्ता आयोग",
+        "status": "0"
+    },
+    {
+        "categoryCode": "381",
+        "sectorCode": "35",
+        "categoryName": "District Consumer Dispute Redressal Commission",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "जिला उपभोक्ता विवाद निवारण आयोग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "382",
+        "sectorCode": "35",
+        "categoryName": "State  Consumer Dispute Redressal Commission",
+        "categoryDescription": "",
+        "hindiCategoryName": "राज्य उपभोक्ता विवाद निवारण आयोग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "383",
+        "sectorCode": "35",
+        "categoryName": "National Consumer Dispute Redressal Commission",
+        "categoryDescription": "",
+        "hindiCategoryName": "राष्ट्रीय उपभोक्ता विवाद निवारण आयोग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "384",
+        "sectorCode": "14",
+        "categoryName": "Social Media Market Place(Facebook,Whatsapp,Twitter,Telegram,Instagram etc.)",
+        "categoryDescription": "Social Media Market Place(Facebook,Whatsapp,Twitter,Telegram,Instagram etc.)",
+        "hindiCategoryName": "सोशल मीडिया मार्केट प्लेस (फेसबुक, व्हाट्सएप, ट्विटर, टेलीग्राम, इंस्टाग्राम आदि)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "385",
+        "sectorCode": "9",
+        "categoryName": "Diagnostic Equipment",
+        "categoryDescription": "Diagnostic Equipment",
+        "hindiCategoryName": "नैदानिक ​​उपकरण",
+        "status": "1"
+    },
+    {
+        "categoryCode": "386",
+        "sectorCode": "26",
+        "categoryName": "Packaged Commodities",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "पैकेज्ड कमोडिटीज",
+        "status": "1"
+    },
+    {
+        "categoryCode": "387",
+        "sectorCode": "8",
+        "categoryName": "Tobacco-Related Products",
+        "categoryDescription": "Tobacco-Related Products",
+        "hindiCategoryName": "तंबाकू संबंधित उत्पाद",
+        "status": "1"
+    },
+    {
+        "categoryCode": "388",
+        "sectorCode": "40",
+        "categoryName": "Brand Franchise",
+        "categoryDescription": "Brand Franchise ",
+        "hindiCategoryName": "ब्रांड फ्रेंचाइजी",
+        "status": "1"
+    },
+    {
+        "categoryCode": "389",
+        "sectorCode": "41",
+        "categoryName": "Misleading Advertisement",
+        "categoryDescription": "Misleading Advertisement",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "390",
+        "sectorCode": "42",
+        "categoryName": "Misleading Advertisement",
+        "categoryDescription": "Misleading Advertisement",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "391",
+        "sectorCode": "1",
+        "categoryName": "Misleading Advertisement",
+        "categoryDescription": "Misleading Advertisement",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "392",
+        "sectorCode": "2",
+        "categoryName": "Misleading Advertisement",
+        "categoryDescription": "Misleading Advertisement",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "393",
+        "sectorCode": "23",
+        "categoryName": "Misleading Advertisement",
+        "categoryDescription": "Misleading Advertisement",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "394",
+        "sectorCode": "8",
+        "categoryName": "Misleading Advertisement",
+        "categoryDescription": "Misleading Advertisement",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "395",
+        "sectorCode": "4",
+        "categoryName": "Misleading Advertisement",
+        "categoryDescription": "Misleading Advertisement",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "396",
+        "sectorCode": "28",
+        "categoryName": "Misleading Advertisement",
+        "categoryDescription": "Misleading Advertisement",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "397",
+        "sectorCode": "33",
+        "categoryName": "Misleading Advertisement",
+        "categoryDescription": "Misleading Advertisement",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "398",
+        "sectorCode": "22",
+        "categoryName": "Misleading Advertisement",
+        "categoryDescription": "Misleading Advertisement",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "399",
+        "sectorCode": "26",
+        "categoryName": "Misleading Advertisement",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "400",
+        "sectorCode": "24",
+        "categoryName": "IRCTC- Air Ticketing",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "आईआरसीटीसी- एयर टिकटिंग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "401",
+        "sectorCode": "35",
+        "categoryName": "Lok Adalat",
+        "categoryDescription": "Lok Adalat",
+        "hindiCategoryName": " लोक अदालत",
+        "status": "1"
+    },
+    {
+        "categoryCode": "402",
+        "sectorCode": "53",
+        "categoryName": "CCPA",
+        "categoryDescription": "CCPA",
+        "hindiCategoryName": "सीसीपीए",
+        "status": "1"
+    },
+    {
+        "categoryCode": "403",
+        "sectorCode": "35",
+        "categoryName": "e-Daakhil",
+        "categoryDescription": "e-Daakhil",
+        "hindiCategoryName": "ई-दाखिल",
+        "status": "0"
+    },
+    {
+        "categoryCode": "404",
+        "sectorCode": "43",
+        "categoryName": "Misuse of ISI Mark",
+        "categoryDescription": "Misuse of ISI Mark",
+        "hindiCategoryName": "आईएसआई मार्क का दुरुपयोग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "405",
+        "sectorCode": "43",
+        "categoryName": "Misuse of Hallmark",
+        "categoryDescription": "Misuse of Hallmark",
+        "hindiCategoryName": "हॉलमार्क का दुरुपयोग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "406",
+        "sectorCode": "43",
+        "categoryName": "Misuse of Registration Mark",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "पंजीकरण चिह्न का दुरुपयोग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "407",
+        "sectorCode": "43",
+        "categoryName": "Quality of Product(ISI Marked Product)",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "उत्पाद की गुणवत्ता (आईएसआई चिह्नित उत्पाद)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "408",
+        "sectorCode": "43",
+        "categoryName": "Quality of Product(Registration Marked Product)",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "उत्पाद की गुणवत्ता (पंजीकरण चिह्नित उत्पाद)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "409",
+        "sectorCode": "43",
+        "categoryName": "Misleading Advertisements",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "410",
+        "sectorCode": "43",
+        "categoryName": "Quality of Product(Hallmarked Articles)",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "उत्पाद की गुणवत्ता (हॉलमार्क लेख)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "411",
+        "sectorCode": "43",
+        "categoryName": "Violation of QCO",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "QCO का उल्लंघन",
+        "status": "1"
+    },
+    {
+        "categoryCode": "412",
+        "sectorCode": "43",
+        "categoryName": "Other Complaints",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "अन्य शिकायतें",
+        "status": "1"
+    },
+    {
+        "categoryCode": "413",
+        "sectorCode": "20",
+        "categoryName": "Online gaming/ betting",
+        "categoryDescription": "Online gaming/ betting",
+        "hindiCategoryName": "ऑनलाइन गेमिंग/सट्टा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "414",
+        "sectorCode": "41",
+        "categoryName": "Service Charge",
+        "categoryDescription": "Service Charge",
+        "hindiCategoryName": "सेवा शुल्क",
+        "status": "0"
+    },
+    {
+        "categoryCode": "415",
+        "sectorCode": "20",
+        "categoryName": "Life style app",
+        "categoryDescription": "Life style app",
+        "hindiCategoryName": "जीवन शैली ऐप",
+        "status": "1"
+    },
+    {
+        "categoryCode": "416",
+        "sectorCode": "15",
+        "categoryName": "Electric vehicle",
+        "categoryDescription": " Electric vehicle",
+        "hindiCategoryName": "विद्युतीय वाहन",
+        "status": "0"
+    },
+    {
+        "categoryCode": "417",
+        "sectorCode": "45",
+        "categoryName": "Road Transport",
+        "categoryDescription": "Road Transport",
+        "hindiCategoryName": "सड़क परिवहन",
+        "status": "1"
+    },
+    {
+        "categoryCode": "418",
+        "sectorCode": "41",
+        "categoryName": "Online Food Order/aggregators/Delivery/Takeway",
+        "categoryDescription": "Online Food Order/aggregators/Delivery/Takeway",
+        "hindiCategoryName": "ऑनलाइन फूड ऑर्डर/एग्रीगेटर्स/डिलीवरी/टेकवे",
+        "status": "1"
+    },
+    {
+        "categoryCode": "419",
+        "sectorCode": "41",
+        "categoryName": "Food Outlet",
+        "categoryDescription": "Food Outlet ",
+        "hindiCategoryName": "फूड रेस्तरां",
+        "status": "1"
+    },
+    {
+        "categoryCode": "420",
+        "sectorCode": "41",
+        "categoryName": "Sitting / Dining (Hotel / Restaurants)",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "बैठक/भोजन (होटल/रेस्तरां)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "421",
+        "sectorCode": "41",
+        "categoryName": "Canteen  & Mess - School / colleges / Offices",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "कैंटीन और मेस - स्कूल/कॉलेज/कार्यालय",
+        "status": "1"
+    },
+    {
+        "categoryCode": "422",
+        "sectorCode": "41",
+        "categoryName": "Local Vendor - Food Cart / Van/Road Side vendor /Food Van /Dhaba",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "स्थानीय विक्रेता - फूड कार्ट/वैन/सड़क किनारे विक्रेता/फूड वैन/ढाबा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "423",
+        "sectorCode": "41",
+        "categoryName": "Packaged Food Products",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "डिब्बाबंद खाद्य उत्पाद",
+        "status": "1"
+    },
+    {
+        "categoryCode": "424",
+        "sectorCode": "41",
+        "categoryName": "Online Grocery App",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "ऑनलाइन किराना ऐप",
+        "status": "1"
+    },
+    {
+        "categoryCode": "425",
+        "sectorCode": "41",
+        "categoryName": "Unlablelled Agri product/Milk /Meat/ Poultry",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "बिना लेबल वाला कृषि उत्पाद/दूध/मांस/पोल्ट्री",
+        "status": "1"
+    },
+    {
+        "categoryCode": "426",
+        "sectorCode": "41",
+        "categoryName": "Perishables - Shelflife (24*7) Product / Bakery Product",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "खराब होने वाली वस्तुएं - शेल्फ लाइफ (24*7) उत्पाद/बेकरी उत्पाद",
+        "status": "1"
+    },
+    {
+        "categoryCode": "427",
+        "sectorCode": "41",
+        "categoryName": "Food - Others",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "भोजन - अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "428",
+        "sectorCode": "6",
+        "categoryName": "Online Cab services / Car rentals",
+        "categoryDescription": "Online Cab services / Car rentals",
+        "hindiCategoryName": "ऑनलाइन कैब सेवाएं / कार किराए पर लेना",
+        "status": "1"
+    },
+    {
+        "categoryCode": "429",
+        "sectorCode": "6",
+        "categoryName": "Online Hotel Booking",
+        "categoryDescription": "Online Hotel Booking",
+        "hindiCategoryName": "ऑनलाइन होटल बुकिंग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "430",
+        "sectorCode": "6",
+        "categoryName": "Online Ticket Booking",
+        "categoryDescription": "Online Ticket Booking",
+        "hindiCategoryName": "ऑनलाइन टिकट बुकिंग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "431",
+        "sectorCode": "6",
+        "categoryName": "Holiday Package",
+        "categoryDescription": "Holiday Package",
+        "hindiCategoryName": "हॉलिडे पैकेज",
+        "status": "1"
+    },
+    {
+        "categoryCode": "432",
+        "sectorCode": "6",
+        "categoryName": "Offline Hotel / Resorts",
+        "categoryDescription": "State govt. tourism package ",
+        "hindiCategoryName": "ऑफ़लाइन होटल / रिसॉर्ट्स",
+        "status": "1"
+    },
+    {
+        "categoryCode": "433",
+        "sectorCode": "6",
+        "categoryName": "Tour & Travel Hospitality Membership",
+        "categoryDescription": "Tour & Travel Hospitality Membership",
+        "hindiCategoryName": "टूर और ट्रैवल हॉस्पिटैलिटी सदस्यता",
+        "status": "1"
+    },
+    {
+        "categoryCode": "434",
+        "sectorCode": "6",
+        "categoryName": "Travel & Tourism Other",
+        "categoryDescription": "Travel & Tourism Other",
+        "hindiCategoryName": "यात्रा और पर्यटन अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "435",
+        "sectorCode": "6",
+        "categoryName": "State govt. tourism package",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "राज्य सरकार पर्यटन पैकेज",
+        "status": "1"
+    },
+    {
+        "categoryCode": "436",
+        "sectorCode": "18",
+        "categoryName": "Misleading Advertisements",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "437",
+        "sectorCode": "3",
+        "categoryName": "Misleading Advertisements",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "NULL",
+        "status": "0"
+    },
+    {
+        "categoryCode": "438",
+        "sectorCode": "15",
+        "categoryName": "Electric vehicle _Two wheelers",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "इलेक्ट्रिक वाहन _दोपहिया वाहन",
+        "status": "1"
+    },
+    {
+        "categoryCode": "439",
+        "sectorCode": "15",
+        "categoryName": "Electric vehicle _Four wheelers",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "इलेक्ट्रिक वाहन _चार पहिया वाहन",
+        "status": "1"
+    },
+    {
+        "categoryCode": "440",
+        "sectorCode": "15",
+        "categoryName": "Electric Bicycles/ E - Riksha",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "इलेक्ट्रिक साइकिल/ई-रिक्शा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "441",
+        "sectorCode": "15",
+        "categoryName": "Three wheelers /Auto",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "तिपहिया/ऑटो",
+        "status": "1"
+    },
+    {
+        "categoryCode": "442",
+        "sectorCode": "15",
+        "categoryName": "Heavy vehicles (Bus /Truck/tractors)",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "भारी वाहन (बस/ट्रक/ट्रैक्टर)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "443",
+        "sectorCode": "31",
+        "categoryName": "Food-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "खाद्य-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "444",
+        "sectorCode": "31",
+        "categoryName": "Shares and Securities-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "शेयर और प्रतिभूतियां-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "445",
+        "sectorCode": "31",
+        "categoryName": "Telecom-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "दूरसंचार-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "446",
+        "sectorCode": "31",
+        "categoryName": "Electricity -Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "बिजली-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "447",
+        "sectorCode": "31",
+        "categoryName": "Petroleum-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "पेट्रोलियम-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "448",
+        "sectorCode": "31",
+        "categoryName": "Health Services-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "स्वास्थ्य सेवाएं-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "449",
+        "sectorCode": "31",
+        "categoryName": "General Insurance-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "सामान्य बीमा-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "450",
+        "sectorCode": "31",
+        "categoryName": "Life Insurance-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "जीवन बीमा-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "451",
+        "sectorCode": "31",
+        "categoryName": "Drugs & Cosmetics-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "दवाएं और सौंदर्य प्रसाधन-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "452",
+        "sectorCode": "31",
+        "categoryName": "Real Estate-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "रियल एस्टेट-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "453",
+        "sectorCode": "31",
+        "categoryName": "Legal Metrology-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "कानूनी मेट्रोलॉजी-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "454",
+        "sectorCode": "31",
+        "categoryName": "Others",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "0"
+    },
+    {
+        "categoryCode": "455",
+        "sectorCode": "31",
+        "categoryName": "E- Commerce-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "ई-कॉमर्स-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "456",
+        "sectorCode": "31",
+        "categoryName": "Consumer Durables-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "उपभोक्ता टिकाऊ वस्तुएं-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "457",
+        "sectorCode": "31",
+        "categoryName": "Electronics Products-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "इलेक्ट्रॉनिक्स उत्पाद-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "458",
+        "sectorCode": "31",
+        "categoryName": "Banking-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "बैंकिंग-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "459",
+        "sectorCode": "31",
+        "categoryName": "Broadband & Internet-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "ब्रॉडबैंड और इंटरनेट-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "460",
+        "sectorCode": "31",
+        "categoryName": "Automobiles-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "ऑटोमोबाइल-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "461",
+        "sectorCode": "31",
+        "categoryName": "Agency Services-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "एजेंसी सेवाएं-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "462",
+        "sectorCode": "31",
+        "categoryName": "Retail Outlets-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "खुदरा दुकानें-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "463",
+        "sectorCode": "31",
+        "categoryName": "Travel & Tourism-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "यात्रा और पर्यटन-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "464",
+        "sectorCode": "31",
+        "categoryName": "Digital Payment Modes-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "डिजिटल भुगतान मोड-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "465",
+        "sectorCode": "31",
+        "categoryName": "NBFCs-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "एनबीएफसी-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "466",
+        "sectorCode": "31",
+        "categoryName": "Courier & Cargo-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "कूरियर और कार्गो-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "467",
+        "sectorCode": "31",
+        "categoryName": "Private Education-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "निजी शिक्षा-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "468",
+        "sectorCode": "31",
+        "categoryName": "FMCG-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "एफएमसीजी-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "469",
+        "sectorCode": "31",
+        "categoryName": "DTH and Cable-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "डीटीएच और केबल-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "470",
+        "sectorCode": "31",
+        "categoryName": "Packers and Movers-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "पैकर्स और मूवर्स-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "471",
+        "sectorCode": "31",
+        "categoryName": "Job Oriented Courses-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "नौकरी उन्मुख पाठ्यक्रम-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "472",
+        "sectorCode": "31",
+        "categoryName": "Direct Selling-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "प्रत्यक्ष बिक्री-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "473",
+        "sectorCode": "31",
+        "categoryName": "Publications-Misleading",
+        "categoryDescription": "",
+        "hindiCategoryName": "प्रकाशन-भ्रामक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "474",
+        "sectorCode": "27",
+        "categoryName": "Apparels /Cloth",
+        "categoryDescription": "Apparels /Cloth",
+        "hindiCategoryName": "परिधान/कपड़ा",
+        "status": "1"
+    },
+    {
+        "categoryCode": "475",
+        "sectorCode": "27",
+        "categoryName": "Footwears",
+        "categoryDescription": "Footwears",
+        "hindiCategoryName": "फुटवेयर",
+        "status": "1"
+    },
+    {
+        "categoryCode": "476",
+        "sectorCode": "27",
+        "categoryName": "Personal Care Product  (Skincare/Hair/Oral /Body)",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "व्यक्तिगत देखभाल उत्पाद (त्वचा की देखभाल/बाल/मौखिक/शरीर)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "477",
+        "sectorCode": "27",
+        "categoryName": "Household Products (Laundry/Paper/Cleaning Supplies -Products)",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "घरेलू उत्पाद (कपड़े धोने/कागज़/सफाई की आपूर्ति - उत्पाद)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "478",
+        "sectorCode": "27",
+        "categoryName": "Health and Wellness Products",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "स्वास्थ्य और कल्याण उत्पाद",
+        "status": "1"
+    },
+    {
+        "categoryCode": "479",
+        "sectorCode": "27",
+        "categoryName": "Baby Products (Diapers/Baby Food/Baby Care)",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "शिशु उत्पाद (डायपर/शिशु भोजन/शिशु देखभाल)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "480",
+        "sectorCode": "27",
+        "categoryName": "Pet Care Products (Pet Food/ Pet Hygiene)",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "पालतू जानवरों की देखभाल उत्पाद (पालतू जानवरों का भोजन/पालतू जानवरों की स्वच्छता)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "481",
+        "sectorCode": "27",
+        "categoryName": "Personal Accessories  (Jewellery/Bags/ Wallets/Belts etc)",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "व्यक्तिगत सहायक उपकरण (आभूषण/बैग/वॉलेट/बेल्ट आदि)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "482",
+        "sectorCode": "46",
+        "categoryName": "UPSC (IAS / IPS) Coaching",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "यूपीएससी (आईएएस/आईपीएस) कोचिंग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "483",
+        "sectorCode": "46",
+        "categoryName": "CA Coaching",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "सीए कोचिंग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "484",
+        "sectorCode": "46",
+        "categoryName": "IT/Medical/ Engineering Coaching (Data Science /Power BI etc)",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "आईटी/मेडिकल/इंजीनियरिंग कोचिंग (डेटा साइंस/पावर बीआई आदि)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "485",
+        "sectorCode": "46",
+        "categoryName": "Govt. job preparation coaching",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "सरकारी नौकरी की तैयारी कोचिंग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "486",
+        "sectorCode": "46",
+        "categoryName": "Professional courses / Job Oriented Courses",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "पेशेवर पाठ्यक्रम/नौकरी उन्मुख पाठ्यक्रम",
+        "status": "1"
+    },
+    {
+        "categoryCode": "487",
+        "sectorCode": "46",
+        "categoryName": "Skills Development Courses",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "कौशल विकास पाठ्यक्रम",
+        "status": "1"
+    },
+    {
+        "categoryCode": "488",
+        "sectorCode": "10",
+        "categoryName": "Online Loan App",
+        "categoryDescription": "Online Loan App",
+        "hindiCategoryName": "ऑनलाइन ऋण ऐप",
+        "status": "1"
+    },
+    {
+        "categoryCode": "490",
+        "sectorCode": "50",
+        "categoryName": "BHIM UPI/AEPS/USSD/SMS",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "भीम यूपीआई/एईपीएस/यूएसएसडी/एसएमएस",
+        "status": "1"
+    },
+    {
+        "categoryCode": "491",
+        "sectorCode": "50",
+        "categoryName": "Internet Banking/ Mobile Banking",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "इंटरनेट बैंकिंग/मोबाइल बैंकिंग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "492",
+        "sectorCode": "50",
+        "categoryName": "POS Machine",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "पीओएस मशीन",
+        "status": "1"
+    },
+    {
+        "categoryCode": "493",
+        "sectorCode": "20",
+        "categoryName": "Rental Platform (Furniture & Homes Appliances)",
+        "categoryDescription": "Rental Platform",
+        "hindiCategoryName": "किराये का प्लेटफ़ॉर्म (फर्नीचर और घरेलू उपकरण)",
+        "status": "1"
+    },
+    {
+        "categoryCode": "494",
+        "sectorCode": "27",
+        "categoryName": "Stationery Item",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "लेखन सामग्री",
+        "status": "1"
+    },
+    {
+        "categoryCode": "495",
+        "sectorCode": "8",
+        "categoryName": "Ayurvedic/ Unani/ Homeopathy Clinic",
+        "categoryDescription": "Ayurvedic/ Unani/ Homeopathy Clinic",
+        "hindiCategoryName": "आयुर्वेदिक/ यूनानी/ होम्योपैथी क्लिनिक",
+        "status": "1"
+    },
+    {
+        "categoryCode": "496",
+        "sectorCode": "44",
+        "categoryName": "Mutual Fund",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "म्यूचुअल फंड",
+        "status": "1"
+    },
+    {
+        "categoryCode": "497",
+        "sectorCode": "44",
+        "categoryName": "Others",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "अन्य",
+        "status": "1"
+    },
+    {
+        "categoryCode": "498",
+        "sectorCode": "44",
+        "categoryName": "Water Supply",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "जलापूर्ति",
+        "status": "1"
+    },
+    {
+        "categoryCode": "499",
+        "sectorCode": "44",
+        "categoryName": "e-Daakhil",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "ई-दाखिल",
+        "status": "1"
+    },
+    {
+        "categoryCode": "500",
+        "sectorCode": "44",
+        "categoryName": "Consumer Commissions",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "उपभोक्ता आयोग",
+        "status": "1"
+    },
+    {
+        "categoryCode": "501",
+        "sectorCode": "48",
+        "categoryName": "Food-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "502",
+        "sectorCode": "48",
+        "categoryName": "Shares and Securities-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "503",
+        "sectorCode": "48",
+        "categoryName": "Telecom-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "504",
+        "sectorCode": "48",
+        "categoryName": "Electricity -GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "505",
+        "sectorCode": "48",
+        "categoryName": "Petroleum-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "506",
+        "sectorCode": "48",
+        "categoryName": "Health Services-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "507",
+        "sectorCode": "48",
+        "categoryName": "General Insurance-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "508",
+        "sectorCode": "48",
+        "categoryName": "Life Insurance-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "509",
+        "sectorCode": "48",
+        "categoryName": "Drugs & Cosmetics-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "510",
+        "sectorCode": "48",
+        "categoryName": "Real Estate-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "511",
+        "sectorCode": "48",
+        "categoryName": "Legal Metrology-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "512",
+        "sectorCode": "48",
+        "categoryName": "E- Commerce-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "513",
+        "sectorCode": "48",
+        "categoryName": "Consumer Durables-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "514",
+        "sectorCode": "48",
+        "categoryName": "Electronics Products-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "515",
+        "sectorCode": "48",
+        "categoryName": "Banking-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "516",
+        "sectorCode": "48",
+        "categoryName": "Broadband & Internet-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "517",
+        "sectorCode": "48",
+        "categoryName": "Automobiles-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "518",
+        "sectorCode": "48",
+        "categoryName": "Agency Services-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "519",
+        "sectorCode": "48",
+        "categoryName": "Retail Outlets-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "520",
+        "sectorCode": "48",
+        "categoryName": "Travel & Tourism-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "521",
+        "sectorCode": "48",
+        "categoryName": "Digital Payment Modes-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "522",
+        "sectorCode": "48",
+        "categoryName": "NBFCs-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "523",
+        "sectorCode": "48",
+        "categoryName": "Courier & Cargo-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "524",
+        "sectorCode": "48",
+        "categoryName": "Private Education-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "525",
+        "sectorCode": "48",
+        "categoryName": "FMCG-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "526",
+        "sectorCode": "48",
+        "categoryName": "DTH and Cable-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "527",
+        "sectorCode": "48",
+        "categoryName": "Packers and Movers-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "528",
+        "sectorCode": "48",
+        "categoryName": "Job Oriented Courses-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "529",
+        "sectorCode": "48",
+        "categoryName": "Direct Selling-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "530",
+        "sectorCode": "48",
+        "categoryName": "Publications-GST",
+        "categoryDescription": "",
+        "hindiCategoryName": "",
+        "status": "1"
+    },
+    {
+        "categoryCode": "531",
+        "sectorCode": "48",
+        "categoryName": "General Enquiry",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "सामान्य जांच",
+        "status": "1"
+    },
+    {
+        "categoryCode": "532",
+        "sectorCode": "48",
+        "categoryName": "Postal-GST",
+        "categoryDescription": "NULL",
+        "hindiCategoryName": "NULL",
+        "status": "1"
+    }
+]

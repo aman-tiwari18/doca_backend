@@ -1,0 +1,125 @@
+{
+    "Telecom": {
+        "categoryPrompt": "telecom, mobile phone, voice call, GSM service, landline connection, call quality, mobile billing, network issue, roaming charges, mobile connection, telecom services, phone service, cellular network, voice service, mobile operator, telecom charges, network problem, call drop, poor signal, mobile network, issue related to telecom, problem with mobile service, complaints about network quality, grievances about telecom billing"
+    },
+    "Electricity": {
+        "categoryPrompt": "electricity, power supply, electricity bill, meter reading, power connection, domestic electricity, commercial electricity, power outage, billing issue, meter problem, load shedding, power cut, electricity charges, utility bill, electric supply, power billing, residential power, commercial power, issue related to electricity, problem with power supply, complaints about electricity bill, grievances about power connection"
+    },
+    "Banking": {
+        "categoryPrompt": "bank, savings account, current account, bank account, ATM, debit card, unauthorized transaction, account freezing, account closure, deposit, withdrawal, bank charges, loan, personal loan, auto loan, home loan, credit card, remittance, money transfer, nodal bank, digital payment, e-wallet, online banking, net banking, bank statement, issue related to banking, problem with bank account, complaints about bank charges, grievances about unauthorized transactions"
+    },
+    "General Insurance": {
+        "categoryPrompt": "insurance, health insurance, medical claim, hospital bill, health policy, motor insurance, car insurance, vehicle insurance, travel insurance, trip cancellation, claim settlement, insurance rejection, claim denial, premium, policy, general insurance, product insurance, gadget insurance, liability insurance, agriculture insurance, cattle insurance, insurance claim, issue related to insurance, problem with claim settlement, complaints about claim rejection, grievances about insurance denial"
+    },
+    "Consumer Durables": {
+        "categoryPrompt": "home appliances, refrigerator, washing machine, air conditioner, television, inverter, battery, water pump, motor, water purifier, RO, grooming products, furniture, modular kitchen, sanitary ware, toiletries, mattress, bedding, musical instruments, home security, plumbing, construction material, fitness equipment, bags, luggage, kitchen hardware, glassware, bike accessories, car accessories, tyres, pet products, locks, home safes, LED lights, bulbs, bicycles, electric scooters, issue related to consumer durables, problem with appliances, complaints about product quality, grievances about home appliances"
+    },
+    "Travel & Tourism": {
+        "categoryPrompt": "travel, tourism, holiday package, tour package, hotel booking, resort booking, timeshare membership, vacation package, shrine yatra, pilgrimage, state tourism, online cab, car rental, ticket booking, travel agent, hospitality, hotel services, resort services, travel membership, travel booking, online hotel, tourism services, issue related to travel, problem with hotel booking, complaints about holiday package, grievances about tourism services"
+    },
+    "Courier & Cargo": {
+        "categoryPrompt": "courier, cargo, delivery service, parcel delivery, shipment, package delivery, courier service, cargo handling, shipping, logistics, express delivery, courier tracking, cargo tracking, delivery delay, lost package, damaged parcel, courier charges, issue related to courier, problem with delivery, complaints about courier service, grievances about cargo delivery"
+    },
+    "Health Services": {
+        "categoryPrompt": "hospital, healthcare, medical services, doctor, treatment, medical negligence, malpractice, pharmacy, chemist, medicines, diagnostic centre, pathology lab, medical test, hospital bill, medical instruments, stem cells, tobacco products, ayurvedic clinic, homeopathy, unani, medical facility, patient care, healthcare services, issue related to healthcare, problem with hospital, complaints about medical negligence, grievances about pharmacy"
+    },
+    "Electronics Products": {
+        "categoryPrompt": "electronics, mobile phone, smartphone, tablet, laptop, computer, desktop, gaming device, gaming console, television, LCD TV, LED TV, smart TV, audio device, home theatre, bluetooth device, camera, handicam, printer, scanner, fax, photocopier, power bank, mobile accessories, smartwatch, VR, CCTV, surveillance, networking device, router, software, antivirus, solar device, diagnostic equipment, electronic products, gadgets, issue related to electronics, problem with mobile phone, complaints about laptop, grievances about electronic products"
+    },
+    "NBFCs": {
+        "categoryPrompt": "NBFC, non-banking financial company, loan, personal loan, auto loan, home loan, consumer loan, company deposits, chit fund, home finance, online loan app, financial services, loan approval, loan disbursement, EMI, interest rate, loan processing, finance company, credit, lending, issue related to NBFC, problem with loan, complaints about loan charges, grievances about NBFC services"
+    },
+    "Broadband & Internet": {
+        "categoryPrompt": "broadband, internet, internet connection, internet speed, WiFi, data connection, wired internet, wireless internet, internet service, broadband billing, internet plan, data limit, connectivity issue, slow internet, network problem, internet provider, ISP, broadband service, issue related to broadband, problem with internet speed, complaints about connectivity, grievances about internet service"
+    },
+    "DTH and Cable": {
+        "categoryPrompt": "DTH, direct to home, cable TV, cable connection, TV channels, satellite TV, DTH service, cable service, subscription, recharge, channel package, signal problem, set-top box, DTH box, cable operator, broadcasting, television service, issue related to DTH, problem with cable connection, complaints about channels, grievances about DTH service"
+    },
+    "E- Commerce": {
+        "categoryPrompt": "e-commerce, online shopping, online purchase, online order, product delivery, tele shopping, m-commerce, mobile commerce, online booking, online hotel booking, online travel booking, online cab service, home delivery, online pharmacy, online rental, direct selling, online food order, food delivery, food aggregator, online loan, social media marketplace, facebook marketplace, whatsapp business, online grocery, delivery service, return policy, refund, product quality, issue related to e-commerce, problem with online shopping, complaints about delivery, grievances about online purchase"
+    },
+    "Automobiles": {
+        "categoryPrompt": "automobile, car, vehicle, two wheeler, bike, motorcycle, scooter, four wheeler, electric vehicle, EV, electric car, electric bike, electric bicycle, e-rickshaw, three wheeler, auto rickshaw, heavy vehicle, bus, truck, tractor, vehicle service, vehicle repair, warranty, spare parts, automobile defect, vehicle maintenance, car service center, bike service, issue related to automobile, problem with vehicle, complaints about car service, grievances about vehicle defect"
+    },
+    "Airlines": {
+        "categoryPrompt": "airline, flight, air travel, domestic flight, international flight, flight booking, flight cancellation, flight delay, baggage, checked baggage, hand baggage, in-flight service, airline ticket, flight reservation, airport, airport authority, boarding, air passenger, aviation, airline service, issue related to airlines, problem with flight booking, complaints about flight delay, grievances about airline service"
+    },
+    "Publications": {
+        "categoryPrompt": "publication, newspaper, magazine, print media, subscription, news delivery, magazine delivery, publishing house, periodical, journal, media publication, autonomous publication, print subscription, newspaper subscription, magazine subscription, publication service, issue related to publication, problem with newspaper delivery, complaints about subscription, grievances about magazine delivery"
+    },
+    "School Education": {
+        "categoryPrompt": "school, school education, state board, central board, CBSE, ICSE, school admission, school fees, educational institution, primary education, secondary education, school facilities, school management, school curriculum, private school, government school, school services, issue related to school, problem with school admission, complaints about school fees, grievances about school management"
+    },
+    "Agency Services": {
+        "categoryPrompt": "agency services, placement agency, job placement, cab service, taxi service, beauty salon, gym, spa, event services, event management, wedding services, party services, IT services, software services, repair services, extended care, mobile insurance, car rental, bike rental, immigration services, visa services, comparison sites, online rental, PG rental, hostel rental, personal care, laundry service, boutique, house cleaning, home improvement, manpower hiring, matrimonial services, IRCTC, online gaming, betting, lifestyle app, rental platform, issue related to agency, problem with service provider, complaints about agency services, grievances about professional services"
+    },
+    "Postal": {
+        "categoryPrompt": "postal, post office, mail service, postal service, letter, parcel, post, speed post, registered post, postal financial services, postal savings, money order, postal delivery, postal tracking, postal charges, India Post, issue related to postal, problem with mail delivery, complaints about postal service, grievances about post office"
+    },
+    "Real Estate": {
+        "categoryPrompt": "real estate, property, builder, developer, construction, housing society, RWA, resident welfare association, apartment, flat, residential property, commercial property, property purchase, property dispute, possession delay, building defects, construction quality, government development authority, metro rail, rental services, property developer, real estate developer, issue related to real estate, problem with builder, complaints about property, grievances about construction"
+    },
+    "Petroleum": {
+        "categoryPrompt": "petroleum, LPG, cooking gas, gas cylinder, gas refill, petrol pump, fuel station, petrol, diesel, fuel, PNG, piped natural gas, CNG, compressed natural gas, fuel quality, fuel pricing, gas connection, gas subsidy, oil company, petroleum products, research institute, issue related to petroleum, problem with LPG, complaints about petrol pump, grievances about fuel quality"
+    },
+    "Railways": {
+        "categoryPrompt": "railway, train, railway ticket, train booking, train reservation, railway station, IRCTC, Indian Railways, train travel, rail passenger, train service, railway catering, train food, railway tourism, air ticketing, train cancellation, train delay, railway platform, railway facilities, issue related to railways, problem with train booking, complaints about railway service, grievances about IRCTC"
+    },
+    "Packers and Movers": {
+        "categoryPrompt": "packers and movers, relocation service, moving service, household shifting, office relocation, packing service, loading service, unloading service, transportation service, moving company, relocation company, goods shifting, furniture moving, vehicle transportation, packing materials, moving charges, issue related to packers, problem with moving service, complaints about relocation, grievances about movers"
+    },
+    "Legal Metrology": {
+        "categoryPrompt": "legal metrology, weights and measures, MRP, maximum retail price, charging over MRP, GST over MRP, packaged commodities, standard weight, measurement accuracy, quality standards, consumer protection, price compliance, MRP violation, product labeling, masks pricing, sanitizer pricing, product availability, issue related to legal metrology, problem with pricing, complaints about overcharging, grievances about MRP violation"
+    },
+    "FMCG": {
+        "categoryPrompt": "FMCG, fast moving consumer goods, packaged products, household products, personal care products, grooming products, apparels, clothing, footwear, shoes, toiletries, sanitary items, construction material, building material, seeds, cloth, skincare, haircare, oral care, body care, laundry products, cleaning supplies, health products, wellness products, baby products, diapers, baby food, baby care, pet care, pet food, pet hygiene, personal accessories, jewellery, bags, wallets, belts, stationery, consumer goods, packaged goods, issue related to FMCG, problem with packaged products, complaints about product quality, grievances about consumer goods"
+    },
+    "Life Insurance": {
+        "categoryPrompt": "life insurance, term insurance, endowment policy, ULIP, unit linked insurance, pension plan, retirement plan, insurance policy, insurance premium, policy maturity, death benefit, life cover, insurance claim, nominee, beneficiary, policy surrender, insurance agent, policy document, insurance services, issue related to life insurance, problem with policy, complaints about claim settlement, grievances about insurance services"
+    },
+    "Higher Education": {
+        "categoryPrompt": "higher education, college, university, undergraduate, postgraduate, IIT, IIM, IISc, IISER, technical education, engineering college, medical college, nursing course, dental college, pharmaceutical course, rural management, ITI, skill development, NITTTR, autonomous organization, central university, state university, apprenticeship, CA institute, veterinary college, animal husbandry, CSIR, solar energy course, aircraft maintenance, aeronautics, mass communication, maritime university, law course, NIELIT, fashion technology, NIFT, hotel management, professional education, higher studies, issue related to higher education, problem with college admission, complaints about university, grievances about educational institution"
+    },
+    "Advertisements": {
+        "categoryPrompt": "misleading advertisement, false advertisement, unfair trade practice, deceptive advertising, misleading claims, false claims, advertisement complaint, advertising standards, consumer deception, misleading promotion, exaggerated claims, false representation, misleading marketing, deceptive marketing, advertising grievance, issue related to advertisement, problem with misleading ads, complaints about false advertising, grievances about deceptive practices"
+    },
+    "Agriculture": {
+        "categoryPrompt": "agriculture, farming, seeds, seed quality, fertilizers, pesticides, kishan call centre, farmer helpline, agricultural products, crop cultivation, agricultural issues, seed problem, fertilizer quality, pesticide quality, agricultural support, farming services, rural agriculture, agricultural grievance, issue related to agriculture, problem with seeds, complaints about fertilizers, grievances about agricultural products"
+    },
+    "Drugs & Cosmetics": {
+        "categoryPrompt": "drugs, medicines, pharmaceutical products, cosmetics, personal care cosmetics, beauty products, magical remedy products, online pharmacy, e-pharmacy, chemist, drug store, medicine quality, cosmetic quality, drug safety, counterfeit drugs, spurious medicines, pharmacy services, pharmaceutical services, issue related to drugs, problem with medicines, complaints about cosmetics, grievances about pharmacy"
+    },
+    "Public Distribution System": {
+        "categoryPrompt": "public distribution system, PDS, ration card, fair price shop, ration shop, food grains, subsidized food, essential commodities, government scheme, food distribution, PDS shop, ration supply, food security, subsidized rations, PDS services, issue related to PDS, problem with ration card, complaints about fair price shop, grievances about food distribution"
+    },
+    "Retail Outlets": {
+        "categoryPrompt": "retail, retail outlet, departmental store, shopping mall, supermarket, hypermarket, stand alone shop, retail store, food outlet, brand franchise, retail shopping, store purchase, retail services, shopping experience, retail billing, product availability, store services, retail complaint, issue related to retail, problem with store, complaints about retail outlet, grievances about shopping"
+    },
+    "Food": {
+        "categoryPrompt": "food, restaurant, hotel, dining, food outlet, food premises, home delivery, food delivery, food aggregator, takeaway, food cart, roadside vendor, food van, dhaba, packaged food, unlabelled food products, agricultural products, milk, meat, poultry, food quality, food safety, food hygiene, service charge, canteen, mess, school canteen, college mess, office canteen, online food order, grocery app, bakery, perishable products, food services, issue related to food, problem with food quality, complaints about restaurant, grievances about food delivery"
+    },
+    "Shares and Securities": {
+        "categoryPrompt": "shares, securities, stock market, share brokerage, stock broker, trading, demat account, share trading, securities trading, SEBI, stock exchange, investment, portfolio, equity, mutual fund, share certificate, brokerage charges, trading platform, stock market grievance, issue related to shares, problem with brokerage, complaints about securities, grievances about stock trading"
+    },
+    "Standards": {
+        "categoryPrompt": "standards, BIS, Bureau of Indian Standards, ISI mark, hallmark, BEE stars, energy rating, trademarks, Agmark, ISO certification, silk mark, quality standards, certification, product standards, quality assurance, misuse of ISI mark, misuse of hallmark, misuse of registration mark, quality compliance, QCO violation, product quality, standard compliance, issue related to standards, problem with certification, complaints about quality, grievances about standards violation"
+    },
+    "General Enquiry": {
+        "categoryPrompt": "general enquiry, general query, information request, cyber crime, police grievance, women helpline, fraudulent complaint, right to information, RTI, GST enquiry, government identity services, aadhaar, government taxes, mutual fund query, water supply, e-daakhil, consumer commission, consumer forum, general complaint, general issue, miscellaneous enquiry, issue related to general matters, problem with services, complaints about various issues, general grievances"
+    },
+    "Govt. Transport": {
+        "categoryPrompt": "government transport, public transport, state transport, bus service, metro rail, metro train, road transport, government bus, state bus, public bus, metro service, urban transport, city transport, transport corporation, bus ticket, metro ticket, bus fare, metro fare, public transportation, government transportation services, issue related to transport, problem with bus service, complaints about metro, grievances about public transport"
+    },
+    "Private Education": {
+        "categoryPrompt": "private education, coaching, coaching institute, IT coaching, play school, preschool, learning app, online learning, education portal, UPSC coaching, IAS coaching, IPS coaching, CA coaching, engineering coaching, medical coaching, data science course, government job coaching, professional courses, job oriented courses, skill development, training institute, private tuition, online classes, education app, issue related to private education, problem with coaching, complaints about course, grievances about training institute"
+    },
+    "Digital Payment Modes": {
+        "categoryPrompt": "digital payment, online payment, mobile wallet, e-wallet, payment gateway, UPI, unified payments interface, RTGS, NEFT, IMPS, internet banking, online banking, mobile banking, debit card, prepaid card, gift card, BHIM app, BHIM UPI, AEPS, aadhaar enabled payment, USSD, SMS banking, POS machine, cashless payment, electronic payment, payment app, payment issue, transaction failure, issue related to digital payment, problem with UPI, complaints about payment gateway, grievances about online banking"
+    },
+    "GST": {
+        "categoryPrompt": "GST, goods and services tax, tax, taxation, GST compliance, GST billing, tax invoice, GST registration, tax rate, GST charges, consumer tax, packaged commodity tax, non-packaged commodity tax, trader tax, service charges, repair charges, GST on food, GST on telecom, GST on electricity, GST on petroleum, GST on health services, GST on insurance, GST on drugs, GST on real estate, GST on e-commerce, GST on banking, GST on automobiles, GST enquiry, tax grievance, issue related to GST, problem with taxation, complaints about GST charges, grievances about tax compliance"
+    },
+    "Direct Selling": {
+        "categoryPrompt": "direct selling, network marketing, MLM, multi-level marketing, online selling, direct sales, selling agent, sales representative, distributor, product demonstration, home delivery sales, direct marketing, sales scheme, commission, direct selling company, direct selling products, issue related to direct selling, problem with network marketing, complaints about MLM, grievances about direct sales"
+    }
+}

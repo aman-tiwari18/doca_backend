@@ -1,0 +1,568 @@
+categoryCode,sectorCode,categoryName,categoryDescription,hindiCategoryName,status
+1,1,"Voice - Landline","Landline Connection","आवाज - लैंडलाइन",1
+2,1,"Voice - GSM","Mobile GSM","आवाज - जीएसएम
+",1
+3,1,"Telecom - Others","Telecom - Others","दूरसंचार - दूसरों
+",1
+4,2,Electricity-Domestic,Electricity-Domestic,बिजली-घरेलू,1
+5,2,Commercial,Commercial,व्यावसायिक,1
+6,2,"Electricity - Others","Electricity - Others","विद्युत - दूसरों
+",1
+7,3,"Saving & Current Account","Saving & Current Account","बचत और चालू खाता
+",0
+8,3,Loans,Loans,"ऋण
+",1
+9,3,ATM's,ATM's,"एटीएम
+",0
+10,3,"Credit Card","Credit Card","क्रेडिट कार्ड
+",0
+11,3,Remittance,Remittance,"प्रेषण
+",0
+12,3,"Banking - Others","Banking - Others","बैंकिंग - दूसरों
+",0
+13,4,"Health Insurance","Health Insurance","स्वास्थ्य बीमा
+",1
+14,4,"Travel Insurance","Travel Insurance","यात्रा बीमा",1
+15,4,"Motor Insurance","Motor Insurance","मोटर बीमा",1
+16,4,"General Insurance - Others","General Insurance - Others","जनरल इंश्योरेंस - दूसरों",1
+17,5,"Home Appliances","Home Appliances","घरेलु उपकरण
+",0
+18,5,"Inverter & Batteries","Inverter & Batteries","इन्वर्टर और बैटरी
+",0
+19,5,"Water Pump & Motor","Water Pump & Motor","जल पम्प और मोटर",0
+20,5,"Water Purifier & RO","Water Purifier & RO","जल शोधक और आरओ",0
+21,5,"Grooming Products","Grooming Products","सौंदर्य उत्पाद
+",0
+22,5,"Furniture & Fixtures","Furniture & Fixtures","सामान तथा जोड़ा गया उपकरण
+",0
+23,5,"Consumer Durabless - Others","General Insurance - Others","उपभोक्ता टिकाऊ - दूसरों",0
+24,6,"Timeshare Membership","Timeshare Membership","टाइमशैयर सदस्यता",0
+25,6,"Holiday Package","Holiday Package","छुट्टी पैकेज",0
+26,6,"State Govt. Tourism Package","State Govt. Tourism Package","राज्य सरकार। पर्यटन पैकेज",0
+27,6,"Shrine Boards Yatra","Shrine Boards Yatra","तीर्थ यात्रा बोर्डों
+",0
+28,6,"Offine Hotels & Resorts","Offine Hotels & Resorts","ऑफ़लाइन होटल एंड रिसॉर्ट्स",0
+29,6,"Travel & Tourism - Others","Travel & Tourism - Others","यात्रा एवं पर्यटन - दूसरों",0
+30,7,Courier,Courier,संदेशवाहक,1
+31,7,Cargo,Cargo,माल,1
+32,8,"Hospital Services","Hospital Services","अस्पताल सेवा",1
+33,8,"Negligences & Malpractice","Negligences & Malpractice","लापरवाही और कदाचार",1
+34,8,"Pharmacy & Chemist Stores","Pharmacy & Chemist Stores","फार्मेसी एवं केमिस्ट स्टोर",1
+35,8,"Diagnostic Centres","Diagnostic Centres","नैदानिक ​​केन्द्रों",1
+36,8,"Medical Negligence - Others","Medical Negligence - Others","चिकित्सकीय लापरवाही - दूसरों",1
+37,9,"Mobile Handsets","Mobile Handsets","मोबाइल हैंडसेट",0
+38,9,"Gaming Devices","Gaming Devices","गेमिंग उपकरणों",0
+39,9,"Computers & laptops","Computers & laptops","कंप्यूटर और लैपटॉप",0
+40,9,"Tablets & Other Gadgets","Tablets & Other Gadgets","गोलियां और अन्य गैजेट्स",0
+41,9,"Electronics Products - Others","Electronics Products - Others","इलेक्ट्रॉनिक्स उत्पाद - दूसरों",0
+42,9,"LCD/LED/Smart TV","LCD/LED/Smart TV","एलसीडी / एलईडी / स्मार्ट टीवी",0
+43,9,"Audio Devices","Audio Devices","ऑडियो उपकरणों",0
+44,10,"Company Deposits","Company Deposits","कंपनी जमा",1
+45,10,"Consumer Product Loans","Consumer Product Loans","उपभोक्ता उत्पाद ऋण",1
+46,10,"Auto Loans","Auto Loans","ऑटो ऋण",1
+47,10,"Home Loans","Home Loans","घर के लिए ऋण",0
+48,10,"Personal Loans","Personal Loans","व्यक्तिगत ऋण
+",1
+49,10,"NBFC's - Others","NBFC's - Others","एनबीएफसी - अन्य
+",1
+50,11,SIP,SIP,"एसआईपी
+",1
+51,11,ELSS,ELSS,"ईएलएसएस
+",1
+52,11,"Mutual Fund - Others","Mutual Fund - Others","म्युचुअल फंड - दूसरों
+",1
+53,12,"Data - Wired","Data - Wired","डेटा - वायर्ड
+",1
+54,12,"Data - Wireless","Data - Wireless","डेटा - वायरलेस
+",1
+55,12,"Broadband & Internet - Others","Broadband & Internet - Others","ब्रॉडबैंड और इंटरनेट - दूसरों",1
+56,13,DTH,DTH,"डीटीएच
+",1
+57,13,Cable,Cable,"केबल
+",1
+58,13,"DTH & Cable - Others","DTH & Cable - Others","डीटीएच और केबल - दूसरों
+",1
+59,14,"Online Shopping","Online Shopping","ऑनलाइन खरीदारी",1
+60,14,"Tele Shopping","Tele Shopping","टेली शॉपिंग
+",1
+61,14,"E- Commerce - Others","E- Commerce - Others","ई वाणिज्य - दूसरों",1
+62,14,"Utility Services","Utility Services","उपयोगिता सेवा",0
+63,14,"Online Hotel Booking","Online Hotel Booking","ऑनलाइन होटल बुकिंग",0
+64,14,"Online Travel Booking","Online Travel Booking","ऑनलाइन ट्रैवल बुकिंग",0
+65,15,"Two Wheelers","Two Wheels/Bike","दोपहिया वाहन",1
+66,15,"Four Wheelers","Four Wheels/Cars","पहिया वाहन",1
+68,16,"Domestic Airlines",Airlines-Domestic,"घरेलू एयरलाइंस",1
+69,16,"International Airlines",International,"अंतरराष्ट्रीय एयरलाइंस",1
+70,16,"Airport authority of India","Airport Authorities","हवाई अड्डे के अधिकारियों",1
+71,16,"Airlines - Others","Airlines - Others","एयरलाइंस - दूसरों",0
+72,17,Newspaper,Newspaper,अखबार,1
+73,17,Magazine,Magazine,"पत्रिका
+",1
+74,17,"Publications - Others","Publications - Others","प्रकाशन - दूसरों",1
+75,18,Others,Others,अन्य,1
+76,19,"State Board","State Board","राज्य बोर्ड",1
+77,19,"Central Board","Central Board","सेंट्रल बोर्ड",1
+78,19,"School Education - Others","School Education - Others","स्कूल शिक्षा - अन्य",1
+79,20,"Placement Agencies","Placement Agencies","प्लेसमेंट एजेंसियों",0
+80,20,"Cab Services","Cab Services","टैक्सी सेवा",0
+81,20,Beauty/GYM/Spa,Beauty/GYM/Spa,"सौंदर्य / जिम / स्पा",0
+82,20,"Event Services","Event Services","ईवेंट्स सेवाएँ",0
+83,20,"IT Services","IT Services","आईटी सेवाएं",0
+84,20,"Agency Services - Others","Agency Services - Others","एजेंसी सेवाएँ -अन्य",0
+85,21,Postal,"Postal ","डाक का",1
+87,22,"Private Developers/ Builder","Private Developers/ Builder","निजी डेवलपर्स / बिल्डर",1
+88,22,"Govt. Development Authorities","Govt. Development Authorities","सरकार। विकास प्राधिकरण",1
+89,22,"RWA & Societies","RWA & Societies","RWA और सोसायटी",1
+90,22,"Real Estate - Others","Real Estate - Others","रियल एस्टेट -अन्य",1
+91,23,LPG,LPG,"रसोई गैस",1
+92,23,"Petrol Pumps","Petrol Pumps","पेट्रोल पंप",1
+93,23,PNG,PNG,पीएनजी,1
+94,23,CNG,CNG,सीएनजी,1
+95,23,"Petroleum - Others","Petroleum - Others","पेट्रोलियम - अन्य",1
+96,24,Railways,Railways,रेलवे,1
+97,24,"Railways - Others","Railways - Others","रेल - अन्य",1
+98,25,"Packers and Movers","Packers and Movers","पैकर्स और मोवेर्स",1
+99,25,"Packers and Movers - Others","Packers and Movers - Others","पैकर्स और मोवेर्स - अन्य",1
+100,26,"Legal Metrology","Legal Metrology","लीगल मेट्रोलोजी",0
+101,26,"Legal Metrology - Others","Legal Metrology - Others","लीगल मेट्रोलोजी - अन्य",1
+102,27,"Packaged household product","Packaged household product ","पैकेज घरेलु उत्पाद",0
+103,27,"Packaged Personal care/Grooming products","Packaged Personal care/Grooming products","पैकेज व्यक्तिगत केयर / सौंदर्य उत्पाद",0
+104,27,"FMCG - Others","FMCG - Others","FMCG - अन्य शिकायतें",1
+105,28,Term,Term,अवधि,1
+106,28,Endowment,Endowment,"अक्षय निधि",1
+107,28,ULIP,ULIP,यूलिप,1
+108,28,"Pension Plans","Pension Plans","पेंशन योजनाएं",1
+109,28,"Life Insurance - Others","Life Insurance - Others","जीवन बीमा - अन्य",1
+110,29,"Under Graduate","Under Graduate","ग्रेजुएट के तहत",1
+111,29,IITs,IITs,आईआईटी,1
+112,29,"IISc and IISERs","IISc and IISERs","आईआईएससी और आईआईएसईआरएस",1
+113,29,"Technical Education","Technical Education","तकनीकी शिक्षा",1
+114,29,"Higher Education - Others","Higher Education - Others","उच्च शिक्षा - अन्य",1
+115,30,"Job Oriented Courses","Job Oriented Courses","रोजगारोन्मुखी पाठ्यक्रम",1
+116,30,"Job Oriented Courses - Others","Job Oriented Courses - Others","रोजगारोन्मुखी पाठ्यक्रम - अन्य",1
+117,31,"Misleading Advertisement","Misleading Advertisement","भ्रामक विज्ञापन",0
+118,31,"Unfair Trade Practices","Unfair Trade Practices","अनुचित व्यापार व्यवहार",0
+119,31,"Advertisements - Others","Advertisements - Others","विज्ञापन - अन्य",0
+120,32,"Seed Problem","Seed Problem","बीज समस्या",1
+121,32,Fertilizers,Fertilizers,उर्वरक,1
+122,32,"Kishan Call Centre","Kishan Call Centre","किशन कॉल सेंटर",1
+123,32,"Agriculture - Others","Agriculture - Others","कृषि - अन्य",1
+124,33,Drugs,Drugs,औषध,1
+125,33,"perosnal Care Cosmetics product",Cosmetics,"प्रसाधन सामग्री",1
+126,33,"Magical Remedy Productrs","Magical Remedy Productrs","जादुई उपाय Productrs",1
+127,33,"Drugs & Cosmetics - Others","Drugs & Cosmetics - Others","औषधि और प्रसाधन सामग्री - अन्य",1
+128,34,"Public Distribution System","Public Distribution System","सार्वजनिक वितरण प्रणाली",1
+129,34,"Public Distribution System - Others","Public Distribution System - Others","सार्वजनिक वितरण प्रणाली - अन्य",1
+130,35,NCDRC,NCDRC,एनसीडीआरसी,0
+131,35,"State Commission","State Commission","राज्य आयोग",0
+132,35,"District Forum","District Forum","जिला फोरम",0
+133,35,"Legal - Others","Legal - Others","कानूनी - अन्य",0
+134,36,CIC,CIC,सीआईसी,1
+135,36,SIC,SIC,"अस ई सी",1
+136,36,"Right to Information - Others","Right to Information - Others","सूचना का अधिकार - अन्य",1
+137,37,Sewage,Sewage,मल,1
+138,37,"Water Supply","Water Supply",जलापूर्ति,1
+139,37,"Water - Others","Water - Others","जल - अन्य",1
+140,38,Aadhar,"Aadhar ","आधार
+",1
+141,38,"PAN Card","PAN Card","पैन कार्ड",1
+142,38,Passport,Passport,पासपोर्ट,1
+143,38,"Voter ID","Voter ID","वोटर आईडी",1
+144,38,"Govt. Identity Services - Others","Govt. Identity Services - Others","सरकार। पहचान सेवाओं - अन्य",1
+145,39,"Service Tax","Service Tax","सेवा कर",1
+146,39,VAT,VAT,वैट,1
+147,39,"Educational Cess","Educational Cess","शिक्षा उपकर",1
+148,39,"Swachh  Bharat","Swachh  Bharat","स्वच्छ भारत",1
+149,39,"FAT Tax","FAT Tax","वसा कर",1
+150,39,"Income Tax","Income Tax","आयकर
+",1
+151,39,"Govt. Taxes - Others","Govt. Taxes - Others","सरकार। कर- अन्य
+",1
+152,40,"Departmental Stores","Departmental Stores","विभागीय स्टोर",1
+153,40,"Shopping Malls","Shopping Malls","शॉपिंग मॉल",1
+154,40,"Stand Alone Shops","Strand Alone Shops","अकेला दुकानें किनारा",1
+155,40,"Retail Outlets -Others","Retail Outlets -Others","रिटेल आउटलेट -अन्य",1
+156,41,"Food Premises - Sitting & Dining","Food Premises - Sitting & Dining","खाद्य परिसर में बैठ कर भोजन ग्रहण करना",0
+157,41,"Food Premises- Home Delivery/food aggregators/Takeaway","Food Premises- Home Delivery/food aggregators/Takeaway","खाद्य परिसर- खाद्य परिसर- घर पर डिलीवरी / स्वयं घर ले जाना / फ़ूड अग्ग्रीगेटर के द्वारा आर्डर",0
+158,41,"Take way","Take way",NULL,0
+159,41,"Unlabelled Agri Products/ Milk/Meat/Poultry","Unlabelled Agri Products/ Milk/Meat/Poultry","कृषि उपज अथवा खुला सामान / दूध / मांस /अंडे",0
+160,7,"Courier & Cargo - Others","Courier & Cargo - Others","कूरियर और कार्गो - अन्य",1
+161,42,"Share Brokerage","Share Brokerage","शेयर ब्रोकरेज",1
+162,42,"Share Brokerage - Others","Share Brokerage - Others","शेयर ब्रोकरेज - अन्य",0
+163,43,"BIS - ENFORCEMENT","BIS - ENFORCEMENT","बीआईएस - प्रवर्तन",0
+164,43,ISI,ISI,आईएसआई,0
+165,43,"Hall Mark","Hall Mark","हॉल मार्क
+",0
+166,43,"BEE Stars","BEE Stars","बीईई स्टार",0
+167,43,"Trade Marks","Trade Marks","ट्रेड मार्क्स",0
+168,43,Agmark,Agmark,एगमार्क,0
+169,43,ISO,ISO,"आईएसओ
+",0
+170,43,"Silk Mark","Silk Mark","सिल्क मार्क",0
+171,43,"Standards - Others","Standards - Others","मानक - अन्य",0
+172,44,"General Enquiry","General Enquiry","सामान्य जांच",1
+173,44,"General Enquiry - Others","General Enquiry - Others","जनरल पूछताछ  - अन्य",1
+174,45,"Govt. Transport","Govt. Transport","सरकार ट्रांसपोर्ट",1
+175,45,"Govt. Transport - Others","Govt. Transport - Others","जनरल पूछताछ - अन्य",1
+176,38,"Employees Provident Fund","Employees Provident Fund","कर्मचारी भविष्य निधि",1
+177,44,"Cyber Crime","Cyber Crime","साइबर अपराध",1
+178,44,"Delhi Police Grievance","Delhi Police Grievance","दिल्ली पुलिस  शिकायत",1
+179,44,"Women helpline","Women helpline","महिला हेल्पलाइन",1
+180,44,"Fraudulent Complaints","Fraudulent Complaints","धोखाधड़ी शिकायतें",1
+181,5,"Sanitary/ Toiletries","Sanitary/ Toiletries","स्वच्छता / प्रसाधन",0
+182,5,Mattress,Mattress,गद्दा,0
+183,5,Tyers,Tyers,टायर,0
+184,35,"Meditation center","Meditation center","ध्यान केंद्र",0
+185,35,"Bar Council","Bar Council","बार काउंसिल",0
+186,8,"Medical Instruments","Medical Instruments","चिकित्सा उपकरण",1
+187,10,"Chit Fund","Chit Fund","चिट फंड",1
+188,4,"Product insurance","Product insurance","प्रोडक्ट बीमा",1
+189,20,"Referring Service","Referring Service","जिक्र करते हुए सेवा",0
+190,20,"Extended Care Services","Extended Care Services","विस्तारित देखभाल सेवा",0
+191,20,"Repair Services","Repair Services","मरम्मत सेवाएँ",0
+192,14,"M- Commerce","M- Commerce","एम कामर्स",0
+193,14,"Online Cab service","Online Cab service","ऑनलाइन टैक्सी सेवा",0
+194,20,"Agency Services-Mobile Insurance","Agency Services-Mobile Insurance","एजेंसी सेवाएं-मोबाइल बीमा",0
+196,46,"IT Coaching","IT Coaching","आईटी कोचिंग",0
+197,20,"Car/bike rental service","Car/bike rental service","कार / बाइक किराए पर लेने की सेवा",0
+198,41,"Food Premises -Food Cart/ Roadside Vendor/ food Van/ Dhaba","Food Premises -Food Cart/ Roadside Vendor/ food Van/ Dhaba","खाद्य परिसर- रेहड़ी /ठेला / फ़ूड वैन / ढाबा",0
+199,41,"Packaged food Products","Packaged food Products","पैकेज खाद्य पदार्थ",0
+200,41,Food-Others,Food-Others,"अन्य शिकायतें",0
+201,14,"Home Delivery","Home Delivery","घर पहुँचाना",0
+202,32,"Pesticides
+","Pesticides
+",कीटनाशकों,1
+203,14,Pharmacy,Pharmacy,फार्मेसी,0
+204,39,GST,GST,जीएसटी,0
+205,14,"Perishables - Shelflife (24hrs)","Perishables - Shelflife (24hrs)","पराजय - शेल्फ़फैफ़ (24 घंटे)",0
+206,21,"Postal Financial Services","Postal Financial Services","पोस्टल वित्तीय सेवाएं",1
+207,21,"Postal Mail Services","Postal Mail Services","डाक मेल सेवा",1
+208,26,"Charging GST Over MRP","Charging GST Over MRP","Charging GST Over MRP",0
+209,4,"Personal Insurance","Personal Insurance","व्यक्तिगत बीमा",1
+210,4,"Liability Insurance","Liability Insurance","दायित्व बीमा",1
+211,29,"Rural Management","Rural Management","ग्रामीण प्रबंधन",1
+212,14,Loans,Loans,ऋण,0
+213,14,Insurance,Insurance,बीमा,0
+214,20,"Immigration & Visa services","Immigration & Visa services","आप्रवासन और वीजा सेवाएं",0
+215,22,"Urban Transport-Metro Rail","Urban Transport-Metro Rail","शहरी परिवहन-मेट्रो रेल",1
+216,46,"Private Education - Others","Private Education - Others","निजी शिक्षा - अन्य",0
+218,47,"Approval Body","Approval Body","अनुमोदन निकाय",1
+219,46,"Play School","Play School","प्ले स्कूल",1
+220,5,"Musical Instruments","Musical Instruments","संगीत वाद्ययंत्र",0
+221,29,"ITI /All Skill development programme","ITI /All Skill development programme","आईटीआई / सभी कौशल विकास कार्यक्रम",1
+222,23,"Research Association/ Institute","Research Association/ Institute","रिसर्च एसोसिएशन / इंस्टीट्यूट",1
+223,29,NITTTRs,NITTTRs,एनआईटीटीटीआरएस,1
+224,29,"Autonomous Organization","Autonomous Organization","स्वायत्त संगठन",1
+225,14,"Online Rental","Online Rental",NULL,0
+226,5,"Home Security","Home Security ","गृह सुरक्षा
+",0
+228,8,"Stem Cells Organization
+","Stem Cells Organization","स्टेम सेल संगठन",1
+229,29,"Apex Level Bodies","Apex Level Bodies","शीर्ष स्तर निकाय",1
+230,29,"Central Universities","Central Universities","केंद्रीय विश्वविद्यालय",1
+231,29,IIMs,IIMs,आईआईएम,1
+232,22,"Rental Services",,"किराये की सेवाएं",0
+233,9,"M Commerce","M Commerce","एम कॉमर्स",0
+234,4,"Agriculture Insurance","Agriculture Insurance","कृषि बीमा",1
+236,17,"Autonomous Publication House","Autonomous Publication House","स्वायत्त प्रकाशन हाउस",1
+237,24,"IRCTC- Tourism",,"आईआरसीटीसी - पर्यटन",1
+238,24,"IRCTC- Catering",,आईआरसीटीसी-केटरिंग,1
+239,24,"IRCTC- I Ticketing",,"आईआरसीटीसी- आई टिकटिंग",1
+240,29,"Boards of Apprenticeship Training","Boards of Apprenticeship Training","प्रशिक्षु प्रशिक्षण बोर्ड",1
+241,29,"Institutions Related to Hindi and other Indian Languages","Institutions Related to Hindi and other Indian Languages","हिंदी और अन्य भारतीय भाषाओं से संबंधित संस्थान",1
+242,41,"Complaints related to Service Charge","Complaints related to Service Charge","सर्विस चार्ज से संबंधित शिकायतें",0
+243,41,"Canteen & Mess - School/ Colleges/offices/Etc","Canteen & Mess - School/ Colleges/offices/Etc","कैंटीन एवम मैस - स्कूल / कॉलेज /ऑफिस इत्यादि",0
+244,27,Apparels/Footwears,Apparels/Footwears,"कपड़े / फूटवेयर्स",0
+245,27,"Toiletries/Sanitary Items/ Other Personal Care","Toiletries/Sanitary Items","प्रसाधन सामग्री / सेनेटरी आइटम",0
+246,5,"Housing hardware item / Plumbing / Sanitary wares/ Construction and Building Material","Housing Hardware Items/Plumbing/Sanitarywares","हाउसिंग हार्डवेयर आइटम / प्लंबिंग  / सेनेटरी वेयर",1
+247,14,"Direct Selling","Direct Selling","प्रत्यक्ष बिक्री",0
+248,3,"Nodal Bank","Nodal Bank","नोडल बैंक",0
+249,20,"Comparison Sites (Loans/Insurance/Property/Gadgets)","Utility Services","तुल्नात्मक वेबसाइटें",1
+250,14,"Online Cab Services/ Car Rentals","Online Cab Services/ Car Rentals","ऑनलाइन टैक्सी सेवा",0
+251,33,"Online Pharmacy","Online Pharmacy","ऑनलाइन फार्मेसी",1
+252,20,"Online Home/PG/Hostel Rental","Online Rentals (Home/ Durables/Etc)","किराये की सेवायें",1
+253,50,"Mobile Wallets / Payment Gateway","Mobile Wallets / Payment Gateway","मोबाइल वॉलेट / भुगतान गेटवे",1
+254,14,"Online food orders/ Delivery","Online food orders/ Delivery","ऑनलाइन भोजन डिलीवरी",0
+255,14,"Online Booking (Hotel / Travel/ Ticket)","Online Booking (Hotel / Travel/ Ticket)","ऑनलाइन  बुकिंग",0
+256,9,"Audio Devices /Home Theatre/Bluetooth Devices","Audio Devices /Home Theatre/Bluetooth Devices",ऑडियो डिवाइस / होम थियेटर / ब्लूटूथ डिवाइस,1
+257,9,Laptops/Desktop/PC's,Laptops/Desktop/PC's,"लैपटॉप / डेस्कटॉप / पीसी
+",1
+258,9,"Camera / Camera Accessories /Handicam","Camera / Camera Accessories /Handicam",कैमरा/ कैमरा एक्सेसरीज  /हैंडीकैम ,1
+259,9,"Gaming Console /Gaming Accessories/MP3 Players","Gaming Console /Gaming Accessories/MP3 Players",गेमिंग कंसोल / गेमिंग एक्सेसरीज/ ऍमपी थ्री प्लेयर ,1
+260,9,"TV/Smart TV/ LCD/LED","TV/Smart TV/ LCD/LED","टीवी/ स्मार्ट टीवी /एलसीडी/एलइदी  
+",1
+261,9,"Networking Devices/ Networking Accessories","Networking Devices/ Networking Accessories",नेटवर्किंग डेविसेस /नेटवर्किंग एक्सेसरीज,1
+262,9,"Mobile Handsets /Tablets / landline Phone Instrument","Mobile Handsets /Tablets / landline Phone Instrument",मोबइल हैंडसेट/ टेबलेट /लैंडलाइन फ़ोन  इंस्ट्रूमेंट ,1
+263,9,"Printer /Fax / Scanner/Photo Copier/Cartridge","Printer /Fax / Scanner/Photo Copier/Cartridge","प्रिन्टर / फैक्स / स्कैनर / फोटो कॉपियर/ कार्ट्रिज 
+",1
+264,9,"Power Banks/Mobile Accessories","Power Banks/Mobile Accessories",पावर बैंक/ मोबाइल एक्सेसरीज,1
+265,9,"Smart Watch/ VR/ Watches","Smart Watch/ VR/ Watches",स्मार्ट वॉच /वीआर/ वॉचेस  ,1
+266,9,"Home Security Systems/ CCTV / Surveillance Products","Home Security Systems/ CCTV / Surveillance Products",होम सिक्योरिटी सिस्टम /सीसी टीवी / सर्वेइल्लांस प्रोडक्ट ,1
+267,9,"Computer Peripherals / Computer Accessories / Electronics Accessories","Computer Peripherals / Computer Accessories","कंप्यूटर पैरिफैरल्स / कंप्यूटर एक्सेसरीज /विद्युत सामान",1
+268,9,"Softwares / Antivirus / Paper Licenses","Softwares / Antivirus / Paper Licenses",सॉफ्टवेयर / एंटीवायरस /पेपर लइसेंसेस ,1
+269,9,"Electronics Products-Bulb/ Lightning Items/ LED's","Electronics Products-Bulb/ Lightning Items/ LED's","इलेक्ट्रॉनिक्स उत्पाद-बल्ब / लाइटनिंग आइटम / एलईडी",0
+270,9,"Solar Devices","Solar Devices",सोलर  डिवाइस,1
+271,9,"Electronics Products-Others","Electronics Products-Others","इलेक्ट्रॉनिक्स  प्रोडक्ट्स -आदर्स
+",1
+272,3,"Digital Payment Modes","Digital Payment Modes","डिजिटल भुगतान मोड",0
+273,5,"Consumer Durables -Others","Consumer Durables -Others",कंस्यूमर दूरेबल - आदर्स ,1
+274,5,"Furniture / Modular Works","Furniture / Modular Works",फर्नीचर / मॉडुलर वर्क्स ,1
+275,5,"Grooming Products","Grooming Products",ग्रूमिंग प्रोडक्ट्स  ,1
+276,5,"Home Appliances","Home Appliances",होम अप्प्लाइंसेस ,1
+277,5,"Fitness / Sports Items/ Bags / Luggage","Fitness / Sports Items/? Bags / Luggage",फिटनेस / स्पोर्ट्स आइटम्स / बैग्स / लगेज ,1
+278,5,"Inverter & Batteries","Inverter & Batteries",इन्वर्टर और  बैटरीज ,1
+279,5,"Bedding/ Mattress","Bedding/ Mattress",बेडिंग / मैट्रेस्स ,1
+280,5,"Musical Instruments / Professional Audio","Musical Instruments / Professional Audio",म्यूजिकल इंस्ट्रूमेंट्स / प्रोफेशनल ऑडियो ,1
+281,5,"Kitchen Hardware/ Glassware Items/Kitchen Items/Other Hardware","Kitchen Hardware/ Glassware Items/Kitchen Items/Other Hardware",किचन हार्डवेयर / ग्लासवेयर आइटम्स / किचन आइटम्स/  आदर्स हार्डवेयर ,1
+282,5,"Bike Electronics & Accessories /Car Electronics & Accessories / Tyers","Bike Electronics & Accessories /Car Electronics & Accessories / Tyers",बाइक इलेक्ट्रॉनिक्स और सहायक उपकरण / कारइलेक्ट्रॉनिक्स और सहायक उपकरण / टायरर्स,1
+283,5,"Water Pump & Motor","Water Pump & Motor",वाटर पंप और  मोटर ,1
+284,5,"Water Purifiers /RO / Air Purifiers / Vacuum Cleaner","Water Purifiers /RO / Air Purifiers","वाटर पुरीफायर/ रओ / एयर पुरीफायर / वैक्यूम क्लीनर",1
+285,5,"Pet Food Supplies & Pet Products","Pet Food Supplies & Pet Products",पालतू पशु भोजन आपूर्ति और पालतू पशु उत्पाद,1
+286,5,"Locks / Home Safes / Digital Locks","Locks / Home Safes / Digital Locks",लॉक्स / होम सेफ / डिजिटल लॉक्स ,1
+287,5,"Conumer Durables-Bulb/ Lightning Items/ LED's","Conumer Durables-Bulb/ Lightning Items/ LED's","उपभोक्ता टिकाऊ-बल्ब / बिजली के सामान / एलईडी",1
+288,5,"Bicycles/Electric Scooters and Bikes","Bicycles/Electric Scooters and Bikes"," साइकिल  / इलेक्ट्रिक स्कूटर और बाइक",1
+289,39,"Complaints related to Service Charge","Complaints related to Service Charge","सर्विस चार्ज से संबंधित शिकायतें",0
+290,27,"Construction / Building Material","Construction / Building Material","निर्माण / भवन निर्माण सामग्री",0
+293,3,"Credit Card (other than Digital Payments)","Credit Card (other than Digital Payments)","क्रेडिट कार्ड  (डिजिटल पेमेंट्स के अलावा)",1
+294,48,"Consumer-Packaged commodity","
+
+
+
+
+
+
+
+","उपभोक्ता-पैक की गई वस्तु",0
+295,48,"Consumer- Non-Packaged commodity","Consumer- Non-Packaged commodity","उपभोक्ता- गैर-पैक की गई वस्तु",0
+296,48,Traders,," व्यापारी",0
+297,48,Enquiries,,पूछताछ,0
+298,48,"Sevices, Repairs etc charges","Sevices, Repairs ets charges","सेवा, मरम्मत और आदि शुल्क",0
+299,20,"Personal Care Services","Personal Care Services","पर्सनल केयर सर्विसेज",0
+300,20,"Car/Bike Rental resale services Apps or Local vendor","Car/Bike Rental resale services Apps or Local vendor"," कार / बाइक रेंटल सर्विसेज / पुनर्विक्रय सेवाएँ",1
+301,4,"Gadget Insurance","Gadget Insurance ","गैजेट बीमा",1
+302,20,"Immigration and Visa Services","Immigration and Visa Services ","आप्रवासन और वीजा सेवाएं",1
+303,20,"Business Referral Services","Business Referral Services","व्यापार रेफरल सेवाएं",1
+304,20,"Placement Agencies","Placement Agencies","प्लेसमेंट एजेंसियां",1
+305,20,"Repair Services","Repair Services ","मरम्मत सेवाएं",1
+306,20,"Miscellaneous Services","Miscellaneous Services  ","विविध सेवाएं",1
+307,20,"Entertainment Services - Cincema/ Concert/ Others","Entertainment Services - Cincema/ Concert/ Others","मनोरंजन सेवाएं - सिनेमा  / कॉन्सर्ट / अन्य",1
+308,20,"Events -  Wedding/ Party Services","Events -  Wedding/ Party Services ","इवेंट- वेडिंग / पार्टी सर्विसेज",1
+309,20,"Boutique / Laundry Services","Boutique / Laundry Services","बुटीक / लाँड्री सेवाएं",1
+310,20,"Personal Care Services/Hobbies","Hobbies/ Leisure Services","शौक / पाठ  सेवाएं",1
+311,20,"House Cleaning Home Improvement Services","House Cleaning Home Improvement Services","घर की सफाई/  गृह सुधार सेवाएं",1
+312,20,"Manpower Hiring Services","Manpower Hiring Services","कर्मियों की भर्ती सेवाएं",1
+313,20,"Matrimonial Services","Matrimonial Services","वैवाहिक सेवाएं",1
+317,10,"Home Finance",,"गृह वित्त",1
+318,49,"Network Marketing","Network Marketing","नेटवर्क मार्केटिंग",1
+319,49,"Online Selling","Online Selling","ऑनलाइन सेलिंग",0
+320,3,"Saving/Current/ Deposit Accounts","Saving/Current/ Deposit Accounts"," बचत / चालू / जमा खाते",1
+321,3,"ATM & Debit Card","ATM & Debit Card","एटीएम और डेबिट कार्ड",1
+322,3,"Nodal Bank/ Govt. Schemes","Nodal Bank/ Govt. Schemes","नोडल बैंक / सरकार योजनाएं",1
+323,3,e-Wallet,e-Wallet,ई-वॉलेट,1
+324,50,e-Wallet,e-Wallet,ई-वॉलेट,0
+325,50,RTGS/NEFT/IMPS,RTGS/NEFT/IMPS,आर.टी.जी.एस./एन.ई.एफ.टी./आई.एम.पी.एस.,1
+326,50,"UPI Banking","UPI Banking","यूपीआई बैंकिंग",0
+327,50,"Internet Banking","Internet Banking"," इंटरनेट बैंकिंग",0
+328,50,"Debit/Prepaid/Gift Cards","Debit/Prepaid/Gift / Credit Cards","डेबिट / प्रीपेड / गिफ्ट कार्ड",1
+329,50,USSD/SMS,USSD/SMS,"यूएसएसडी / एसएमएस",0
+330,50,"BHIM UPI","BHIM UPI","भिम यूपीआई",0
+331,50,"BHIM Aadhaar/AEPS","BHIM Aadhaar/AEPS","भिम आधार /ऐईपीएस",0
+332,50,"Policy Inputs","Policy Inputs"," पॉलिसी इनपुट",0
+333,20,"IRCTC- Tourism","IRCTC- Tourism","आईआरसीटीसी - पर्यटन",0
+334,20,"IRCTC- Catering","IRCTC- Catering",आईआरसीटीसी-केटरिंग,0
+335,20,"IRCTC- I Ticketing","IRCTC- I Ticketing","आईआरसीटीसी- आई टिकटिंग",0
+336,35,Enquiry,Enquiry,NULL,0
+337,33,"Chemist Issues",,"औषधि मुद्दे",1
+338,14,"Online loan","Online loan","ऑनलाइन ऋण",0
+339,27,"Seeds and Associated products","Seeds and Associated products","बीज और संबद्ध उत्पाद",0
+340,32,"seeds and associated products","seeds and associated products","बीज संबंधित उत्पाद",1
+342,40,"Food outlets",,"फूड आउटलेट",0
+343,45,"Metro Rail",,"मेट्रो रेल",1
+344,29,"National Institute for the Empowerment of Persons with Intellectual Disabilities","National Institute for the Empowerment of Persons with Intellectual Disabilities","बौद्धिक विकलांग व्यक्तियों के सशक्तिकरण के लिए राष्ट्रीय संस्थान",1
+345,29,"CA Institute","CA Institute","सीए संस्थान",1
+346,29,"College of Veterinary Sciences & Animal Husbandry","College of Veterinary Sciences & Animal Husbandry","पशु चिकित्सा विज्ञान और पशुपालन कॉलेज",1
+347,29,"Council of Scientific & Industrial Research (CSIR)","Council of Scientific & Industrial Research (CSIR)","वैज्ञानिक और औद्योगिक अनुसंधान परिषद (सीएसआईआर)",1
+348,29,"Solar Energy Courses","Solar Energy Courses","सौर ऊर्जा पाठ्यक्रम",1
+349,29,"School for Aircraft Maintenance Engineer /ST Institute of Aeronautics","School for Aircraft Maintenance Engineer /ST Institute of Aeronautics ","एयरक्राफ्ट मेंटेनेंस इंजीनियर / एसटी इंस्टीट्यूट ऑफ एयरोनॉटिक्स  स्कूल",1
+350,29,"Indian Institute of Mass Communication","Indian Institute of Mass Communication","भारतीय जनसंचार संस्थान",1
+351,29,"Indian Maritime University","Indian Maritime University","भारतीय समुद्री विश्वविद्यालय",1
+352,29,"Law  Courses","Law  Courses","कानून पाठ्यक्रम",1
+353,29,"National Institute of Electronics & Information Technology (NIELIT)","National Institute of Electronics & Information Technology (NIELIT) ","राष्ट्रीय इलेक्ट्रॉनिक्स और सूचना प्रौद्योगिकी संस्थान",1
+354,29,"Audiometric and speech language pathology","Audiometric and speech-language pathology","ऑडियोमेट्रिक और भाषण भाषा विकृति विज्ञान",1
+355,29,"National Institute Of Fashion Technology","National Institute Of Fashion Technology","नेशनल इंस्टीट्यूट ऑफ फैशन टेक्नोलॉजी",1
+356,29,"State Universities","State Universities","राज्य विश्वविद्यालय",1
+357,29,"Medical Education & Research  /Nursing course/Dental College/Pharmaceutical Courses","Medical Education & Research  /Nursing course/Dental College/Pharmaceutical Courses","चिकित्सा शिक्षा और अनुसंधान / नर्सिंग पाठ्यक्रम / डेंटल कॉलेज / फार्मास्युटिकल पाठ्यक्रम",1
+358,46,"Learning App and Portal",NA,"लर्निंग ऐप और पोर्टल",1
+359,29,"Hotel Management Institute","Hotel Management Institute","Hotel Management Institute",1
+360,14,"Charging more than MRP for masks",NA,"मास्क के लिए एमआरपी से अधिक चार्ज करना",0
+361,14,"Charging more than MRP for Sanitizer",NA,"सेनिटाइजर  के लिए एमआरपी  से अधिक चार्ज करना",0
+362,14,"Non-availability of Masks",NA,"मास्क की अनुपलब्धता",0
+363,14,"Non-availability of Sanitizer",NA,"सेनिटाइजर की अनुपलब्धता",0
+364,26,"Charging more than MRP for masks",NULL,"मास्क के लिए एमआरपी से अधिक चार्ज करना",0
+365,26,"Charging more than MRP for Sanitizer",NULL,"सेनिटाइजर  के लिए एमआरपी  से अधिक चार्ज करना",0
+366,26,"Non-availability of Masks",NULL,"मास्क की अनुपलब्धता",0
+367,26,"Non-availability of Sanitizer",NULL,"सेनिटाइजर की अनुपलब्धता",0
+368,51,"Charging more than MRP",NA,"एमआरपी से अधिक चार्ज करना",1
+369,51,Non-availability,NA,"मास्क की अनुपलब्धता",1
+370,52,"Charging more than MRP",NULL,"एमआरपी से अधिक चार्ज करना",1
+371,52,Non-availability,NULL,"सेनिटाइजर की अनुपलब्धता",1
+372,51,Quality,NA,गुणवत्ता,0
+373,52,Quality,NA,गुणवत्ता,1
+374,42,"SEBI- Securities related grievance","SEBI- Securities-related grievance","सेबी- प्रतिभूति संबंधी शिकायत",1
+375,44,"Right to Information","Right to Information","सूचना का अधिकार",1
+376,44,GST,GST,जीएसटी,1
+377,44,"Govt. Identity Services","Govt. Identity Services","सरकार पहचान सेवाओं",1
+378,44,"Govt. Taxes","Govt. Taxes","सरकार करों",1
+379,4,"Cattle Insurance","Cattle Insurance","पशु बीमा",1
+380,35,"Consumer Commissions","Consumer Commissions","उपभोक्ता आयोग",0
+381,35,"District Consumer Dispute Redressal Commission",NULL,"जिला उपभोक्ता विवाद निवारण आयोग",1
+382,35,"State  Consumer Dispute Redressal Commission",,"राज्य उपभोक्ता विवाद निवारण आयोग",1
+383,35,"National Consumer Dispute Redressal Commission",,"राष्ट्रीय उपभोक्ता विवाद निवारण आयोग",1
+384,14,"Social Media Market Place(Facebook,Whatsapp,Twitter,Telegram,Instagram etc.)","Social Media Market Place(Facebook,Whatsapp,Twitter,Telegram,Instagram etc.)","सोशल मीडिया मार्केट प्लेस (फेसबुक, व्हाट्सएप, ट्विटर, टेलीग्राम, इंस्टाग्राम आदि)",1
+385,9,"Diagnostic Equipment","Diagnostic Equipment","नैदानिक ​​उपकरण",1
+386,26,"Packaged Commodities",NULL,"पैकेज्ड कमोडिटीज",1
+387,8,"Tobacco-Related Products","Tobacco-Related Products","तंबाकू संबंधित उत्पाद",1
+388,40,"Brand Franchise","Brand Franchise ","ब्रांड फ्रेंचाइजी",1
+389,41,"Misleading Advertisement","Misleading Advertisement",NULL,0
+390,42,"Misleading Advertisement","Misleading Advertisement",NULL,0
+391,1,"Misleading Advertisement","Misleading Advertisement",NULL,0
+392,2,"Misleading Advertisement","Misleading Advertisement",NULL,0
+393,23,"Misleading Advertisement","Misleading Advertisement",NULL,0
+394,8,"Misleading Advertisement","Misleading Advertisement",NULL,0
+395,4,"Misleading Advertisement","Misleading Advertisement",NULL,0
+396,28,"Misleading Advertisement","Misleading Advertisement",NULL,0
+397,33,"Misleading Advertisement","Misleading Advertisement",NULL,0
+398,22,"Misleading Advertisement","Misleading Advertisement",NULL,0
+399,26,"Misleading Advertisement",NULL,NULL,0
+400,24,"IRCTC- Air Ticketing",NULL,"आईआरसीटीसी- एयर टिकटिंग",1
+401,35,"Lok Adalat","Lok Adalat"," लोक अदालत",1
+402,53,CCPA,CCPA,सीसीपीए,1
+403,35,e-Daakhil,e-Daakhil,ई-दाखिल,0
+404,43,"Misuse of ISI Mark","Misuse of ISI Mark","आईएसआई मार्क का दुरुपयोग",1
+405,43,"Misuse of Hallmark","Misuse of Hallmark","हॉलमार्क का दुरुपयोग",1
+406,43,"Misuse of Registration Mark",NULL,"पंजीकरण चिह्न का दुरुपयोग",1
+407,43,"Quality of Product(ISI Marked Product)",NULL,"उत्पाद की गुणवत्ता (आईएसआई चिह्नित उत्पाद)",1
+408,43,"Quality of Product(Registration Marked Product)",NULL,"उत्पाद की गुणवत्ता (पंजीकरण चिह्नित उत्पाद)",1
+409,43,"Misleading Advertisements",NULL,NULL,0
+410,43,"Quality of Product(Hallmarked Articles)",NULL,"उत्पाद की गुणवत्ता (हॉलमार्क लेख)",1
+411,43,"Violation of QCO",NULL,"QCO का उल्लंघन",1
+412,43,"Other Complaints",NULL,"अन्य शिकायतें",1
+413,20,"Online gaming/ betting","Online gaming/ betting","ऑनलाइन गेमिंग/सट्टा",1
+414,41,"Service Charge","Service Charge","सेवा शुल्क",0
+415,20,"Life style app","Life style app","जीवन शैली ऐप",1
+416,15,"Electric vehicle"," Electric vehicle","विद्युतीय वाहन",0
+417,45,"Road Transport","Road Transport","सड़क परिवहन",1
+418,41,"Online Food Order/aggregators/Delivery/Takeway","Online Food Order/aggregators/Delivery/Takeway","ऑनलाइन फूड ऑर्डर/एग्रीगेटर्स/डिलीवरी/टेकवे",1
+419,41,"Food Outlet","Food Outlet ","फूड रेस्तरां",1
+420,41,"Sitting / Dining (Hotel / Restaurants)",NULL,"बैठक/भोजन (होटल/रेस्तरां)",1
+421,41,"Canteen  & Mess - School / colleges / Offices",NULL,"कैंटीन और मेस - स्कूल/कॉलेज/कार्यालय",1
+422,41,"Local Vendor - Food Cart / Van/Road Side vendor /Food Van /Dhaba",NULL,"स्थानीय विक्रेता - फूड कार्ट/वैन/सड़क किनारे विक्रेता/फूड वैन/ढाबा",1
+423,41,"Packaged Food Products",NULL,"डिब्बाबंद खाद्य उत्पाद",1
+424,41,"Online Grocery App",NULL,"ऑनलाइन किराना ऐप",1
+425,41,"Unlablelled Agri product/Milk /Meat/ Poultry",NULL,"बिना लेबल वाला कृषि उत्पाद/दूध/मांस/पोल्ट्री",1
+426,41,"Perishables - Shelflife (24*7) Product / Bakery Product",NULL,"खराब होने वाली वस्तुएं - शेल्फ लाइफ (24*7) उत्पाद/बेकरी उत्पाद",1
+427,41,"Food - Others",NULL,"भोजन - अन्य",1
+428,6,"Online Cab services / Car rentals","Online Cab services / Car rentals","ऑनलाइन कैब सेवाएं / कार किराए पर लेना",1
+429,6,"Online Hotel Booking","Online Hotel Booking","ऑनलाइन होटल बुकिंग",1
+430,6,"Online Ticket Booking","Online Ticket Booking","ऑनलाइन टिकट बुकिंग",1
+431,6,"Holiday Package","Holiday Package","हॉलिडे पैकेज",1
+432,6,"Offline Hotel / Resorts","State govt. tourism package ","ऑफ़लाइन होटल / रिसॉर्ट्स",1
+433,6,"Tour & Travel Hospitality Membership","Tour & Travel Hospitality Membership","टूर और ट्रैवल हॉस्पिटैलिटी सदस्यता",1
+434,6,"Travel & Tourism Other","Travel & Tourism Other","यात्रा और पर्यटन अन्य",1
+435,6,"State govt. tourism package",NULL,"राज्य सरकार पर्यटन पैकेज",1
+436,18,"Misleading Advertisements",NULL,NULL,0
+437,3,"Misleading Advertisements",NULL,NULL,0
+438,15,"Electric vehicle _Two wheelers",NULL,"इलेक्ट्रिक वाहन _दोपहिया वाहन",1
+439,15,"Electric vehicle _Four wheelers",NULL,"इलेक्ट्रिक वाहन _चार पहिया वाहन",1
+440,15,"Electric Bicycles/ E - Riksha",NULL,"इलेक्ट्रिक साइकिल/ई-रिक्शा",1
+441,15,"Three wheelers /Auto",NULL,तिपहिया/ऑटो,1
+442,15,"Heavy vehicles (Bus /Truck/tractors)",NULL,"भारी वाहन (बस/ट्रक/ट्रैक्टर)",1
+443,31,Food-Misleading,,खाद्य-भ्रामक,1
+444,31,"Shares and Securities-Misleading",,"शेयर और प्रतिभूतियां-भ्रामक",1
+445,31,Telecom-Misleading,,दूरसंचार-भ्रामक,1
+446,31,"Electricity -Misleading",,बिजली-भ्रामक,1
+447,31,Petroleum-Misleading,,पेट्रोलियम-भ्रामक,1
+448,31,"Health Services-Misleading",,"स्वास्थ्य सेवाएं-भ्रामक",1
+449,31,"General Insurance-Misleading",,"सामान्य बीमा-भ्रामक",1
+450,31,"Life Insurance-Misleading",,"जीवन बीमा-भ्रामक",1
+451,31,"Drugs & Cosmetics-Misleading",,"दवाएं और सौंदर्य प्रसाधन-भ्रामक",1
+452,31,"Real Estate-Misleading",,"रियल एस्टेट-भ्रामक",1
+453,31,"Legal Metrology-Misleading",,"कानूनी मेट्रोलॉजी-भ्रामक",1
+454,31,Others,,,0
+455,31,"E- Commerce-Misleading",,ई-कॉमर्स-भ्रामक,1
+456,31,"Consumer Durables-Misleading",,"उपभोक्ता टिकाऊ वस्तुएं-भ्रामक",1
+457,31,"Electronics Products-Misleading",,"इलेक्ट्रॉनिक्स उत्पाद-भ्रामक",1
+458,31,Banking-Misleading,,बैंकिंग-भ्रामक,1
+459,31,"Broadband & Internet-Misleading",,"ब्रॉडबैंड और इंटरनेट-भ्रामक",1
+460,31,Automobiles-Misleading,,ऑटोमोबाइल-भ्रामक,1
+461,31,"Agency Services-Misleading",,"एजेंसी सेवाएं-भ्रामक",1
+462,31,"Retail Outlets-Misleading",,"खुदरा दुकानें-भ्रामक",1
+463,31,"Travel & Tourism-Misleading",,"यात्रा और पर्यटन-भ्रामक",1
+464,31,"Digital Payment Modes-Misleading",,"डिजिटल भुगतान मोड-भ्रामक",1
+465,31,NBFCs-Misleading,,एनबीएफसी-भ्रामक,1
+466,31,"Courier & Cargo-Misleading",,"कूरियर और कार्गो-भ्रामक",1
+467,31,"Private Education-Misleading",,"निजी शिक्षा-भ्रामक",1
+468,31,FMCG-Misleading,,एफएमसीजी-भ्रामक,1
+469,31,"DTH and Cable-Misleading",,"डीटीएच और केबल-भ्रामक",1
+470,31,"Packers and Movers-Misleading",,"पैकर्स और मूवर्स-भ्रामक",1
+471,31,"Job Oriented Courses-Misleading",,"नौकरी उन्मुख पाठ्यक्रम-भ्रामक",1
+472,31,"Direct Selling-Misleading",,"प्रत्यक्ष बिक्री-भ्रामक",1
+473,31,Publications-Misleading,,प्रकाशन-भ्रामक,1
+474,27,"Apparels /Cloth","Apparels /Cloth",परिधान/कपड़ा,1
+475,27,Footwears,Footwears,फुटवेयर,1
+476,27,"Personal Care Product  (Skincare/Hair/Oral /Body)",NULL,"व्यक्तिगत देखभाल उत्पाद (त्वचा की देखभाल/बाल/मौखिक/शरीर)",1
+477,27,"Household Products (Laundry/Paper/Cleaning Supplies -Products)",NULL,"घरेलू उत्पाद (कपड़े धोने/कागज़/सफाई की आपूर्ति - उत्पाद)",1
+478,27,"Health and Wellness Products",NULL,"स्वास्थ्य और कल्याण उत्पाद",1
+479,27,"Baby Products (Diapers/Baby Food/Baby Care)",NULL,"शिशु उत्पाद (डायपर/शिशु भोजन/शिशु देखभाल)",1
+480,27,"Pet Care Products (Pet Food/ Pet Hygiene)",NULL,"पालतू जानवरों की देखभाल उत्पाद (पालतू जानवरों का भोजन/पालतू जानवरों की स्वच्छता)",1
+481,27,"Personal Accessories  (Jewellery/Bags/ Wallets/Belts etc)",NULL,"व्यक्तिगत सहायक उपकरण (आभूषण/बैग/वॉलेट/बेल्ट आदि)",1
+482,46,"UPSC (IAS / IPS) Coaching",NULL,"यूपीएससी (आईएएस/आईपीएस) कोचिंग",1
+483,46,"CA Coaching",NULL,"सीए कोचिंग",1
+484,46,"IT/Medical/ Engineering Coaching (Data Science /Power BI etc)",NULL,"आईटी/मेडिकल/इंजीनियरिंग कोचिंग (डेटा साइंस/पावर बीआई आदि)",1
+485,46,"Govt. job preparation coaching",NULL,"सरकारी नौकरी की तैयारी कोचिंग",1
+486,46,"Professional courses / Job Oriented Courses",NULL,"पेशेवर पाठ्यक्रम/नौकरी उन्मुख पाठ्यक्रम",1
+487,46,"Skills Development Courses",NULL,"कौशल विकास पाठ्यक्रम",1
+488,10,"Online Loan App","Online Loan App","ऑनलाइन ऋण ऐप",1
+490,50,"BHIM UPI/AEPS/USSD/SMS",NULL,"भीम यूपीआई/एईपीएस/यूएसएसडी/एसएमएस",1
+491,50,"Internet Banking/ Mobile Banking",NULL,"इंटरनेट बैंकिंग/मोबाइल बैंकिंग",1
+492,50,"POS Machine",NULL,"पीओएस मशीन",1
+493,20,"Rental Platform (Furniture & Homes Appliances)","Rental Platform","किराये का प्लेटफ़ॉर्म (फर्नीचर और घरेलू उपकरण)",1
+494,27,"Stationery Item",NULL,"लेखन सामग्री",1
+495,8,"Ayurvedic/ Unani/ Homeopathy Clinic","Ayurvedic/ Unani/ Homeopathy Clinic","आयुर्वेदिक/ यूनानी/ होम्योपैथी क्लिनिक",1
+496,44,"Mutual Fund",NULL,"म्यूचुअल फंड",1
+497,44,Others,NULL,अन्य,1
+498,44,"Water Supply",NULL,जलापूर्ति,1
+499,44,e-Daakhil,NULL,ई-दाखिल,1
+500,44,"Consumer Commissions",NULL,"उपभोक्ता आयोग",1
+501,48,Food-GST,,,1
+502,48,"Shares and Securities-GST",,,1
+503,48,Telecom-GST,,,1
+504,48,"Electricity -GST",,,1
+505,48,Petroleum-GST,,,1
+506,48,"Health Services-GST",,,1
+507,48,"General Insurance-GST",,,1
+508,48,"Life Insurance-GST",,,1
+509,48,"Drugs & Cosmetics-GST",,,1
+510,48,"Real Estate-GST",,,1
+511,48,"Legal Metrology-GST",,,1
+512,48,"E- Commerce-GST",,,1
+513,48,"Consumer Durables-GST",,,1
+514,48,"Electronics Products-GST",,,1
+515,48,Banking-GST,,,1
+516,48,"Broadband & Internet-GST",,,1
+517,48,Automobiles-GST,,,1
+518,48,"Agency Services-GST",,,1
+519,48,"Retail Outlets-GST",,,1
+520,48,"Travel & Tourism-GST",,,1
+521,48,"Digital Payment Modes-GST",,,1
+522,48,NBFCs-GST,,,1
+523,48,"Courier & Cargo-GST",,,1
+524,48,"Private Education-GST",,,1
+525,48,FMCG-GST,,,1
+526,48,"DTH and Cable-GST",,,1
+527,48,"Packers and Movers-GST",,,1
+528,48,"Job Oriented Courses-GST",,,1
+529,48,"Direct Selling-GST",,,1
+530,48,Publications-GST,,,1
+531,48,"General Enquiry",NULL,"सामान्य जांच",1
+532,48,Postal-GST,NULL,NULL,1

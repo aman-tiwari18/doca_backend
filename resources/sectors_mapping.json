@@ -1,0 +1,320 @@
+[
+    {
+        "sectorCode": "1",
+        "sectorName": "Telecom",
+        "hindiSectorName": "दूरसंचार",
+        "status": "1"
+    },
+    {
+        "sectorCode": "2",
+        "sectorName": "Electricity",
+        "hindiSectorName": "बिजली",
+        "status": "1"
+    },
+    {
+        "sectorCode": "3",
+        "sectorName": "Banking",
+        "hindiSectorName": "बैंकिंग",
+        "status": "1"
+    },
+    {
+        "sectorCode": "4",
+        "sectorName": "General Insurance",
+        "hindiSectorName": "सामान्य बीमा",
+        "status": "1"
+    },
+    {
+        "sectorCode": "5",
+        "sectorName": "Consumer Durables",
+        "hindiSectorName": "उपभोक्ता टिकाऊ वस्तुएं",
+        "status": "1"
+    },
+    {
+        "sectorCode": "6",
+        "sectorName": "Travel & Tourism",
+        "hindiSectorName": "यात्रा पर्यटन",
+        "status": "1"
+    },
+    {
+        "sectorCode": "7",
+        "sectorName": "Courier & Cargo",
+        "hindiSectorName": "कूरियर और कार्गो",
+        "status": "1"
+    },
+    {
+        "sectorCode": "8",
+        "sectorName": "Health Services",
+        "hindiSectorName": "स्वास्थ्य सेवाएं",
+        "status": "1"
+    },
+    {
+        "sectorCode": "9",
+        "sectorName": "Electronics Products",
+        "hindiSectorName": "इलेक्ट्रॉनिक्स उत्पाद",
+        "status": "1"
+    },
+    {
+        "sectorCode": "10",
+        "sectorName": "NBFCs",
+        "hindiSectorName": "एनबीएफसी",
+        "status": "1"
+    },
+    {
+        "sectorCode": "11",
+        "sectorName": "Mutual Fund",
+        "hindiSectorName": "म्यूचुअल फंड",
+        "status": "0"
+    },
+    {
+        "sectorCode": "12",
+        "sectorName": "Broadband & Internet",
+        "hindiSectorName": "ब्रॉडबैंड इंटरनेट",
+        "status": "1"
+    },
+    {
+        "sectorCode": "13",
+        "sectorName": "DTH and Cable",
+        "hindiSectorName": "डीटीएच और केबल",
+        "status": "1"
+    },
+    {
+        "sectorCode": "14",
+        "sectorName": "E- Commerce",
+        "hindiSectorName": "ई वाणिज्य",
+        "status": "1"
+    },
+    {
+        "sectorCode": "15",
+        "sectorName": "Automobiles",
+        "hindiSectorName": "गाडियां",
+        "status": "1"
+    },
+    {
+        "sectorCode": "16",
+        "sectorName": "Airlines",
+        "hindiSectorName": "एयरलाइंस",
+        "status": "1"
+    },
+    {
+        "sectorCode": "17",
+        "sectorName": "Publications",
+        "hindiSectorName": "प्रकाशन",
+        "status": "1"
+    },
+    {
+        "sectorCode": "18",
+        "sectorName": "Others",
+        "hindiSectorName": "अन्य",
+        "status": "0"
+    },
+    {
+        "sectorCode": "19",
+        "sectorName": "School Education",
+        "hindiSectorName": "विद्यालय शिक्षा",
+        "status": "1"
+    },
+    {
+        "sectorCode": "20",
+        "sectorName": "Agency Services",
+        "hindiSectorName": "वएजेंसी सेवाएँ",
+        "status": "1"
+    },
+    {
+        "sectorCode": "21",
+        "sectorName": "Postal",
+        "hindiSectorName": "डाक",
+        "status": "1"
+    },
+    {
+        "sectorCode": "22",
+        "sectorName": "Real Estate",
+        "hindiSectorName": "रियल एस्टेट",
+        "status": "1"
+    },
+    {
+        "sectorCode": "23",
+        "sectorName": "Petroleum",
+        "hindiSectorName": "पेट्रोलियम",
+        "status": "1"
+    },
+    {
+        "sectorCode": "24",
+        "sectorName": "Railways",
+        "hindiSectorName": "प्रकाशन",
+        "status": "1"
+    },
+    {
+        "sectorCode": "25",
+        "sectorName": "Packers and Movers",
+        "hindiSectorName": "पैकर्स और मोवेर्स",
+        "status": "1"
+    },
+    {
+        "sectorCode": "26",
+        "sectorName": "Legal Metrology",
+        "hindiSectorName": "लीगल मेट्रोलोजी",
+        "status": "1"
+    },
+    {
+        "sectorCode": "27",
+        "sectorName": "FMCG",
+        "hindiSectorName": "एफएमसीजी",
+        "status": "1"
+    },
+    {
+        "sectorCode": "28",
+        "sectorName": "Life Insurance",
+        "hindiSectorName": "जीवन बीमा",
+        "status": "1"
+    },
+    {
+        "sectorCode": "29",
+        "sectorName": "Higher Education",
+        "hindiSectorName": "उच्च शिक्षा",
+        "status": "1"
+    },
+    {
+        "sectorCode": "30",
+        "sectorName": "Job Oriented Courses",
+        "hindiSectorName": "रोजगारोन्मुखी पाठ्यक्रम",
+        "status": "0"
+    },
+    {
+        "sectorCode": "31",
+        "sectorName": "Advertisements",
+        "hindiSectorName": "विज्ञापन",
+        "status": "1"
+    },
+    {
+        "sectorCode": "32",
+        "sectorName": "Agriculture",
+        "hindiSectorName": "कृषि",
+        "status": "1"
+    },
+    {
+        "sectorCode": "33",
+        "sectorName": "Drugs & Cosmetics",
+        "hindiSectorName": "औषधि और प्रसाधन सामग्री",
+        "status": "1"
+    },
+    {
+        "sectorCode": "34",
+        "sectorName": "Public Distribution System",
+        "hindiSectorName": "सार्वजनिक वितरण प्रणाली",
+        "status": "1"
+    },
+    {
+        "sectorCode": "35",
+        "sectorName": "Legal",
+        "hindiSectorName": "कानूनी",
+        "status": "0"
+    },
+    {
+        "sectorCode": "36",
+        "sectorName": "Right to Information",
+        "hindiSectorName": "सूचना का अधिकार",
+        "status": "0"
+    },
+    {
+        "sectorCode": "37",
+        "sectorName": "Water Supply",
+        "hindiSectorName": "जलापूर्ति",
+        "status": "0"
+    },
+    {
+        "sectorCode": "38",
+        "sectorName": "Govt. Identity Services",
+        "hindiSectorName": "सरकार पहचान सेवाओं",
+        "status": "0"
+    },
+    {
+        "sectorCode": "39",
+        "sectorName": "Govt. Taxes",
+        "hindiSectorName": "सरकार करों",
+        "status": "0"
+    },
+    {
+        "sectorCode": "40",
+        "sectorName": "Retail Outlets",
+        "hindiSectorName": "रिटेल आउटलेट",
+        "status": "1"
+    },
+    {
+        "sectorCode": "41",
+        "sectorName": "Food",
+        "hindiSectorName": "खाद्य",
+        "status": "1"
+    },
+    {
+        "sectorCode": "42",
+        "sectorName": "Shares and Securities",
+        "hindiSectorName": "शेयर और प्रतिभूतियां",
+        "status": "1"
+    },
+    {
+        "sectorCode": "43",
+        "sectorName": "Standards",
+        "hindiSectorName": "मानक",
+        "status": "1"
+    },
+    {
+        "sectorCode": "44",
+        "sectorName": "General Enquiry",
+        "hindiSectorName": "सामान्य जांच",
+        "status": "1"
+    },
+    {
+        "sectorCode": "45",
+        "sectorName": "Govt. Transport",
+        "hindiSectorName": "सरकार ट्रांसपोर्ट",
+        "status": "1"
+    },
+    {
+        "sectorCode": "46",
+        "sectorName": "Private Education",
+        "hindiSectorName": "निजी शिक्षा",
+        "status": "1"
+    },
+    {
+        "sectorCode": "47",
+        "sectorName": "Govt Organisation",
+        "hindiSectorName": "सरकारी संगठन",
+        "status": "0"
+    },
+    {
+        "sectorCode": "48",
+        "sectorName": "GST",
+        "hindiSectorName": "जीएसटी",
+        "status": "1"
+    },
+    {
+        "sectorCode": "49",
+        "sectorName": "Direct Selling",
+        "hindiSectorName": "डायरेक्ट सेलिंग",
+        "status": "1"
+    },
+    {
+        "sectorCode": "50",
+        "sectorName": "Digital Payment Modes",
+        "hindiSectorName": "डिजिटल भुगतान",
+        "status": "1"
+    },
+    {
+        "sectorCode": "51",
+        "sectorName": "Masks",
+        "hindiSectorName": "मास्क",
+        "status": "0"
+    },
+    {
+        "sectorCode": "52",
+        "sectorName": "Sanitizer",
+        "hindiSectorName": "सेनिटाइजर",
+        "status": "0"
+    },
+    {
+        "sectorCode": "53",
+        "sectorName": "CCPA",
+        "hindiSectorName": "सीसीपीए",
+        "status": "0"
+    }
+]

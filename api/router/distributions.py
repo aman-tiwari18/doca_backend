@@ -326,3 +326,19 @@ async def subcategory_with_counts(
             status_code=500,
             detail=f"Error processing request: {str(e)}"
         )
+
+
+class CompanyCategoryDistributionRequest(BaseModel):
+    start_date: str = "2025-01-01"
+    end_date: str = "2025-03-30"
+    value: int = 1
+    CityName: str = "All"
+    stateName: str = "All"
+    complaintType: str = "All"
+    complaintMode: str = "All"
+    companyName: str = "All"
+    complaintStatus: str = "All"
+    threshold: float = 1.5
+    complaint_numbers: List[str] = ["NA"]
+    skip: int = 0
+    limit: int = 10
